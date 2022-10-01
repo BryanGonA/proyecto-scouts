@@ -1,0 +1,114 @@
+.titulo{margin: 1000px;}
+
+.contenedor{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.labels{
+    overflow: hidden;
+    margin: 0px;
+
+}
+
+.caso{
+    overflow-x: scroll;
+}
+
+.container{
+    
+    margin-top: 0px;
+    width: 100%;
+    margin-bottom: 25px;
+    height: auto;
+    box-shadow: 4px 4px 14px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;    
+    padding: 20px;
+    position: relative;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 33px;
+  
+}
+
+.content{
+    margin-bottom: -10px;
+}
+
+%title{
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 49px;
+    text-align: center;
+    text-decoration-line: underline;
+    margin-bottom: 15px;
+}
+.title{
+    @extend %title;
+    color: black;
+    
+}
+.titleE{
+    @extend %title;
+    color: #B31D1D;
+}
+
+.editarB{
+    float: right;
+    position: absolute;
+    right: 10px;
+    border: none;
+    background-color: white;
+    float: inline-end;
+    bottom: 10px;
+
+}
+
+%input{
+    align-items: center;
+    padding: 0px;
+    margin-left: 10px;
+    background-color: white;
+    
+    
+}
+
+.mostrar{
+    @extend %input;
+    max-width: 100%;
+    top: initial;
+    border: hidden !important;
+    color: black;
+    
+    
+}
+
+
+.editarI{
+    @extend %input;
+    border: show !important;
+    max-width: 100%;
+    
+}
+
+.ocultarB{
+
+    visibility: hidden;
+    margin: 10px;
+}
+.mostrarB{
+    visibility: visible;
+    margin: 10px;
+}
+.contenedor_btns{
+    padding-top: 20px;
+    text-align: center;
+}
+.label1{
+    width: 25%;
+    display: inline-table;
+}
+
+
+

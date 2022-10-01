@@ -1,0 +1,54 @@
+.text_title{
+    width: 100%;
+    height: 0px;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 50px;
+    text-align: center;
+    margin-top: 20px;
+    color: #B31D1D;
+}
+.contenedor{
+    background: #FFFFFF;
+    box-shadow: 4px 4px 14px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    margin-top: 0px;
+    width: 100%;
+    margin-bottom: 25px;
+    
+    margin-top: 0px;
+    width: 100%;
+    margin-bottom: 25px;
+    height: auto;
+    box-shadow: 4px 4px 14px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;    
+    padding: 20px;
+    position: relative;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 33px;
+  
+}
+.csvbutton{
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+    border-radius: 10px;
+    font-size: 26px;
+    padding: 3px 9px;
+    text-align: center;
+    font-weight: 700;
+}
+.icon{
+   padding-left: 15px;
+   color: black;
+   width: 40px;
+   text-align: right;
+}
+.addbutton{
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}

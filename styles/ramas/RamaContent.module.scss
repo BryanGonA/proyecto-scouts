@@ -1,0 +1,47 @@
+.block {
+    padding-top: 50px;
+    width: 100%;
+    padding-bottom: 50px;
+}
+
+.block_text {
+    padding-left: 80px;
+    padding-right: 80px;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 41px;
+    text-align: justify;
+}
+
+.gallery {
+    width: 100%;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+@media (max-width: 720px) {
+    .block_text {
+        padding-left: 50px;
+        padding-right: 50px;
+        font-size: 24px;
+        line-height: normal;
+    }
+    .gallery {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
+@media (max-width: 420px) {
+    .block_text {
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 20px;
+    }
+    .gallery {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}

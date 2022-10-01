@@ -1,0 +1,270 @@
+.barra{
+    height: 130px;
+    z-index: 1;
+    overflow: hidden;
+    position: relative;
+}
+.barra_2{
+    height: 130px;
+    width: 100%;
+    z-index: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0px;
+}
+
+.curva{
+    stroke: none;
+    fill: #b31d1d;
+}
+
+.curva_2{
+    stroke: none;
+    fill: #b31d1d;
+    opacity: 0.5;
+}
+
+.antorcha_1{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.antorcha_2{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+.contenedor_metodo_scout{
+    position: relative;
+    border: 0px solid ;
+    box-shadow: 2px 2px 3px #b31d1d;
+    border-radius: 26px 26px;
+}
+
+.contenedor_relativo{
+    position: relative;
+}
+
+.fondo{
+    width: 100%;
+    height: 100%;
+}
+
+.fondo_2{
+    width: 100%;
+    height: 120%;
+}
+
+.fondo_card{
+    background-color: #E1D8CD;
+    border: 0px solid lightgray;
+    box-shadow: 0px 3px 5px gray;
+    border-radius: 26px 26px;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+    
+}
+
+
+.limite_parrafo{    
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+}
+
+.limite_descripcion{
+    height: 175px;
+}
+
+.texto_titulo{
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 50px;
+    text-align: center;
+    color: #B31D1D;
+    text-shadow:
+    0 0 2px #fff,
+    -2px -2px 0 #fff,  
+    2px -2px 0 #fff,
+    -2px 2px 0 #fff,
+    2px 2px 0 #fff;
+}
+
+.text_form{
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 30px;    
+    padding-left: 1.5rem;
+    padding-right: 1.5rem; 
+}
+
+.backgroud-button{
+    font-weight: 800;
+    font-size: 25px;
+    line-height: 10px;
+    text-align: center;
+    background-color: #B31D1D;
+    color: white;
+}
+.texto_titulo2{
+    font-weight: 900;
+    font-size: 70px;
+    line-height: 50px;
+    text-align: center;
+    color: #B31D1D;
+    text-shadow:
+    0 0 2px #fff,
+    -2px -2px 0 #fff,  
+    2px -2px 0 #fff,
+    -2px 2px 0 #fff,
+    2px 2px 0 #fff;
+}
+
+.texto_descripcion{
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 30px;
+    text-align: center;     
+    padding-left: 5rem;
+    padding-right: 5rem;   
+}
+
+.texto_descripcion-card{
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 30px;
+    text-align: center;     
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;  
+}
+
+.footer_card{
+    position: relative;
+}
+
+.fondo_card:hover{
+    box-shadow: 0px 6px 10px black;
+}
+
+.imagen_card{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.row {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+
+.backgroun_container{
+    background: #E5E5E5;
+}
+
+.contenedor-padding{
+    padding: 3rem;
+}
+
+.imagen-card{
+    padding: 1rem;
+}
+
+
+
+
+@media screen and (max-width: 1000px) {
+    .texto_descripcion{       
+        
+        padding-left: 5rem;
+        padding-right: 5rem;       
+    }
+
+    .card_final{
+        height: 600px;
+    }
+    
+    .card_final .limite_descripcion{
+        height: 250px;    
+         
+    }
+}
+
+
+@media screen and (max-width: 720px) {
+    .texto_descripcion{        
+        font-size: 24px;    
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;    
+    }
+
+    .texto_descripcion-card{
+        font-size: 24px; 
+    }
+
+    .texto_titulo{       
+        font-size: 30px;               
+    }
+
+    .contenedor-padding{
+        padding: 2rem;
+    }
+
+    .antorcha_2{
+        display: none;
+    }
+
+    .antorcha_1{
+        display: none;
+    }
+
+    .card_final{
+        height: 650px;
+    }
+
+    .card_final .limite_descripcion{
+        height: 330px;    
+         
+    }
+
+    .imagen-card{
+        padding-bottom: 2.5rem;
+    }
+  }
+@media screen and (max-width: 420px) {
+    .texto_descripcion{        
+        font-size: 18px;
+        padding-left: 1rem;
+        padding-right: 1rem;        
+    }
+
+    .texto_descripcion-card{
+        font-size: 18px; 
+    }
+
+    .texto_titulo{       
+        font-size: 24px;
+    }
+
+    .contenedor-padding{
+        padding: 1rem;
+    }
+
+    .antorcha_2{
+        display: none;
+    }
+
+    .antorcha_1{
+        display: none;
+    }
+    .card_final{
+        height: 580px;
+    }
+    .card_final .limite_descripcion{
+        height: 260px;        
+    }
+
+    .imagen-card{
+        padding: 1rem;
+    }
+   
+}

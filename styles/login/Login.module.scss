@@ -1,0 +1,390 @@
+
+
+.letra{
+    font-family: Nunito;
+ }
+
+.area_titulo{
+ 
+    width: 100%;
+    height: 180px;
+    align-items: center;
+    display : flex;
+    vertical-align: middle;
+   
+
+}
+
+.area_entradas{
+    top: 12vh;
+    width: 100%;
+    height: 12vh;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    //display: flex;
+    //flex-wrap: wrap;
+    
+}
+.area_entradas_r{
+    top: 12vh;
+    width: 100%;
+    height: 6vh;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    //display: flex;
+    //flex-wrap: wrap;
+    
+}
+.area_entradas_c{
+    top: 12vh;
+    width: 100%;
+    height: 12vh;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    //display: flex;
+    //flex-wrap: wrap;
+    
+}
+
+.area_check{
+    width: 100%;
+    height: 9vh;
+    background-attachment: fixed;
+    align-items: center;
+}
+
+.area_boton{
+    width: 100%;
+    height: 12vh;
+    background-attachment: fixed;
+    align-items: center;
+    //display: flex;
+    //flex-wrap: wrap;
+    
+}
+
+.margen{
+    height: 7vh;
+}
+
+.title{
+
+    width: 100%;
+    height: 0px;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 50px;
+    text-align: center;
+    margin-top: 20px;
+    
+
+color: #B31D1D;
+}
+
+
+.tarjeta{
+    
+position: absolute;
+width: 728px;
+height: 354px;
+left: 334px;
+top: 364px;
+
+
+
+}
+
+.login_container{
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+
+.centrado{
+text-align: center;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.entradas{
+
+background: rgba(228, 149, 149, 0.5);
+border-radius: 10px;
+text-align: center;
+justify-content: center;
+flex-direction: column;
+width: 75%;
+height: 57px;
+border:  rgba(228, 149, 149, 0.5);
+
+font-style: normal;
+font-weight: 800;
+font-size: 24px;
+line-height: 33px;
+color: rgba(0, 0, 0, 0.5);
+
+
+}
+/* Chrome, Safari, Edge, Opera */
+.entradas::-webkit-outer-spin-button,
+.entradas::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin            : 0;
+}
+
+/* Firefox */
+.entradas[type=number] {
+    -moz-appearance: textfield;
+}
+
+.area_marco{
+    width: 100%;
+    
+
+
+}
+
+.marco{
+    left: 25%;
+    position: relative;
+    width: 50%;
+    background: #FFFFFF;
+    border: 5px solid #DCDCDC ;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+.boton{
+
+width: 40%;
+height: 50px;
+top: 75%;
+background: rgba(179, 29, 29, 0.95);
+border-radius: 10px;
+color: white;
+border-color: #B31D1D;
+
+font-style: normal;
+font-weight: 800;
+font-size: 24px;
+line-height: 33px;
+/* identical to box height */
+
+text-align: center;
+}
+
+.area_alertas{
+    width: 75%;
+    height: 25%;
+    background-attachment: fixed;
+    align-items: center;
+
+}
+.caja_alerta{
+    background: #F1CACA;
+    border-radius: 10px;
+    width: 50%;
+    height: 100%;
+    position:relative;
+    left: 25%;
+    
+}
+
+.check{
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 27px;
+    text-align: center;
+
+    
+}
+
+.olvida{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 27px;
+    text-align: center;
+    text-decoration-line: underline;
+    color: #000000;
+}
+
+.alerta_text{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 15px;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    color: red;
+    background: #F1CACA;
+    border-radius: 10px;
+    
+    
+}
+.alerta_text_r{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 15px;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    color: red;
+    background: #F1CACA;
+    border-radius: 10px;
+    margin-top: 35px;
+    
+}
+.eye{
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #ECAEAE;
+    border-radius: 0px 10px 10px 0px;
+    height: 57px;
+    line-height: 55px;
+    color: white;
+    
+    
+}
+
+.passGroup {
+    width: 75%;
+    height: 12vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.passInput {
+    border-top-left-radius: 10px !important;
+    border-bottom-left-radius: 10px !important;
+}
+
+.pass{
+    position: absolute;
+    text-align: center;
+    justify-content: center;
+    color: white;
+    height: 40px;
+    width: 35px;
+    z-index: 2;
+    margin: 10px;
+}
+
+.user{
+    position: absolute;
+    left: 14%;
+    text-align: center;
+    justify-content: center;
+    color: white;
+    height: 30px;
+    width: 28px;
+    margin-top: 13px;
+}
+
+
+.key{
+    position: absolute;
+    left: 40%;
+    top: 26.5%;
+}
+
+@media (max-width: 1172px) {
+
+    
+
+    .marco{
+        width: 75%;
+        left: 12.5%;
+    }
+    
+}
+@media (max-width: 800px)
+{
+    .title{
+        font-size: 50px;
+    
+    }
+
+    .marco{
+
+        left: 5%;
+        width: 90%;
+        
+    }   
+
+}
+
+
+@media (max-width: 660px)
+{
+
+.title{
+        font-size: 40px;
+        line-height: 35px;
+    
+    }
+.check{
+    font-style: normal;
+    font-weight: 800;
+    font-size: 15px;
+    line-height: 27px;
+    text-align: center;
+
+    
+}
+.entradas{
+    width: 90%;
+    font-size: 14px;
+}
+.passGroup {
+    width: 90%;
+}
+.olvida{
+    font-size: 14px;
+}
+
+.boton{
+    font-size: 14px;
+}
+.user{
+    left: 7.5%;
+}
+
+}
+
+
+@media (max-width: 510px)
+{
+    .alerta_text_r{
+    
+        margin-top: 22.5px;
+        
+    }
+    
+
+}
+.pass{
+
+    // background-color: rgba(228, 149, 149, .5);
+    color: #000000;
+    font-weight: 800;
+    font-size: 24px;
+    border-radius: 7px;
+  
+}

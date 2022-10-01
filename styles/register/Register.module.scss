@@ -1,0 +1,60 @@
+.container {
+    margin-top: 100px;
+    width: 92%;
+    margin-bottom: 100px;
+    border: solid #f8f9fa;
+    border-width: .3rem;
+}
+
+.title {
+    font-weight: 900;
+    font-size: 45px;
+    color: #B31D1D;
+}
+
+.dropHeader {
+    background: #C65656;
+    border: 1px solid #FFFFFF;
+    border-radius: 8px 8px 0px 0px;
+    cursor: pointer;
+}
+
+.dropCollapse {
+}
+
+.dropTitle {
+    font-weight: 900;
+    font-size: 30px;
+    color: #FFFFFF;
+}
+
+@media (max-width: 720px) {
+    .container {
+        width: 100%;
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .title {
+        font-size: 36px;
+    }
+
+    .dropTitle {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 420px) {
+
+    .dropHeader {
+        padding: .5rem .3rem;
+    }
+
+    .title {
+        font-size: 30px;
+    }
+
+    .dropTitle {
+        font-size: 20px;
+    }
+}

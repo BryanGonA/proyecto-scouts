@@ -1,0 +1,160 @@
+.container{
+    background: #FFFFFF;
+    box-shadow: 4px 4px 14px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+}
+
+.text_data{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 33px;    
+    color: #000000;
+}
+
+.text_title{
+    width: 100%;
+    height: 0px;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 50px;
+    text-align: center;
+    margin-top: 20px;
+    color: #B31D1D;
+}
+
+.text_data{    
+    font-weight: 400;
+       
+}
+
+@media (max-width: 660px)
+{
+    .text_data{        
+        font-size: 18px;       
+    }
+
+    .text_title{        
+        font-size: 32px;       
+    }
+}
+
+.editarB{
+    float: right;
+    position: absolute;
+    right: 10px;
+    border: none;
+    background-color: white;
+    float: inline-end;
+    bottom: 10px;
+
+}
+
+.contenedor{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.editarI{
+    @extend %input;
+    border: show !important;
+    max-width: 100%;
+    
+}
+
+%input{
+    align-items: center;
+    padding: 0px;
+    margin-left: 10px;
+    background-color: white;
+    
+    
+}
+
+.mostrar{
+    @extend %input;
+    max-width: 100%;
+    top: initial;
+    border: hidden !important;
+    color: black;
+    
+}
+.mostrar_correo{
+    width:70% !important;
+    max-width: 100%;
+    top: initial;
+    border: hidden !important;
+    color: black;
+    
+}
+.ocultarB{
+    visibility: hidden;
+    margin: 10px;
+}
+.mostrarB{
+    visibility: visible;
+    margin: 10px;
+}
+.contenedor_btns{
+    padding-top: 20px;
+    text-align: center;   
+}
+.label2{
+    width: 25%;
+    display: inline-table;
+}
+.inputObser{
+    border: hidden !important;
+    border-radius: 8px;
+    padding: 2px;
+    width: 45%;
+    text-transform:uppercase;
+}
+.addbutton{
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    border-radius: 10px;
+    padding: 3px 9px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.btn_add{
+    width: 315px;
+    height: 48px;
+    left: 544px;
+    top: 305px;
+    background: rgba(0, 87, 255, 0.78);
+    border: 2px solid #000000;
+    box-sizing: border-box;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    color: white;
+    margin: 15px;
+}
+
+.link_plan{
+    margin-top: 30px;
+}
+
+.icon{
+    padding-left: 15px;
+    color: black;
+    width: 40px;
+    text-align: right;
+ }
+
+ .icon_trash {
+    padding-left: 15px;
+    color: red;
+    width: 40px;
+    text-align: right;
+    cursor: pointer;
+ }

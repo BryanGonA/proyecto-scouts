@@ -1,0 +1,28 @@
+.navg_pills{
+    margin-top: 80px;
+    text-align: center;
+
+}
+.active {
+    background: #CB9292 !important;
+}
+.data {
+    
+    background: #C4C4C4;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-weight: 800;
+    font-size: 26px;
+    text-align: center;
+
+    color: #000000;
+    margin: 10px;
+    padding: 4px 20px;
+}
+
+@media (max-width: 720px) {
+    .data {
+        font-size: 16px;
+    }
+}

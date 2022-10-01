@@ -1,0 +1,105 @@
+.tarjeta_fondo {
+    background-color: #ffffff;
+    border: 2px solid lightgray;
+    border-radius: 30PX;
+    width: 100%;
+    padding: 5%;
+    box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.1);
+}
+.desc {
+    color: black;
+    font-size: 22px;
+    font-weight: bolder;
+}
+
+.icon{
+  position: relative;
+  left: auto;
+}
+.title{
+    font-size: 24px;
+}
+.input{
+    border:hidden !important;  
+    text-transform:uppercase;
+}
+.input2{
+    border:show !important;
+    border-radius: 8px;
+    padding: 2px;
+    text-transform:uppercase;
+}
+.input3{
+    visibility: hidden;
+}
+.input4{
+    visibility: show;
+    border:hidden !important;  
+}
+.inputOb{
+    border: show !important;
+    border-radius: 8px;
+    padding: 2px;
+    width: 45%;
+    text-transform:uppercase;
+}
+.inputOb2{
+
+    border: show !important;
+    border-radius: 8px;
+    padding: 2px;
+    width: 100%;
+    text-transform:uppercase;
+}
+.inputObser{
+    border: hidden !important;
+    border-radius: 8px;
+    padding: 2px;
+    width: 45%;
+    text-transform:uppercase;
+}
+
+.button{
+    border: hidden !important; 
+    background-color: white;
+   
+}
+.botones{
+    text-align: center; 
+    
+}
+.mostrar{
+  visibility: visible;
+  background-color: white;
+  color: black;
+  margin: 10px;  
+}
+.ocultar{
+   visibility: hidden;
+   margin: 10px;
+}
+
+@media (max-width: 1300px) {
+    .desc{
+        font-size: 15px;
+    }
+    .title{
+        font-size: 18px;
+    }
+}
+@media (max-width: 600px) {
+    .desc{
+        font-size: 10px;
+    }
+    .title{
+        font-size: 14px;
+    }
+}
+@media (max-width: 400px) {
+    .desc{
+        font-size: 12px;
+    }
+}
+.label{
+    width: 25%;
+}

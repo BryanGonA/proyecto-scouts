@@ -1,0 +1,57 @@
+$header-index: 100;
+$navmenu-index: 90;
+
+$burger-right: 20px;
+
+$nav-height: 74px;
+$nav-button-height: 45px;
+$nav-elements-height: 80px;
+
+$header-color: white;
+$title-color: white;
+$title-color2: black;
+$main-color: #911c1cb9;
+$burger-color: white;
+
+@import './header/HeaderNavigation.module';
+@import './header/Dropdown';
+
+.header {
+    width: 100%;
+    height: 40px;
+}
+
+.wide-svg {
+    height: 150px;
+    overflow: hidden;
+    position: absolute;
+
+    .red {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        z-index: $header-index;
+        path {
+            stroke: none;
+            fill: #B31D1D;;
+        }
+    }
+}
+
+.wide-back {
+    height: 140px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    svg {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        z-index: $header-index;
+        path {
+            stroke: none;
+            fill: #B31D1D;
+            opacity: 0.5;
+        }
+    }
+}

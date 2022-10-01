@@ -1,0 +1,122 @@
+.title{       
+    font-size: 300%; 
+    text-align: center;     
+    color:#B31D1D;   
+    font-weight: 900; 
+}
+.description{
+font-size: 120%;
+text-align: center;
+color: black;
+}
+
+.letter{
+    font-size: 120%;
+    text-align: center;
+    color: black;
+    text-decoration:none;
+    margin-top: 2%;
+}
+
+.recover {
+
+    width: 100%;
+    padding: 6px 10px;
+    margin: 8px 0;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    background-color:#FFFFFF;
+    margin-top: 5%;
+    position: relative;
+    
+    color: #000000;
+    font-weight: 800;
+    font-size: 24px;
+    border-radius: 7px;
+
+
+}
+.container{
+    text-align: center;
+    box-sizing: border-box;
+    width: 50%;
+    border: solid #D6D3D3 2px;
+    padding: 2%;
+    border-radius: 7px;
+    margin-top: 3%;
+    position:relative;
+    left:25%;
+    
+}
+.containerp{
+    margin-top: 10%;
+    
+}
+@media (max-width: 800px) {
+    .containerp{
+         margin-top: 17%;     
+     }
+    .container{
+         width: 95%;
+         left: 2.5%;     
+    }
+    .button{    
+        button{
+        font-size: 15px !important ;
+              }
+     }
+    .recover {
+        font-size: 17px;
+     }
+    .title{      
+        margin-top: 5%; 
+        font-size: 200%; 
+     }  
+    .description{
+         font-size: 100%;
+    }   
+    .letter{
+        font-size: 100%;
+    } 
+  }
+@media (max-width: 400px) {
+    .containerp{
+        margin-top: 30%;
+    }
+    .container{
+        width: 95%;
+        left: 2.5%;  
+    }
+    .button{ 
+        button{
+           font-size: 15px !important ;    
+            }
+        }
+    .recover {
+            font-size: 17px;
+        }
+    .title{       
+        font-size: 200%; 
+     }  
+    .description{
+        font-size: 100%;
+    }   
+    .letter{
+        font-size: 100%;
+    } 
+}
+.button{
+    margin-top: 4%;
+    button{
+        background: rgba(179, 29, 29, 0.95);
+        font-weight: 800;
+        font-size: 24px ;
+        border-radius: 10px;
+    }
+}
+.alert{
+    width: 70%;
+    left: 17%;
+    margin-top: 6%;
+}

@@ -1,0 +1,120 @@
+.contenedor{
+    background: #FFFFFF;
+    box-shadow: 4px 4px 14px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    margin-top: 0px;
+    width: 100%;
+    margin-bottom: 25px;
+    padding: 20px;
+    
+}
+.contenedor_btns{
+    padding-top: 20px;
+    text-align: center;
+    margin: 10px;   
+}
+.text_title{
+    width: 100%;
+    height: 0px;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 50px;
+    text-align: center;
+    margin-top: 20px;
+    color: #B31D1D;
+}
+
+.icon{
+   padding: 15px;
+   color: black;
+   width: 70px;
+   text-align: right;
+}
+.titulo{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 900;
+    font-size: calc(1.1em + 1vw);
+    line-height: 68px;
+    text-align: center;
+
+
+}
+.subtitulo{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 900;
+    font-size: calc(0.7em + 0.5vw);
+    line-height: 55px;
+    text-align: center;
+    font-feature-settings: 'case' on;
+    padding-bottom: 40px;
+}
+.contenedor{
+    background: #FFFFFF;
+    box-shadow: 4px 4px 14px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    margin-top: 0px;
+    width: 100%;
+    margin-bottom: 25px;
+    
+    margin-top: 0px;
+    width: 100%;
+    margin-bottom: 25px;
+    height: auto;
+    box-shadow: 4px 4px 14px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;    
+    padding: 20px;
+    position: relative;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 33px;
+  
+}
+.desc {
+    color: black;
+    font-size: 22px;
+    font-weight: bolder;
+}
+.label{
+    display: block;
+}
+.input{
+    display: block;
+    ;
+}
+.logo{
+    width: 145px;
+    height: 187px;
+    left: 931px;
+    top: 262px;
+    display: inline-block;
+    padding: 10px;
+    vertical-align: middle;
+    text-align: center;
+
+}
+.label1{
+    display: inline-block;
+}
+.inputR{
+    background-color: darkgray;
+    display: inline-block;
+    border-radius: 8px;
+    padding: 2px;
+    
+}
+.rec{
+    float: right;
+}
+.inputObser{
+    display: inline-block;
+
+}
+.botones{
+    text-align: center; 
+    float: center;
+    margin: 10px;
+ }

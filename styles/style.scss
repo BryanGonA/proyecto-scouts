@@ -1,0 +1,16 @@
+$main-color: orange;
+$header-color: white;
+$burger-color: black;
+$title-color: black;
+
+@import './layout/hamburgers.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;800;900&display=swap%27%27');
+@import './inicio/animacion.css';
+@import './layout/footer';
+@import './inicio/inicio.scss';
+
+body {
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 600;
+}

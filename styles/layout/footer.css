@@ -1,0 +1,150 @@
+.footer_margin {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+
+.footer {
+    bottom: 0px;
+    width: 100%;
+}
+
+.whatsapp img {
+    position: fixed;
+    z-index: 80;
+    bottom: 130px;
+    right: 5px;
+    height: 10%;
+}
+
+.subir img {
+    position: fixed;
+    z-index: 80;
+    bottom: 235px;
+    right: 5px;
+    height: 10%;
+}
+
+.logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height:1%; */
+    /* align:center; */
+    /* display: inline; */
+    background-color: #B31D1D;
+    padding: 0px;
+}
+
+.logos img {
+    padding: 1%;
+    width: 50px;
+    max-width: 50px;
+    background-color: #B31D1D;
+}
+
+
+.terminos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #B31D1D;
+    padding: 0px;
+}
+
+.terminos a {
+    font-weight: 800;
+    font-size: 24px;
+    color: white;
+}
+
+.condiciones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #B31D1D;
+    padding: 0px;
+}
+
+.condiciones a {
+    font-weight: 800;
+    font-size: 24px;
+    color: white;
+}
+
+.redes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #B31D1D;
+    padding: 0px;
+}
+
+.redes img {
+    width: 40px;
+    max-width: 40px;
+    padding: 5px;
+    background-color: #B31D1D;
+}
+
+.texto_copy {
+    font-weight: 800;
+    font-size: 24px;
+    text-align: center;
+    padding: 0px;
+}
+
+@media (max-width:720px) {
+
+    .texto_copy {
+        font-size: 18px;
+    }
+
+    .terminos a {
+        font-size: 18px;
+    }
+
+    .condiciones a {
+        font-size: 18px;
+    }
+
+    .whatsapp img {
+        right: 5px;
+        bottom: 140px;
+        height: 40px;
+    }
+
+    .subir img {
+        right: 5px;
+        bottom: 185px;
+        height: 40px;
+    }
+}
+
+@media (max-width:420px) {
+
+    .texto_copy {
+        font-size: 10px;
+    }
+
+    .terminos a {
+        font-size: 14px;
+    }
+
+    .condiciones a {
+        font-size: 14px;
+    }
+
+    .whatsapp img {
+        right: 5px;
+        bottom: 170px;
+        height: 30px;
+    }
+
+    .subir img {
+        right: 5px;
+        bottom: 210px;
+        height: 30px;
+    }
+}

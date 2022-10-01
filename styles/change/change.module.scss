@@ -1,0 +1,88 @@
+.title{       
+    font-size: 300%; 
+    text-align: center;     
+    color:#B31D1D;   
+    font-weight: 900; 
+}
+
+.pass{
+
+    // background-color: rgba(228, 149, 149, .5);
+    color: #000000;
+    font-weight: 800;
+    font-size: 24px;
+    border-radius: 7px;
+  
+}
+.container{
+    text-align: center;
+    box-sizing: border-box;
+    width: 50%;
+    border: solid #D6D3D3 2px;
+    padding: 1%;
+    border-radius: 7px;
+    margin-top: 3%;
+    position: relative;
+    left:25%;
+    margin-block-end: 5%;
+    
+}
+
+.containerp{
+    margin-top: 10%;
+    
+}
+@media (max-width: 800px) {
+        .containerp{
+            margin-top: 17%;   
+        }
+        .container{  
+            width: 80%;
+            left: 10%;
+        }
+        .pass{
+            font-size: 20px;
+        }
+  }
+@media (max-width: 400px) {
+    .containerp{
+        margin-top: 30%;
+     } 
+    .container{    
+        width: 95%;
+        left: 2.5%;
+    }
+    .pass{
+        font-size: 16px;
+    }
+    .button{
+        button{
+            font-size: 16px !important;
+        }
+    }
+}
+.button{
+    margin-top: 5%;
+    border-radius: 10px;
+
+    button{
+        background: rgba(179, 29, 29, 0.95);
+        font-weight: 800;
+        font-size: 24px ;
+        border-radius: 10px;
+    }
+}
+
+
+.eyes{
+
+width: 100%;
+background-color: #ECAEAE;
+border-radius: 7px;
+
+}
+
+.alert{
+    width: 70%;
+    left: 17%;
+}

@@ -1,0 +1,408 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: rgb(78, 0, 0);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.topmargin-xs {
+  margin-top: 15px;
+}
+.topmargin-sm {
+  margin-top: 30px;
+}
+.topmargin-lg {
+  margin-top: 80px;
+}
+
+section {
+  padding: 20px 0;
+}
+
+.animacion_hide {
+  display: none;
+}
+
+.animacion_fondo {
+  background-color: cornsilk !important;
+}
+
+.animacion_fondo2 {
+  background-color: rgba(255, 248, 220, 0.5) !important;
+  min-height: 750px;
+  height: 100%;
+}
+.animacion_fondo3 {
+  background-color: rgb(141, 0, 0) !important;
+  border: 5px solid rgb(141, 0, 0);
+  border-radius: 0px 0px 500px 100px;
+}
+
+#Principal {
+  position: fixed;
+  background-size: cover;
+  padding-top: 0px;
+  min-height: 750px;
+  color: #ffffff;
+  width: 100%;
+  overflow-y: hidden;
+}
+
+.Principal2 {
+  background-size: cover;
+  padding-top: 10px;
+  min-height: 90px;
+  color: #ffffff;
+}
+.secpad {
+  padding: 374px;
+}
+
+.secpad2 {
+  padding: 20px;
+}
+.animacion_rectangle {
+  background-color: #b81414;
+  position: absolute;
+  width: 60%;
+  height: 69px;
+  left: 18%;
+  top: 230px;
+  border: 2.5px solid white;
+  box-sizing: border-box;
+  border-radius: 50px;
+  color: white;
+  font-family: Nunito;
+  text-align: center;
+  font-weight: 900;
+  font-size: 250%;
+  font-style: normal;
+  line-height: 65px;
+  margin-top: 0px;
+  z-index: 10px;
+}
+.animacion_ola {
+  width: 100%;
+  height: 700px;
+  overflow: hidden;
+  position: relative;
+  left: 0;
+  top: 0;
+}
+.animacion_ola2 {
+  height: 100%;
+  width: 100%;
+}
+.animacion_ola3 {
+  stroke: none;
+  fill: #ce1616;
+}
+.animacion_olas {
+  width: 100%;
+  height: 720px;
+  overflow: hidden;
+  position: absolute;
+  margin-top: -700px;
+  margin-left: 0px;
+}
+.animacion_olas2 {
+  height: 100%;
+  width: 100%;
+}
+.animacion_olas3 {
+  stroke: none;
+  fill: #a002029d;
+}
+
+.animacion_text {
+  color: white;
+  border: none;
+  position: relative;
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 68px;
+  font-size: 50px;
+  top: 90px;
+}
+
+.animacion_text2 {
+  color: black;
+  border: none;
+  position: absolute;
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 55px;
+  font-size: 40px;
+  top: 25%;
+  text-align: center;
+}
+.animacion_foto_logo {
+  position: absolute;
+  top: 35%;
+  left: 10%;
+  display: flex;
+  height: 20%;
+}
+
+.animacion_foto_logo img {
+  padding: 2%;
+  width: 200px;
+  height: 200px;
+}
+@media (min-width: 821px) and (max-width: 1000px) {
+  .animacion_foto_logo {
+    left: 2.5%;
+  }
+  .animacion_foto_logo img {
+    padding: 2%;
+    width: 150px;
+    height: 150px;
+  }
+  .animacion_rectangle {
+    left: 15%;
+  }
+  .animacion_text {
+    font-weight: 900;
+    line-height: 68px;
+    font-size: 35px;
+    top: 90px;
+  }
+  .animacion_text2 {
+    font-weight: 900;
+    line-height: 55px;
+    font-size: 25px;
+    top: 25%;
+  }
+
+}
+@media (min-width: 721px) and (max-width: 820px) {
+  .animacion_foto_logo img {
+    padding: 2%;
+    width: 150px;
+    height: 150px;
+  }
+  .animacion_text {
+    font-weight: 900;
+    line-height: 68px;
+    font-size: 40px;
+    top: 90px;
+  }
+  .animacion_text2 {
+    font-weight: 900;
+    line-height: 55px;
+    font-size: 30px;
+    top: 25%;
+  }
+  .animacion_rectangle {
+    width: 50%;
+    height: 40px;
+    left: 20%;
+    top: 150%;
+    text-align: center;
+    line-height: 30px;
+    font-weight: 400;
+    font-size: 150%;
+  }
+  .animacion_foto_logo {
+    left: 2.5%;
+  }
+
+}
+
+.animacion_fondo_inicio {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  z-index: 110;
+}
+
+.animacion_animation {
+  animation-delay: 2s;
+  transform: translateY(-1000px);
+}
+
+.animacion_prueba2 {
+  width: 100%;
+  height: 610px;
+  transition-property: height;
+  transition-duration: 0.5s, 1s, 1s;
+  transition-timing-function: ease-out;
+  transition-delay: 0s, 0.5s, 1.5s;
+}
+.animacion_prueba3 {
+  width: 100%;
+  height: 0px;
+  transition-property: height;
+  transition-duration: 0.5s, 0.5s, 0.5s;
+  transition-timing-function: linear, linear;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s, 0.5s, 0.5s;
+}
+.scroll {
+  overflow: hidden;
+}
+.animacion_fondo_texto {
+  height: 100%;
+  left: 5%;
+  position: absolute;
+}
+.animacion_fondo_texto2 {
+  height: 100%;
+  left: 20%;
+  position: absolute;
+}
+
+@media (min-width: 300px) and (max-width: 720px) {
+  .animacion_text {
+    left: 5%;
+    font-size: 120%;
+    top: 5%;
+  }
+  .animacion_text2 {
+    top: 15%;
+    font-size: 100%;
+    left: 25%;
+  }
+  .animacion_foto_logo {
+    top: 25%;
+    left: 0%;
+    height: 10%;
+  }
+
+  .animacion_foto_logo img {
+    width: 25%;
+    height: 120px;
+  }
+  .animacion_rectangle {
+    width: 50%;
+    height: 40px;
+    left: 5%;
+    top: 200%;
+    text-align: center;
+    line-height: 30px;
+    font-weight: 400;
+    font-size: 150%;
+  }
+
+  .animacion_ola svg {
+    height: 70%;
+  }
+  .animacion_olas svg {
+    height: 70%;
+  }
+  @media (min-width: 300px) and (max-width: 410px) {
+    .animacion_text {
+      left: 5%;
+      font-size: 100%;
+      top: 5%;
+    }
+
+    .animacion_rectanle {
+      width: 10%;
+      height: 5%;
+      text-align: center;
+      line-height: 30px;
+      font-weight: 200;
+      font-size: 10px;
+    }
+  }
+
+  /* @media (max-width:420px){
+  .text{    
+ left: 20px;
+ font-size: 20px;
+ top: 40px;
+}
+.text2{    
+  top: 90px;
+  font-size: 15px;
+  left: 100px;
+ }
+ .foto_logo{
+
+  top: 120px;
+  left: 10px;
+  height: 5%;
+ }
+
+ .foto_logo img {
+
+  width: 90px;
+  height: 90px;
+
+}
+.rectangle {
+
+  width: 40%;
+  height: 30px;
+  left: 60px;
+  top: 100px;
+  text-align: center;
+  line-height: 25px;
+  font-weight: 400;
+  font-size: 100%;
+ 
+}
+
+.ola svg{
+  height: 50%;
+}
+.olas svg{
+height: 50%;
+}
+
+  }
+} */
+}
+
+.animacion_logos {
+  width: 100%;
+  height: 75vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.animacion_logos_portada {
+  position: relative;
+  top: 35%;
+  left: 10px;
+  height: 5%;
+}

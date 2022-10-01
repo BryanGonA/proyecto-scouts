@@ -1,0 +1,89 @@
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: $title-color;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 33px;
+
+    padding: 7px 13px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+}
+
+@media (min-width: 721px) {
+
+    /* Change the background color of the dropdown button when the dropdown content is shown */
+    .dropdown:hover .navbtn {
+        background: $main-color;
+    }
+
+    /* Change color of dropdown links on hover */
+    .dropdown-content a:hover {
+        background: none !important;
+        text-decoration: underline !important;
+    }
+
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    .dropdown {
+        float: initial;
+    }
+    
+    /* Dropdown Content (Hidden by Default) */
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        min-width: 160px;
+        left: 50%;
+        z-index: $header-index;
+        background: rgba(179, 29, 29, 0.8);
+        border: 1px solid #FFFCFC;
+        box-sizing: border-box;
+        border-radius: 0px 40px 40px 40px;
+    }
+}
+
+@media (max-width: 720px) {
+    .dropdown-content a {
+        color: black;
+    }
+    .collapsible {
+        color: white;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+      }
+      
+      .active_collapse, .collapsible:hover {
+        color: $main-color !important;
+      }
+
+      .active_sub {
+        color: $main-color !important;
+      }
+      
+      .collapsible:after {
+        content: '\002B';
+        color: black;
+        font-weight: bold;
+        position: absolute;
+      }
+      
+      .active_collapse:after {
+        content: "\2212";
+      }
+      
+      .content {
+        padding: 0 18px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+      }
+}
