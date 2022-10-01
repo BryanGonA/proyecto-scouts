@@ -16,15 +16,39 @@ export default function FormPhoto({values, setValues}: RegisterFormProps) {
                 photo.current.files[0].name = '';
                 return
             }
-            var file = photo.current.files[0];
-            var reader = new FileReader();
-            reader.onload = function (e) {
-                image.current.src = e.target.result
-            }
-            reader.readAsDataURL(file);
-            setValues({...values, photo: file})
+            //implementacion de el script para el redimencionado de las imagenes ------------------------------------------------------------------------------------------------
+
+                     
+                var imageFile = photo.current.files[0];
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                  var img = document.createElement("img");
+                  img.onload = function (event) {
+                    // Crear dinámicamente un elemento del lienzo
+                    var canvas = document.createElement("canvas");
+
+                    //var canvas = document.getElementById("canvas");
+                    var ctx = canvas.getContext("2d");
+
+                    // Redimensionamiento real
+                    imageFile = ctx.drawImage(img, 0, 0, 300, 300);
+
+                    // Mostrar la imagen redimensionada en el elemento de vista previa.
+                    //var dataurl = canvas.toDataURL(imageFile.type);
+                    //document.getElementById("preview").src = dataurl;
+                    
+                    //image.current.src = e.target.result;
+                };
+                image.current.src = e.target.result;
+                
+              }
+              reader.readAsDataURL(imageFile);
+              setValues({...values, photo: imageFile})
+            
+            // Fin del Script para el redimencionado de las imagenes. --------------------------------------------------------------------------------------------------------------
         }
     };
+    
 
     return (
         <>
