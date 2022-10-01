@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from "react";
-import Gallery from "react-photo-gallery";
-import Carousel, { Modal, ModalGateway } from "react-images";
+import Gallery from "react-image-gallery";
+import Carousel, { Modal, ModalGateway } from "react-image-gallery";
 import styles from '~/styles/ramas/RamaContent.module.scss'
 
 export default function RamaGallery({photos} :  any) {
