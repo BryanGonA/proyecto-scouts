@@ -30,6 +30,7 @@ export default function JefeGrupoCartera() {
                 downloadCSV()
                 router.push('/dashboard')
             }
+            
         })
     }, [])
     return (
