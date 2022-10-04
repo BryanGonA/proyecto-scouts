@@ -63,7 +63,19 @@ export default function JefeGrupoCartera() {
                 'Authorization': `Bearer ${localStorage.getItem('token')}`
             }
         })
-            .then(res => res.json())
+            .then(res => {
+                return res.json().then(data => {
+                    if (res.ok) {
+                        return Promise.resolve(data)
+
+                    }
+                    else {
+                        return Promise.reject(data)
+                    }
+
+            })
+        })
+
             .then(data => {
                 let rows = []
                 data.forEach((element: any) => {
