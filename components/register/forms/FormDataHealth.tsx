@@ -1,6 +1,6 @@
 import styles from '~/styles/register/forms/ParentsData.module.scss'
 import { useEffect, useRef, useState } from "react";
-import MultiSelect from "react-multi-select-component";
+import {MultiSelect} from "react-multi-select-component";
 import { RegisterFormProps } from '../RegisterForm';
 import {Intervention, Disease} from '../RegisterForm'
 

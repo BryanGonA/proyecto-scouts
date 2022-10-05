@@ -1,9 +1,11 @@
 {
-  "name": "frontend",
-  "version": "1.1.0",
-  "author": "Proyecto Informatico UAO 2020-3",
-  "description": "Proyecto FrontEnd para el Grupo Scouts Centinelas 113 de Cali, generado mediante la asignatura Proyecto Informático UAO 2020-3",
-  "private": true,
+  "name": "proyecto-scouts",
+  "version": "1.0.0",
+  "description": "Cada módulo se trabajará en ramas (**branch**) en donde se publicará el trabajo desarrollado por su responsable:",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -11,40 +13,34 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CookLoco/proyecto-informatico-scouts.git"
+    "url": "git+https://github.com/BryanGonA/proyecto-scouts.git"
   },
+  "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/CookLoco/proyecto-informatico-scouts/issues"
+    "url": "https://github.com/BryanGonA/proyecto-scouts/issues"
   },
-  "homepage": "https://github.com/CookLoco/proyecto-informatico-scouts#readme",
-  "keywords": [
-    "scouts",
-    "proyecto",
-    "nextjs",
-    "nestjs",
-    "react",
-    "node"
-  ],
+  "homepage": "https://github.com/BryanGonA/proyecto-scouts#readme",
   "dependencies": {
-    "bootstrap": "^4.5.3",
-    "mdbreact": "^4.27.0",
-    "next": "^10.0.1",
-    "react": "16.13.1",
-    "react-bootstrap": "^1.4.0",
-    "react-cookie": "^4.0.3",
-    "react-dom": "16.13.1",
-    "react-images": "^1.1.7",
-    "react-multi-select-component": "^3.0.4",
-    "react-photo-gallery": "^8.0.0",
-    "react-select": "^3.1.0",
-    "sass": "^1.27.0",
-    "sweetalert2": "^10.5.1",
-    "sweetalert2-react-content": "^3.2.1",
-    "swr": "^0.3.8"
+    "audit": "^0.0.6",
+    "fix": "^0.0.6",
+    "mdbreact": "^5.2.0",
+    "next": "^12.3.0",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.5.0",
+    "react-cookie": "^4.1.1",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.4.0",
+    "react-image-gallery": "^1.2.9",
+    "react-multi-select-component": "^4.3.3",
+    "react-select": "^5.4.0",
+    "sass": "^1.54.9",
+    "sweetalert2": "^11.4.32",
+    "sweetalert2-react-content": "^5.0.3",
+    "swr": "^1.3.0"
   },
   "devDependencies": {
-    "@types/node": "^14.11.8",
-    "typescript": "^4.0.3"
+    "@types/node": "^18.7.17",
+    "typescript": "^4.8.3"
   }
 }
