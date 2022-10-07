@@ -25,10 +25,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/dashboard/jefe-grupo/cartera": [
+    "/dashboard/jefe-grupo/personal/editar/[idPersonal]": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/dashboard/jefe-grupo/cartera.js"
+      "static/chunks/pages/dashboard/jefe-grupo/personal/editar/[idPersonal].js"
     ]
   },
   "ampFirstPages": []

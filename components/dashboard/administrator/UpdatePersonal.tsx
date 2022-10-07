@@ -105,7 +105,7 @@ export default function ActualizarPersonal({ idPersonal, edit }: any) {
         }
     }, [])
 
-    const obtenerid = (userid) => {
+    const obtenerid = (userid: any) => {
         fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/users/${userid}`, {
             method: 'GET',
             headers: {
@@ -113,14 +113,13 @@ export default function ActualizarPersonal({ idPersonal, edit }: any) {
                 'Authorization': "Bearer " + localStorage.getItem("auth_token"),
                 'Access-Control-Allow-Origin': `${process.env.NEXT_PUBLIC_URL}`
             },
-        }).then(res => {
-            return res.json().then(data => {
-                if (res.ok) {
-                    return Promise.resolve(data)
-                } else {
-                    return Promise.reject(data)
-                }
-            })
+        }).then(async res => {
+            const data = await res.json();
+            if (res.ok) {
+                return Promise.resolve(data);
+            } else {
+                return Promise.reject(data);
+            }
         }).then(data => {
 
             setDatos(data.data)
@@ -162,7 +161,8 @@ export default function ActualizarPersonal({ idPersonal, edit }: any) {
 
     }
 
-    const actualizarid = (account, userid) => {
+    //const actualizarid = (account, userid) => {
+    const actualizarid = (account: { name: any; lastName: any; email: any; documentType: string; document: any; birthDate: Date; homeAddress: any; attentionSite: any; personalDetails: { phone: any; level: any; charge: any; bloodType: any; rh: any; eps: any; }; branches: { nameBranch: any; }; }, userid: any) => {
         fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/users/${userid}`, {
             mode: 'cors',
             method: 'PUT',
@@ -173,14 +173,13 @@ export default function ActualizarPersonal({ idPersonal, edit }: any) {
                 'Access-Control-Allow-Origin': `${process.env.NEXT_PUBLIC_URL}`
             },
             body: JSON.stringify(account)
-        }).then(res => {
-            return res.json().then(data => {
-                if (res.ok) {
-                    return Promise.resolve(account)
-                } else {
-                    return Promise.reject(data)
-                }
-            })
+        }).then(async res => {
+            const data = await res.json();
+            if (res.ok) {
+                return Promise.resolve(data);
+            } else {
+                return Promise.reject(data);
+            }
 
         }).then(data => {
             MySwal.fire({

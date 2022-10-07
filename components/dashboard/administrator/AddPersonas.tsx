@@ -17,13 +17,36 @@ export default function AgregarPersonal() {
                 photo.current.files[0].name = '';
                 return
             }
-            var file = photo.current.files[0];
+            //implementacion de el script para el redimencionado de las imagenes ------------------------------------------------------------------------------------------------
+
+                     
+            var imageFile = photo.current.files[0];
             var reader = new FileReader();
             reader.onload = function (e) {
-                image.current.src = e.target.result
-            }
-            reader.readAsDataURL(file);
-            setValues({ ...values, photo: file })
+              var img = document.createElement("img");
+              img.onload = function (event) {
+                // Crear dinámicamente un elemento del lienzo
+                var canvas = document.createElement("canvas");
+
+                //var canvas = document.getElementById("canvas");
+                var ctx = canvas.getContext("2d");
+
+                // Redimensionamiento real
+                imageFile = ctx.drawImage(img, 0, 0, 300, 300);
+
+                // Mostrar la imagen redimensionada en el elemento de vista previa.
+                //var dataurl = canvas.toDataURL(imageFile.type);
+                //document.getElementById("preview").src = dataurl;
+                
+                //image.current.src = e.target.result;
+            };
+            image.current.src = e.target.result;
+            
+          }
+          reader.readAsDataURL(imageFile);
+          setValues({...values, photo: imageFile})
+        
+        // Fin del Script para el redimencionado de las imagenes. --------------------------------------------------------------------------------------------------------------
         }
     };
 
@@ -104,49 +127,51 @@ export default function AgregarPersonal() {
 
         }
         fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/users/personal`, {
-            mode: 'cors',
-            method: 'POST',
-            headers: {
-                'Referrer-Policy': 'origin-when-cross-origin',
-                'Content-Type': 'application/json',
-                'Authorization': "Bearer " + localStorage.getItem("auth_token"),
-                'Access-Control-Allow-Origin': `${process.env.NEXT_PUBLIC_URL}`
-            }, body: JSON.stringify(account)
-        }).then(res => {
-            return res.json().then(data => {
-                if (res.ok) {
-                    return Promise.resolve(data)
-                } else {
-                    return Promise.reject(data)
-                }
-            })
-        }).then(data => {
-            let userId = data.data.id
-            let photo = new FormData()
-            photo.append("file", values.photo)
-            photo.append("id", userId)
-            
+          mode: "cors",
+          method: "POST",
+          headers: {
+            "Referrer-Policy": "origin-when-cross-origin",
+            "Content-Type": "application/json",
+            Authorization: "Bearer " + localStorage.getItem("auth_token"),
+            "Access-Control-Allow-Origin": `${process.env.NEXT_PUBLIC_URL}`,
+          },
+          body: JSON.stringify(account),
+        })
+          .then(async (res) => {
+            const data = await res.json();
+            if (res.ok) {
+              return Promise.resolve(data);
+            } else {
+              return Promise.reject(data);
+            }
+          })
+          .then((data) => {
+            let userId = data.data.id;
+            let photo = new FormData();
+            photo.append("file", values.photo);
+            photo.append("id", userId);
+
             MySwal.fire({
-                icon: 'success',
-                title: 'Datos agregados!',
-                text: 'Los datos fueron agregados correctamente',
-                confirmButtonColor: '#31B411',
-                confirmButtonText: "Continuar",
+              icon: "success",
+              title: "Datos agregados!",
+              text: "Los datos fueron agregados correctamente",
+              confirmButtonColor: "#31B411",
+              confirmButtonText: "Continuar",
             }).then(function (isConfirm) {
-                if (isConfirm) {
-                    window.location.href = "/dashboard/jefe-grupo/personal";
-                }
-              })
+              if (isConfirm) {
+                window.location.href = "/dashboard/jefe-grupo/personal";
+              }
+            });
             fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/upload`, {
-                mode: 'cors',
-                method: 'POST',
-                body: photo,
-                headers: {
-                    'Referrer-Policy': 'origin-when-cross-origin',
-                    'Access-Control-Allow-Origin': `${process.env.NEXT_PUBLIC_URL}`
-                }
-            })
-        })    
+              mode: "cors",
+              method: "POST",
+              body: photo,
+              headers: {
+                "Referrer-Policy": "origin-when-cross-origin",
+                "Access-Control-Allow-Origin": `${process.env.NEXT_PUBLIC_URL}`,
+              },
+            });
+          });    
     }
     const [Datos, setDatos] = useState(null)
     const [loading, setLoading] = useState(true)

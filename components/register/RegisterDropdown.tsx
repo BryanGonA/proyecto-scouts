@@ -1,4 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
+import { FormLabel } from 'react-bootstrap'
+import FormCheckInput from 'react-bootstrap/esm/FormCheckInput'
 import styles from '~/styles/register/Register.module.scss'
 
 export interface RegisterDropProps {
@@ -99,13 +101,16 @@ export default function RegisterDropdown({ id, title, active, handleDropClick, d
         } else {
             hide()
         }
-    }, [isActive])
+    }, [isActive]);
 
-    /* useEffect(() => {
+    useEffect(() => {
+        let number = 0;
+        
+        count.current.innerText = number.toString()
         if (count.current) {
             count.current.textContent = "0/" + (countRequiredTag('input')+countRequiredTag('select'))
         }
-    }) */
+    }) 
 
     return (
         <div className="card">

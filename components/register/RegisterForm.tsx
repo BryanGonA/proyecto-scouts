@@ -153,6 +153,7 @@ export default function RegisterForm() {
             }
         }
     }, [user])
+    
 
     const [values, setValues] = useState<Inputs>(defaultValues)
     return (
