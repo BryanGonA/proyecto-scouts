@@ -1,4 +1,8 @@
 export interface User {
+    value: any
+    date: any
+    observation: any
+    amount: any
     id: number,
     name: string,
     lastName: string,
@@ -6,6 +10,7 @@ export interface User {
     documentType: string,
     document: string,
     birthDate: Date,
+    payDate: Date,
     createDate: Date,
     status: boolean,
     roles: {
