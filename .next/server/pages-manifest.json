@@ -2,5 +2,9 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/dashboard/tesorero/agregar/[idUser]": "pages/dashboard/tesorero/agregar/[idUser].js"
+  "/logout": "pages/logout.js",
+  "/login": "pages/login.js",
+  "/dashboard/info": "pages/dashboard/info.js",
+  "/dashboard/tesorero": "pages/dashboard/tesorero.js",
+  "/dashboard": "pages/dashboard.js"
 }
