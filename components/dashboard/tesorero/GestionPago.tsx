@@ -260,7 +260,7 @@ export default function GestionPagos({ id, paymentId }: any) {
                 i_observ.current.value = payment.observation
                 let date = new Date(payment.date)
                 let string = date.toISOString().split('T')[0].split('-')
-                i_payDate.current.value = string[0] + '-' + string[2] + '-' + string[1]
+                i_payDate.current.value = String[0] + '/' + String[1] + '/' + String[2]  //string[0] + '-' + string[2] + '-' + string[1]
                 payment.paymentConcepts.forEach(concept => {
                     let input = getInputValue(concept.name)
                     if (input) {
@@ -295,6 +295,14 @@ export default function GestionPagos({ id, paymentId }: any) {
         values.push({ name: 'CAMPAMENTO', ref: i_camp })
         values.push({ name: 'INSIGNIAS', ref: i_insig })
         values.push({ name: 'OTROS', ref: i_other })
+        values.push({name:'CURS',ref:cant_curs}) //c.Cursos
+        values.push({name:'SHIRT',ref:cant_camiseta}) //c_Camiseta
+        values.push({name:'EXC',ref:cant_exc}) //c_excursion
+        values.push({name:'NOCT',ref:cant_noct}) //c_nocturna
+        values.push({name:'CARD',ref:cant_carnet}) //c_carnet
+        values.push({name:'UNIF',ref:cant_unif}) //c_uniformes
+        values.push({name:'CAMP',ref:cant_actEco}) //c_actEco
+        values.push({name:'INSIG',ref:cant_insig}) //
         setInputValues(values)
     }
 

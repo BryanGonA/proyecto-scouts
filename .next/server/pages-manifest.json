@@ -2,9 +2,7 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/logout": "pages/logout.js",
-  "/login": "pages/login.js",
-  "/dashboard/info": "pages/dashboard/info.js",
   "/dashboard/tesorero": "pages/dashboard/tesorero.js",
-  "/dashboard": "pages/dashboard.js"
+  "/dashboard/tesorero/editar/[userId]/[paymentId]": "pages/dashboard/tesorero/editar/[userId]/[paymentId].js",
+  "/dashboard/tesorero/payments/[idPago]": "pages/dashboard/tesorero/payments/[idPago].js"
 }
