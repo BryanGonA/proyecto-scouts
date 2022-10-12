@@ -2,6 +2,8 @@ import { MDBDataTable } from 'mdbreact';
 import { useEffect, useRef, useState } from "react";
 import withReactContent from 'sweetalert2-react-content'
 import styles from "~/styles/dashboard/administrator/AddPerson.module.scss";
+
+
 export default function ActualizarPersonal({ idPersonal, edit }: any) {
 
     const [values, setValues] = useState(null)
@@ -9,6 +11,7 @@ export default function ActualizarPersonal({ idPersonal, edit }: any) {
 
     const photo = useRef(null);
     const image = useRef(null);
+    //const img = users.get
     const method = () => {
         if (photo.current.files[0]) {
             var filesize = photo.current.files[0].size;
@@ -18,13 +21,37 @@ export default function ActualizarPersonal({ idPersonal, edit }: any) {
                 photo.current.files[0].name = '';
                 return
             }
-            var file = photo.current.files[0];
+            //implementacion de el script para el redimencionado de las imagenes ------------------------------------------------------------------------------------------------
+
+                     
+            var imageFile = photo.current.files[0];
             var reader = new FileReader();
             reader.onload = function (e) {
-                image.current.src = e.target.result
-            }
-            reader.readAsDataURL(file);
-            setValues({ ...values, photo: file })
+              var img = document.createElement("img");
+              img.onload = function (event) {
+                // Crear dinámicamente un elemento del lienzo
+                var canvas = document.createElement("canvas");
+
+                //var canvas = document.getElementById("canvas");
+                var ctx = canvas.getContext("2d");
+
+                // Redimensionamiento real
+                imageFile = ctx.drawImage(img, 0, 0, 300, 300);
+
+                // Mostrar la imagen redimensionada en el elemento de vista previa.
+                var dataurl = canvas.toDataURL(imageFile.type);
+                //document.getElementById("preview").src = dataurl;
+                
+                image.current.src = e.target.result;
+            };
+             image.current.src = e.target.result;
+            
+          }
+          reader.readAsDataURL(imageFile);
+          setValues({...values, photo: imageFile})
+          //setValues({...values, photo: i})
+
+        // Fin del Script para el redimencionado de las imagenes. --------------------------------------------------------------------------------------------------------------
         }
     };
 
@@ -113,7 +140,7 @@ export default function ActualizarPersonal({ idPersonal, edit }: any) {
                 'Authorization': "Bearer " + localStorage.getItem("auth_token"),
                 'Access-Control-Allow-Origin': `${process.env.NEXT_PUBLIC_URL}`
             },
-        }).then(async res => {
+        }).then(async (res) => {
             const data = await res.json();
             if (res.ok) {
                 return Promise.resolve(data);
@@ -123,6 +150,8 @@ export default function ActualizarPersonal({ idPersonal, edit }: any) {
         }).then(data => {
 
             setDatos(data.data)
+           
+            setPersonal(data.data.personalData)
             setPersonal(data.data.personalDetails)
             setRama(data.data.branches)
             setLoading(false)
@@ -132,8 +161,7 @@ export default function ActualizarPersonal({ idPersonal, edit }: any) {
         })
     }
 
-
-    function actualizar() {
+       const actualizar = () =>{
         let account = {
             name: btnName.current.value,
             lastName: btnApellido.current.value,
@@ -156,47 +184,120 @@ export default function ActualizarPersonal({ idPersonal, edit }: any) {
                 nameBranch: btnRama.current.value,
             }
         }
-
+        
+        
         actualizarid(account, idPersonal);
 
     }
 
-    //const actualizarid = (account, userid) => {
-    const actualizarid = (account: { name: any; lastName: any; email: any; documentType: string; document: any; birthDate: Date; homeAddress: any; attentionSite: any; personalDetails: { phone: any; level: any; charge: any; bloodType: any; rh: any; eps: any; }; branches: { nameBranch: any; }; }, userid: any) => {
+    /*const actualizarid = (account, userid) => {
+    //const actualizarid = (account: { name: any; lastName: any; email: any; documentType: string; document: any; birthDate: Date; homeAddress: any; attentionSite: any; personalDetails: { phone: any; level: any; charge: any; bloodType: any; rh: any; eps: any; }; branches: { nameBranch: any; }; }, userId: any) => {
+        //fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/users/${userid}`, {
+                    
         fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/users/${userid}`, {
-            mode: 'cors',
-            method: 'PUT',
-            headers: {
-                'Referrer-Policy': 'origin-when-cross-origin',
-                'Content-Type': 'application/json',
-                'Authorization': "Bearer " + localStorage.getItem("auth_token"),
-                'Access-Control-Allow-Origin': `${process.env.NEXT_PUBLIC_URL}`
-            },
-            body: JSON.stringify(account)
-        }).then(async res => {
+          method: "PUT",
+          headers: {
+            'Content-Type': "application/json",
+            'Authorization': "Bearer " + localStorage.getItem("auth_token"),
+            //'Access-Control-Allow-Origin': `${process.env.NEXT_PUBLIC_URL}`,
+          },
+          body: JSON.stringify(account),
+        })
+          .then(async (res) => {
+            const data = await res.json();
+            if (res.ok) {
+              return Promise.resolve(data);
+            } else {
+              return Promise.reject(data);
+            }
+          })
+          .then(data => {
+            
+
+            MySwal.fire({
+              icon: "success",
+              title: "Datos Actializados!",
+              text: "Los datos fueron actualizados correctamente",
+              confirmButtonColor: "#31B411",
+              confirmButtonText: "Continuar",
+            }).then(function (isConfirm) {
+              if (isConfirm) {
+                window.location.href = "/dashboard/jefe-grupo/personal";
+              }
+            });
+            }).catch((error) => {
+            console.log(error);
+            MySwal.fire({
+              icon: "error",
+              title: "Oops...",
+              text: "¡Algo salio mal intentando actualizar los datos!     Por favor intente de nuevo",
+              confirmButtonColor: "#31B411",
+              confirmButtonText: "Continuar",
+            });
+          });
+    }*/
+
+    const actualizarid = (account: { name: any; lastName: any; email: any; documentType: string; document: any; birthDate: Date; homeAddress: any; attentionSite: any; personalDetails: { phone: any; level: any; charge: any; bloodType: any; rh: any; eps: any; }; branches: { nameBranch: any; }; }, userid: string) => {
+
+         const actualizar2 = async () => {
+    
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/users/personal/${userid}`, {
+                method: "PUT",
+                headers: {
+                    'Content-Type': "application/json",
+                    'Authorization': "Bearer " + localStorage.getItem("auth_token"),
+                    'Access-Control-Allow-Origin': `${process.env.NEXT_PUBLIC_URL}`,
+                },
+                body: JSON.stringify(account),
+            })
             const data = await res.json();
             if (res.ok) {
                 return Promise.resolve(data);
             } else {
                 return Promise.reject(data);
             }
+        }
+        actualizar2().then(data => {
+            
+        }).catch((error) => {
+            console.log(error);
+        });
 
-        }).then(data => {
+        const actualizar = async () => {
+            const res = await fetch(process.env.NEXT_PUBLIC_API_URL + "/api/users/" + userid, {
+                mode: 'cors',
+                method: 'PUT',
+                headers: {
+                    'Content-Type': "application/json",
+                    'Authorization': "Bearer " + localStorage.getItem("auth_token"),
+                    'Access-Control-Allow-Origin': `${process.env.NEXT_PUBLIC_URL}`,
+
+                },
+                body: JSON.stringify(account),
+            })
+            const data = await res.json();
+            if (res.ok) {
+                return Promise.resolve(data);
+            } else {
+                return Promise.reject(data);
+            }
+        }
+        actualizar().then(data => {
             MySwal.fire({
-                icon: 'success',
-                title: 'Datos actualizados!',
-                text: 'Los datos fueron actualizados correctamente',
-                confirmButtonColor: '#31B411',
+                icon: "success",
+                title: "Datos Actializados!",
+                text: "Los datos fueron actualizados correctamente",
+                confirmButtonColor: "#31B411",
                 confirmButtonText: "Continuar",
-
             }).then(function (isConfirm) {
                 if (isConfirm) {
-                    window.location.href = "/dashboard/jefe-grupo/personal/";
+                    window.location.href = "/dashboard/jefe-grupo/personal";
                 }
-            })
-        }).catch(error => {
-
-        })
+            });
+        }).catch((error) => {
+            console.log(error);
+                  
+        });
     }
 
 

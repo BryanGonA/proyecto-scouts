@@ -54,7 +54,7 @@ export default function ActionBranch({id, value} : any) {
             method: 'GET',
             headers: {
               'Referrer-Policy': 'origin-when-cross-origin',
-              'Authorization': "Bearer " + localStorage.getItem("auth_token"),
+              Authorization: "Bearer " + localStorage.getItem("auth_token"),
               'Content-Type': 'application/json',
               'Access-Control-Allow-Origin': `${process.env.NEXT_PUBLIC_URL}`
             },
@@ -74,7 +74,10 @@ export default function ActionBranch({id, value} : any) {
             setSelected(default_value)                         
           }).then(()=>{              
               setLoading(false)              
-          })
+          }).catch((error) => {
+            console.log(error)
+          })      
+
 
     }
     
@@ -108,6 +111,8 @@ export default function ActionBranch({id, value} : any) {
                         return Promise.reject(data)
                     }
                     })  
+            }).catch (error => {
+                console.log(error)
             })            
         
     }

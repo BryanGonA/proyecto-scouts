@@ -1,4 +1,5 @@
 export interface User {
+    concept: string,
     id: number,
     name: string,
     lastName: string,

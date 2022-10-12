@@ -135,6 +135,8 @@ export default function PersonalAdministrator() {
                                   "/dashboard/jefe-grupo/personal/";
                               }
                             });
+                          }).catch((error) => {
+                            console.log(error);
                           });
                       }}
                     />

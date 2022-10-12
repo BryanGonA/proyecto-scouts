@@ -6,6 +6,7 @@ import { User } from '~/lib/commonInterfaces';
 import Link from 'next/link';
 import { downloadCSV } from '~/lib/utils';
 import { useCurrentUser } from '~/hooks/use-current-user';
+import payments from '~/pages/dashboard/payments';
 
 
 export default function Cartera(){
@@ -16,17 +17,18 @@ export default function Cartera(){
     let data_bill = {
         columns: [
           {
-            label: 'N° Documento',
-            field: 'document',
-            sort: 'asc',
-            width: 200
-          },
-          {
             label: 'Nombre',
             field: 'fullName',
             sort: 'asc',
             width: 200
           },
+          {
+            label: 'Concepto',
+            field: 'concept',
+            sort: 'asc',
+            width: 270
+          },
+                   
           {
             label: 'Acciones',
             field: 'actions',
@@ -47,8 +49,12 @@ export default function Cartera(){
      useEffect( ()=>{
        if (!loadingUser) {
         getUsers()
+        
        }
      },[userData])
+
+     
+        
 
      function getUsers(){
       
@@ -71,14 +77,18 @@ export default function Cartera(){
               })
             }).then(data => {
                 let users = data.data
+                
                 users = users.map((user: User) => {
+                  
                     let u = {
                       id: user.id,
-                    document: user.document,
-                    fullName: toTitleCase(user.name + ' ' + user.lastName),
-                    actions: <Link href={`/dashboard/tesorero/payments/${user.id}`}>
-                                <a><img className={styles.icon} src="/img/dashboard/eye.svg" /> Ver pagos</a>
-                            </Link>
+                      document: user.document,
+                      //concept: user.concept,
+                      //concept: conceptos.join(', '),
+                      fullName: toTitleCase(user.name + ' ' + user.lastName),
+                      actions: <Link href={`/dashboard/tesorero/payments/${user.id}`}>
+                                  <a><img className={styles.icon} src="/img/dashboard/eye.svg" /> Ver pagos</a>
+                              </Link>
                     }
                     return u
                 })
@@ -90,6 +100,8 @@ export default function Cartera(){
             }).catch(error => {
             })
      }
+
+     
     
 
     return (

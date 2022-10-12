@@ -69,14 +69,13 @@ export default function  ScoutPayment({idPago}:any){
           'Content-Type': 'application/json',
           'Access-Control-Allow-Origin': `${process.env.NEXT_PUBLIC_URL}`
         },
-      }).then(res => {
-        return res.json().then(data => {
-          if (res.ok) {
-            return Promise.resolve(data)
-          } else {
-            return Promise.reject(data)
-          }
-        })
+      }).then(async res => {
+        const data = await res.json();
+        if (res.ok) {
+          return Promise.resolve(data);
+        } else {
+          return Promise.reject(data);
+        }
       }).then(data => {         
         consultar(data.user.id)
       })
@@ -93,14 +92,13 @@ export default function  ScoutPayment({idPago}:any){
           'Content-Type': 'application/json',
           'Access-Control-Allow-Origin': `${process.env.NEXT_PUBLIC_URL}`
       },           
-    }).then(res => {
-        return res.json().then(data => {
-            if (res.ok) {
-                return Promise.resolve(data)
-            } else {
-                return Promise.reject(data)
-            }
-        })
+    }).then(async res => {
+        const data = await res.json();
+      if (res.ok) {
+        return Promise.resolve(data);
+      } else {
+        return Promise.reject(data);
+      }
     }).then(data => {
       if(data.data){
         let puntero = data.data.payments.map((payment)=>{

@@ -65,7 +65,7 @@ export default function  Inscriptions(){
         method: 'GET',
         headers: {
           'Referrer-Policy': 'origin-when-cross-origin',
-          'Authorization': "Bearer " + localStorage.getItem("auth_token"),
+          Authorization: "Bearer " + localStorage.getItem("auth_token"),
           'Content-Type': 'application/json',
           'Access-Control-Allow-Origin': `${process.env.NEXT_PUBLIC_URL}`
         },

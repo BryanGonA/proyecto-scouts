@@ -88,6 +88,7 @@ export default function GestionPagos({ id, paymentId }: any) {
 
     function total(rec_pagos) {
         let suma = 0
+        //let suma_uniforme = i_uniform.current.value*2 //i_cant_uniforme.current.value
         rec_pagos.paymentConcepts.forEach(concepto => {
             suma += concepto.amount
         })

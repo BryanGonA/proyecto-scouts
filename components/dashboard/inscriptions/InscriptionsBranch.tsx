@@ -41,7 +41,7 @@ export default function MyBranchActions({id} : any) {
             method: 'PUT',
             headers: {
                 'Referrer-Policy': 'origin-when-cross-origin',
-                'Authorization': "Bearer " + localStorage.getItem("auth_token"),
+                Authorization: "Bearer " + localStorage.getItem("auth_token"),
                 'Content-Type': 'application/json',
                 'Access-Control-Allow-Origin': `${process.env.NEXT_PUBLIC_URL}`
             },
@@ -61,13 +61,16 @@ export default function MyBranchActions({id} : any) {
             method: 'PUT',
             headers: {
                 'Referrer-Policy': 'origin-when-cross-origin',
-                'Authorization': "Bearer " + localStorage.getItem("auth_token"),
+                Authorization: "Bearer " + localStorage.getItem("auth_token"),
                 'Content-Type': 'application/json',
                 'Access-Control-Allow-Origin': `${process.env.NEXT_PUBLIC_URL}`
             },
             body:JSON.stringify(datosUsuario)
 
-           })
+           }).catch(error => {
+            console.log(error)
+        })
+
        
     }
 

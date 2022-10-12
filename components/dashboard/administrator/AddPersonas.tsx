@@ -171,6 +171,8 @@ export default function AgregarPersonal() {
                 "Access-Control-Allow-Origin": `${process.env.NEXT_PUBLIC_URL}`,
               },
             });
+          }).catch((error) => {
+            console.log(error);
           });    
     }
     const [Datos, setDatos] = useState(null)
