@@ -1,7 +1,8 @@
 export interface User {
+    join: any
     value: any
     date: any
-    observation: any
+    observation: string,
     amount: any
     id: number,
     name: string,
@@ -13,6 +14,7 @@ export interface User {
     payDate: Date,
     createDate: Date,
     status: boolean,
+    concepts: string,
     roles: {
         id: number,
         name: string

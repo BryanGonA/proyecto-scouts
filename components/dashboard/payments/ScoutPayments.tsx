@@ -70,7 +70,7 @@ export default function  ScoutPayment({idPago}:any){
       })
     }    
   },[])
-
+  
   function consultar(id_usuario){
     fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/users/payment/${id_usuario}`, {
       mode:'cors',
@@ -93,7 +93,7 @@ export default function  ScoutPayment({idPago}:any){
       if(data.data){
         let puntero = data.data.payments.map((payment)=>{
           let conceptos = payment.paymentConcepts.map((concept)=> concept.name)
-          
+
           let datos = {
             receiptNumber: payment.receiptNumber ,
             concept: conceptos.join(', '),

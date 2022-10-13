@@ -6,24 +6,19 @@ import { User } from '~/lib/commonInterfaces';
 import Link from 'next/link';
 import { downloadCSV } from '~/lib/utils';
 import { useCurrentUser } from '~/hooks/use-current-user';
-import { spacing } from 'react-select/dist/declarations/src/theme';
-import { valueContainerCSS } from 'react-select/dist/declarations/src/components/containers';
-import cartera from '~/pages/dashboard/jefe-grupo/cartera';
-import payments from '~/pages/dashboard/payments';
 
-
-export default function ScoutCartera({loadingUser}: any){
+export default function Cartera({loadingUser}: any){
     const data_bill = {
         columns: [
           {
-            label: 'Document',              
-            field: 'Tdocument',
+            label: 'id.cliente',
+            field: 'ID',
             sort: 'asc',
             width: 200
           },
           {
-            label: 'Id Cliente',
-            field: 'document',
+            label: 'Nombre',
+            field: 'fullName',
             sort: 'asc',
             width: 200
           },
@@ -47,7 +42,7 @@ export default function ScoutCartera({loadingUser}: any){
           },
           {
             label: 'Valor T.',
-            field: 'value',
+            field: 'amount',
             sort: 'asc',
             width: 200
           },    
@@ -70,20 +65,51 @@ export default function ScoutCartera({loadingUser}: any){
     const [dataList, setDataList] = useState(data_bill)
     const [loading, setLoading] = useState(true)
     const { user: userData} = useCurrentUser()
-    const router = useRouter()
     const toTitleCase = (str: string) => {
         return str.toLowerCase().split(' ').map((s) => s.charAt(0).toUpperCase() + s.substring(1)).join(' ');
     }
 
-
      useEffect( ()=>{
        if (!loadingUser) {
         getUsers()
+        conceptos()
        }
      },[userData])
 
+     function conceptos(){
+      fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/users/payment/` ,{
+        mode:'cors',
+        method: 'GET',
+        headers: {
+            'Referrer-Policy': 'origin-when-cross-origin',
+            'Authorization': "Bearer " + localStorage.getItem("auth_token"),
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': `${process.env.NEXT_PUBLIC_URL}`
+        }          
+      }).then(async res => {
+          const data = await res.json();
+        if (res.ok) {
+          return Promise.resolve(data);
+        } else {
+          return Promise.reject(data);
+        }
+      }).then(data => {    
+        
+          let puntero = data.data.payments.map((payment: { paymentConcepts: any[]; })=>{
+            let conceptos = payment.paymentConcepts.map((concepts)=> concepts.name)
+            
+            let datos = {
+              concept: conceptos.push,
+            }
+            return datos
+        })
+        data_bill.rows = puntero            
+        setDataList(data_bill)  
+      setLoading(false)
+      })
+    }
+
      function getUsers(){
-      
             fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/users`, {
               mode: 'cors',
               method: 'GET',
@@ -93,7 +119,7 @@ export default function ScoutCartera({loadingUser}: any){
                 'Authorization': "Bearer " + localStorage.getItem("auth_token"),
                 'Access-Control-Allow-Origin': `${process.env.NEXT_PUBLIC_URL}`
               },
-            }).then(res => {
+            }).then(async(res) => {
               return res.json().then(data => {
                 if (res.ok) {
                   return Promise.resolve(data)
@@ -104,11 +130,8 @@ export default function ScoutCartera({loadingUser}: any){
             }).then(data => {
                 let users = data.data
                 users = users.map((user: User) => {
-                    let u = {
-                      id: user.id,
-                    Tdocument: user.documentType,
-                    document: user.document,
-                    
+                  let u = {
+                    ID:user.id,
                     fullName: toTitleCase(user.name + ' ' + user.lastName),
                     actions: <Link href={`/dashboard/tesorero/payments/${user.id}`}>
                                 <a><img className={styles.icon} src="/img/dashboard/eye.svg" /> Ver pagos</a>
