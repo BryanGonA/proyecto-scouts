@@ -190,7 +190,7 @@ export default function ActualizarPersonal({ idPersonal, edit }: any) {
 
     }
 
-    /*const actualizarid = (account, userid) => {
+    const actualizarid = (account, userid) => {
     //const actualizarid = (account: { name: any; lastName: any; email: any; documentType: string; document: any; birthDate: Date; homeAddress: any; attentionSite: any; personalDetails: { phone: any; level: any; charge: any; bloodType: any; rh: any; eps: any; }; branches: { nameBranch: any; }; }, userId: any) => {
         //fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/users/${userid}`, {
                     
@@ -235,35 +235,11 @@ export default function ActualizarPersonal({ idPersonal, edit }: any) {
               confirmButtonText: "Continuar",
             });
           });
-    }*/
+    }
 
-    const actualizarid = (account: { name: any; lastName: any; email: any; documentType: string; document: any; birthDate: Date; homeAddress: any; attentionSite: any; personalDetails: { phone: any; level: any; charge: any; bloodType: any; rh: any; eps: any; }; branches: { nameBranch: any; }; }, userid: string) => {
+    /*const actualizarid = (account: { name: any; lastName: any; email: any; documentType: string; document: any; birthDate: Date; homeAddress: any; attentionSite: any; personalDetails: { phone: any; level: any; charge: any; bloodType: any; rh: any; eps: any; }; branches: { nameBranch: any; }; }, userid: string) => {
 
-         const actualizar2 = async () => {
-    
-            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/users/personal/${userid}`, {
-                method: "PUT",
-                headers: {
-                    'Content-Type': "application/json",
-                    'Authorization': "Bearer " + localStorage.getItem("auth_token"),
-                    'Access-Control-Allow-Origin': `${process.env.NEXT_PUBLIC_URL}`,
-                },
-                body: JSON.stringify(account),
-            })
-            const data = await res.json();
-            if (res.ok) {
-                return Promise.resolve(data);
-            } else {
-                return Promise.reject(data);
-            }
-        }
-        actualizar2().then(data => {
-            
-        }).catch((error) => {
-            console.log(error);
-        });
-
-        const actualizar = async () => {
+         const actualizar = async () => {
             const res = await fetch(process.env.NEXT_PUBLIC_API_URL + "/api/users/" + userid, {
                 mode: 'cors',
                 method: 'PUT',
@@ -298,7 +274,7 @@ export default function ActualizarPersonal({ idPersonal, edit }: any) {
             console.log(error);
                   
         });
-    }
+    }*/
 
 
 
