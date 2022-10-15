@@ -25,10 +25,20 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/registro": [
+    "/dashboard/tesorero": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/registro.js"
+      "static/chunks/pages/dashboard/tesorero.js"
+    ],
+    "/dashboard/tesorero/agregar/[idUser]": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/dashboard/tesorero/agregar/[idUser].js"
+    ],
+    "/login": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/login.js"
     ]
   },
   "ampFirstPages": []

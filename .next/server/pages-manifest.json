@@ -2,5 +2,7 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/registro": "pages/registro.js"
+  "/dashboard/tesorero": "pages/dashboard/tesorero.js",
+  "/dashboard/tesorero/agregar/[idUser]": "pages/dashboard/tesorero/agregar/[idUser].js",
+  "/login": "pages/login.js"
 }

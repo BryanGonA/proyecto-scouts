@@ -302,7 +302,9 @@ export default function FormDataHealth({values, setValues} : RegisterFormProps) 
                     </div>
                     <div className="form-check form-check-inline row col-12 justify-content-center">
                         <input className="form-check-input" type="checkbox" id="autorizar_informacion" value="autorizar_informacion" required/>
-                        <label className="form-check-label" htmlFor="autorizar_informacion">* Autorizo utilizar la información que aqui se encuentra teniendo en cuenta la <a href="#">política de privacidad</a> y <a href="#">términos y condiciones</a></label>
+                        <label className="form-check-label" htmlFor="autorizar_informacion">* Autorizo utilizar la información que aqui se encuentra teniendo en cuenta la 
+                        <a href="documents/POLITICAS.pdf">política de privacidad</a> y 
+                        <a href="documents/TERMINOS_Y_CONDICIONES.pdf">términos y condiciones</a></label>
                     </div>
                 </div>
                 <div className='row mt-4 mb-4 text-center'>
