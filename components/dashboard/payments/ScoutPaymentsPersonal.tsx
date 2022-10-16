@@ -119,7 +119,7 @@ export default function  ScoutPayment({idPago}:any){
                     </Link>
                     <img className={styles.icon_trash} src= "/img/dashboard/trash.svg" onClick={() => eliminar(id_usuario, payment.id, payment.receiptNumber)}/>
                   </>
-               
+              
           }
           return datos
         })

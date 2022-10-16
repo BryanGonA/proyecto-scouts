@@ -44,14 +44,14 @@ export default function Cartera(){
     }
 
 
-     useEffect( ()=>{
-       if (!loadingUser) {
-        getUsers()
-       }
-     },[userData])
+      useEffect( ()=>{
+        if (!loadingUser) {
+          getUsers()
+        }
+      },[userData])
 
-     function getUsers(){
-      
+      function getUsers(){
+        
             fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/users`, {
               mode: 'cors',
               method: 'GET',
@@ -89,7 +89,7 @@ export default function Cartera(){
               
             }).catch(error => {
             })
-     }
+    }
     
 
     return (
@@ -98,7 +98,7 @@ export default function Cartera(){
             <h1 className={`${styles.text_title} p-5`}>¡Pagos Scout Centinelas 113!</h1>
           </div>
           <div className={styles.contenedor}>
-             <div className="row">
+              <div className="row">
                 <div className="col-6"> 
                     <p className={`btn ${styles.csvbutton}`} onClick={downloadCSV} >
                         <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" className="bi bi-file-earmark-arrow-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
