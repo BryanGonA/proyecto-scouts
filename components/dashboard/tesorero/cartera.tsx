@@ -7,12 +7,17 @@ import Link from 'next/link';
 import { downloadCSV } from '~/lib/utils';
 import { useCurrentUser } from '~/hooks/use-current-user';
 
-export default function Cartera({loadingUser}: any){
-    const data_bill = {
+
+export default function Cartera(){
+
+  const { user: userData, isLoading: loadingUser, error: userError } = useCurrentUser()
+  const router = useRouter()
+
+    let data_bill = {
         columns: [
           {
-            label: 'id.cliente',
-            field: 'ID',
+            label: 'N° Documento',
+            field: 'document',
             sort: 'asc',
             width: 200
           },
@@ -23,93 +28,30 @@ export default function Cartera({loadingUser}: any){
             width: 200
           },
           {
-            label: 'Concepto',
-            field: 'concept',
-            sort: 'asc',
-            width: 270
-          },
-          {
-            label: 'Descripción',
-            field: 'description',
-            sort: 'asc',
-            width: 150
-          },
-          {
-            label: 'Tipo de pago',
-            field: 'type',
-            sort: 'asc',
-            width: 200
-          },
-          {
-            label: 'Valor T.',
-            field: 'amount',
-            sort: 'asc',
-            width: 200
-          },    
-          {
-            label: 'Fecha',
-            field: 'date',
-            sort: 'asc',
-            width: 200
-          },
-          {
             label: 'Acciones',
             field: 'actions',
             sort: 'asc',
             width: 200
-          },  
+          },      
         ],
         rows:[]
-    };
+    }
 
     const [dataList, setDataList] = useState(data_bill)
     const [loading, setLoading] = useState(true)
-    const { user: userData} = useCurrentUser()
     const toTitleCase = (str: string) => {
         return str.toLowerCase().split(' ').map((s) => s.charAt(0).toUpperCase() + s.substring(1)).join(' ');
     }
 
-     useEffect( ()=>{
-       if (!loadingUser) {
-        getUsers()
-        conceptos()
-       }
-     },[userData])
 
-     function conceptos(){
-      fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/users/payment/` ,{
-        mode:'cors',
-        method: 'GET',
-        headers: {
-            'Referrer-Policy': 'origin-when-cross-origin',
-            'Authorization': "Bearer " + localStorage.getItem("auth_token"),
-            'Content-Type': 'application/json',
-            'Access-Control-Allow-Origin': `${process.env.NEXT_PUBLIC_URL}`
-        }          
-      }).then(async res => {
-          const data = await res.json();
-        if (res.ok) {
-          return Promise.resolve(data);
-        } else {
-          return Promise.reject(data);
+      useEffect( ()=>{
+        if (!loadingUser) {
+          getUsers()
         }
-      }).then(data => {    
-        
-          let puntero = data.data.payments.map((payment: { paymentConcepts: any[]; })=>{
-            let conceptos = payment.paymentConcepts.map((concepts)=> concepts.name)
-            
-            let datos = {
-              concept: conceptos.push,
-            }
-            return datos
-        })
-        data_bill.rows = puntero            
-        setDataList(data_bill)  
-      setLoading(false)
-      })
-    }
+      },[userData])
 
-     function getUsers(){
+      function getUsers(){
+        
             fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/users`, {
               mode: 'cors',
               method: 'GET',
@@ -119,7 +61,7 @@ export default function Cartera({loadingUser}: any){
                 'Authorization': "Bearer " + localStorage.getItem("auth_token"),
                 'Access-Control-Allow-Origin': `${process.env.NEXT_PUBLIC_URL}`
               },
-            }).then(async(res) => {
+            }).then(res => {
               return res.json().then(data => {
                 if (res.ok) {
                   return Promise.resolve(data)
@@ -130,8 +72,9 @@ export default function Cartera({loadingUser}: any){
             }).then(data => {
                 let users = data.data
                 users = users.map((user: User) => {
-                  let u = {
-                    ID:user.id,
+                    let u = {
+                      id: user.id,
+                    document: user.document,
                     fullName: toTitleCase(user.name + ' ' + user.lastName),
                     actions: <Link href={`/dashboard/tesorero/payments/${user.id}`}>
                                 <a><img className={styles.icon} src="/img/dashboard/eye.svg" /> Ver pagos</a>
@@ -146,7 +89,7 @@ export default function Cartera({loadingUser}: any){
               
             }).catch(error => {
             })
-     }
+    }
     
 
     return (
@@ -155,7 +98,7 @@ export default function Cartera({loadingUser}: any){
             <h1 className={`${styles.text_title} p-5`}>¡Pagos Scout Centinelas 113!</h1>
           </div>
           <div className={styles.contenedor}>
-             <div className="row">
+              <div className="row">
                 <div className="col-6"> 
                     <p className={`btn ${styles.csvbutton}`} onClick={downloadCSV} >
                         <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" className="bi bi-file-earmark-arrow-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -163,7 +106,7 @@ export default function Cartera({loadingUser}: any){
                             <path d="M9.5 3V0L14 4.5h-3A1.5 1.5 0 0 1 9.5 3z"/>
                             <path fill-rule="evenodd" d="M8 6a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 10.293V6.5A.5.5 0 0 1 8 6z"/>
                         </svg>
-                            Exportar               
+                            Exportar PDF                  
                     </p>
                 </div>
 

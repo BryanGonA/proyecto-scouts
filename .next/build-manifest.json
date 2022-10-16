@@ -30,10 +30,20 @@
       "static/chunks/main.js",
       "static/chunks/pages/dashboard/tesorero.js"
     ],
-    "/login": [
+    "/dashboard/tesorero/agregar/[idUser]": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/login.js"
+      "static/chunks/pages/dashboard/tesorero/agregar/[idUser].js"
+    ],
+    "/dashboard/tesorero/editar/[userId]/[paymentId]": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/dashboard/tesorero/editar/[userId]/[paymentId].js"
+    ],
+    "/dashboard/tesorero/payments/[idPago]": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/dashboard/tesorero/payments/[idPago].js"
     ]
   },
   "ampFirstPages": []
