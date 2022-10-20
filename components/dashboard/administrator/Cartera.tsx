@@ -18,7 +18,7 @@ export default function JefeGrupoCartera() {
   let data_pays = {
     columns: [
       {
-        label: "Recibo",
+        label: "No. recibo",
         field: "receipt",
         sort: "asc",
         width: 100,
@@ -36,7 +36,7 @@ export default function JefeGrupoCartera() {
         width: 100,
       },
       {
-        label: "concepto",
+        label: "Concepto",
         field: "concept",
         sort: "asc",
         width: 100,
@@ -60,7 +60,7 @@ export default function JefeGrupoCartera() {
       headers: {
         "Referrer-Policy": "origin-when-cross-origin",
         "Content-Type": "application/json",
-        Authorization: `Bearer ${localStorage.getItem("token")}`,
+        'Authorization': `Bearer ${localStorage.getItem("token")}`,
       },
     })
       .then((res) => {
@@ -132,34 +132,4 @@ export default function JefeGrupoCartera() {
       </div>
     </div>
   );
-
-  /*useEffect(() => {
-        MySwal.fire({
-            title: <strong>DESCARGA DE CARTERA CENTINELAS 113</strong>,
-            text: "¿Está seguro de descargar la cartera del Grupo Scout Centinelas 113?",
-            icon: 'info',
-            showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
-            confirmButtonText: 'Continuar',
-            cancelButtonText: 'Cancelar'
-        }).then((result) => {
-            if (result.isConfirmed) {
-                downloadCSV()
-                router.push('/dashboard')
-            }
-            
-        })
-    }, [])
-    return (
-        <div>
-            <div>
-                <h1 className={`${styles.text_title} p-5`}>Cartera Centinelas 113</h1>
-            </div>
-            <div className={`${styles.text_data} row justify-content-center py-3`}>
-                <div className={`${styles.container} py-5 w-100`} id='example'>
-                </div>
-            </div>
-        </div>
-    )*/
 }

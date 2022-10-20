@@ -2,8 +2,6 @@ import { MDBDataTable } from 'mdbreact';
 import { useEffect, useRef, useState } from "react";
 import withReactContent from 'sweetalert2-react-content'
 import styles from "~/styles/dashboard/administrator/AddPerson.module.scss";
-
-
 export default function ActualizarPersonal({ idPersonal, edit }: any) {
 
     const [values, setValues] = useState(null)
@@ -11,7 +9,6 @@ export default function ActualizarPersonal({ idPersonal, edit }: any) {
 
     const photo = useRef(null);
     const image = useRef(null);
-    //const img = users.get
     const method = () => {
         if (photo.current.files[0]) {
             var filesize = photo.current.files[0].size;
@@ -21,9 +18,6 @@ export default function ActualizarPersonal({ idPersonal, edit }: any) {
                 photo.current.files[0].name = '';
                 return
             }
-            //implementacion de el script para el redimencionado de las imagenes ------------------------------------------------------------------------------------------------
-
-                     
             var imageFile = photo.current.files[0];
             var reader = new FileReader();
             reader.onload = function (e) {
@@ -132,15 +126,16 @@ export default function ActualizarPersonal({ idPersonal, edit }: any) {
         }
     }, [])
 
-    const obtenerid = (userid: any) => {
+    const obtenerid = (userid) => {
         fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/users/${userid}`, {
             method: 'GET',
+            cache: 'no-cache',
             headers: {
                 'Referrer-Policy': 'origin-when-cross-origin',
                 'Authorization': "Bearer " + localStorage.getItem("auth_token"),
                 'Access-Control-Allow-Origin': `${process.env.NEXT_PUBLIC_URL}`
             },
-        }).then(async (res) => {
+        }).then(async res => {
             const data = await res.json();
             if (res.ok) {
                 return Promise.resolve(data);
@@ -150,8 +145,6 @@ export default function ActualizarPersonal({ idPersonal, edit }: any) {
         }).then(data => {
 
             setDatos(data.data)
-           
-            setPersonal(data.data.personalData)
             setPersonal(data.data.personalDetails)
             setRama(data.data.branches)
             setLoading(false)
@@ -161,7 +154,8 @@ export default function ActualizarPersonal({ idPersonal, edit }: any) {
         })
     }
 
-       const actualizar = () =>{
+
+    function actualizar() {
         let account = {
             name: btnName.current.value,
             lastName: btnApellido.current.value,
@@ -184,97 +178,64 @@ export default function ActualizarPersonal({ idPersonal, edit }: any) {
                 nameBranch: btnRama.current.value,
             }
         }
-        
-        
+
         actualizarid(account, idPersonal);
 
     }
 
     const actualizarid = (account, userid) => {
-    //const actualizarid = (account: { name: any; lastName: any; email: any; documentType: string; document: any; birthDate: Date; homeAddress: any; attentionSite: any; personalDetails: { phone: any; level: any; charge: any; bloodType: any; rh: any; eps: any; }; branches: { nameBranch: any; }; }, userId: any) => {
-        //fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/users/${userid}`, {
-                    
-        fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/users/${userid}`, {
-          method: "PUT",
-          headers: {
-            'Content-Type': "application/json",
-            'Authorization': "Bearer " + localStorage.getItem("auth_token"),
-            //'Access-Control-Allow-Origin': `${process.env.NEXT_PUBLIC_URL}`,
-          },
-          body: JSON.stringify(account),
-        })
-          .then(async (res) => {
-            const data = await res.json();
-            if (res.ok) {
-              return Promise.resolve(data);
-            } else {
-              return Promise.reject(data);
-            }
-          })
-          .then(data => {
-            
-
-            MySwal.fire({
-              icon: "success",
-              title: "Datos Actializados!",
-              text: "Los datos fueron actualizados correctamente",
-              confirmButtonColor: "#31B411",
-              confirmButtonText: "Continuar",
-            }).then(function (isConfirm) {
-              if (isConfirm) {
-                window.location.href = "/dashboard/jefe-grupo/personal";
-              }
-            });
-            }).catch((error) => {
-            console.log(error);
-            MySwal.fire({
-              icon: "error",
-              title: "Oops...",
-              text: "¡Algo salio mal intentando actualizar los datos!     Por favor intente de nuevo",
-              confirmButtonColor: "#31B411",
-              confirmButtonText: "Continuar",
-            });
-          });
-    }
-
-    /*const actualizarid = (account: { name: any; lastName: any; email: any; documentType: string; document: any; birthDate: Date; homeAddress: any; attentionSite: any; personalDetails: { phone: any; level: any; charge: any; bloodType: any; rh: any; eps: any; }; branches: { nameBranch: any; }; }, userid: string) => {
-
-         const actualizar = async () => {
-            const res = await fetch(process.env.NEXT_PUBLIC_API_URL + "/api/users/" + userid, {
-                mode: 'cors',
-                method: 'PUT',
-                headers: {
-                    'Content-Type': "application/json",
-                    'Authorization': "Bearer " + localStorage.getItem("auth_token"),
-                    'Access-Control-Allow-Origin': `${process.env.NEXT_PUBLIC_URL}`,
-
-                },
-                body: JSON.stringify(account),
-            })
+        fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/users/personal/${userid}`, {
+            mode: 'cors',
+            method: 'PUT',
+            headers: {
+                'Referrer-Policy': 'origin-when-cross-origin',
+                'Content-Type': 'application/json',
+                'Authorization': "Bearer " + localStorage.getItem("auth_token"),
+                'Access-Control-Allow-Origin': `${process.env.NEXT_PUBLIC_URL}`
+            },
+            body: JSON.stringify(account),
+        }).then(async res => {
             const data = await res.json();
             if (res.ok) {
                 return Promise.resolve(data);
             } else {
                 return Promise.reject(data);
             }
-        }
-        actualizar().then(data => {
+
+        }).then(data => {
+            let userId = data.data.id
+            let photo = new FormData()
+            photo.append("file", values.photo)
+            photo.append("id", userId)
+
             MySwal.fire({
-                icon: "success",
-                title: "Datos Actializados!",
-                text: "Los datos fueron actualizados correctamente",
-                confirmButtonColor: "#31B411",
+                icon: 'success',
+                title: 'Datos actualizados!',
+                text: 'Los datos fueron actualizados correctamente',
+                confirmButtonColor: '#31B411',
                 confirmButtonText: "Continuar",
+
             }).then(function (isConfirm) {
                 if (isConfirm) {
-                    window.location.href = "/dashboard/jefe-grupo/personal";
+                    window.location.href = "/dashboard/jefe-grupo/personal/";
                 }
-            });
-        }).catch((error) => {
-            console.log(error);
-                  
-        });
-    }*/
+            })
+            fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/uploads/photo/${userid}`, {
+                mode: 'cors',
+                method: 'PUT',
+                body: photo,
+                headers: {
+                    'Referrer-Policy': 'origin-when-cross-origin',
+                    'Authorization': "Bearer " + localStorage.getItem("auth_token"),
+                    'Access-Control-Allow-Origin': `${process.env.NEXT_PUBLIC_URL}`
+                }
+            }).catch(err => {
+                console.log(err)
+            })
+        }).catch(error => {
+            console.log(error)
+        })
+    }
 
 
 
