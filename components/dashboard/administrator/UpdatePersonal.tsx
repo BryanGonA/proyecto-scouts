@@ -18,13 +18,34 @@ export default function ActualizarPersonal({ idPersonal, edit }: any) {
                 photo.current.files[0].name = '';
                 return
             }
-            var file = photo.current.files[0];
+            var imageFile = photo.current.files[0];
             var reader = new FileReader();
             reader.onload = function (e) {
-                image.current.src = e.target.result
-            }
-            reader.readAsDataURL(file);
-            setValues({ ...values, photo: file })
+              var img = document.createElement("img");
+              img.onload = function (event) {
+                // Crear dinámicamente un elemento del lienzo
+                var canvas = document.createElement("canvas");
+
+                //var canvas = document.getElementById("canvas");
+                var ctx = canvas.getContext("2d");
+
+                // Redimensionamiento real
+                imageFile = ctx.drawImage(img, 0, 0, 300, 300);
+
+                // Mostrar la imagen redimensionada en el elemento de vista previa.
+                var dataurl = canvas.toDataURL(imageFile.type);
+                //document.getElementById("preview").src = dataurl;
+                
+                image.current.src = e.target.result;
+            };
+             image.current.src = e.target.result;
+            
+          }
+          reader.readAsDataURL(imageFile);
+          setValues({...values, photo: imageFile})
+          //setValues({...values, photo: i})
+
+        // Fin del Script para el redimencionado de las imagenes. --------------------------------------------------------------------------------------------------------------
         }
     };
 
@@ -108,19 +129,19 @@ export default function ActualizarPersonal({ idPersonal, edit }: any) {
     const obtenerid = (userid) => {
         fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/users/${userid}`, {
             method: 'GET',
+            cache: 'no-cache',
             headers: {
                 'Referrer-Policy': 'origin-when-cross-origin',
                 'Authorization': "Bearer " + localStorage.getItem("auth_token"),
                 'Access-Control-Allow-Origin': `${process.env.NEXT_PUBLIC_URL}`
             },
-        }).then(res => {
-            return res.json().then(data => {
-                if (res.ok) {
-                    return Promise.resolve(data)
-                } else {
-                    return Promise.reject(data)
-                }
-            })
+        }).then(async res => {
+            const data = await res.json();
+            if (res.ok) {
+                return Promise.resolve(data);
+            } else {
+                return Promise.reject(data);
+            }
         }).then(data => {
 
             setDatos(data.data)
@@ -163,7 +184,7 @@ export default function ActualizarPersonal({ idPersonal, edit }: any) {
     }
 
     const actualizarid = (account, userid) => {
-        fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/users/${userid}`, {
+        fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/users/personal/${userid}`, {
             mode: 'cors',
             method: 'PUT',
             headers: {
@@ -172,17 +193,21 @@ export default function ActualizarPersonal({ idPersonal, edit }: any) {
                 'Authorization': "Bearer " + localStorage.getItem("auth_token"),
                 'Access-Control-Allow-Origin': `${process.env.NEXT_PUBLIC_URL}`
             },
-            body: JSON.stringify(account)
-        }).then(res => {
-            return res.json().then(data => {
-                if (res.ok) {
-                    return Promise.resolve(account)
-                } else {
-                    return Promise.reject(data)
-                }
-            })
+            body: JSON.stringify(account),
+        }).then(async res => {
+            const data = await res.json();
+            if (res.ok) {
+                return Promise.resolve(data);
+            } else {
+                return Promise.reject(data);
+            }
 
         }).then(data => {
+            let userId = data.data.id
+            let photo = new FormData()
+            photo.append("file", values.photo)
+            photo.append("id", userId)
+
             MySwal.fire({
                 icon: 'success',
                 title: 'Datos actualizados!',
@@ -195,8 +220,20 @@ export default function ActualizarPersonal({ idPersonal, edit }: any) {
                     window.location.href = "/dashboard/jefe-grupo/personal/";
                 }
             })
+            fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/uploads/photo/${userid}`, {
+                mode: 'cors',
+                method: 'PUT',
+                body: photo,
+                headers: {
+                    'Referrer-Policy': 'origin-when-cross-origin',
+                    'Authorization': "Bearer " + localStorage.getItem("auth_token"),
+                    'Access-Control-Allow-Origin': `${process.env.NEXT_PUBLIC_URL}`
+                }
+            }).catch(err => {
+                console.log(err)
+            })
         }).catch(error => {
-
+            console.log(error)
         })
     }
 
