@@ -2,9 +2,9 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/dashboard/jefe-grupo/personal": "pages/dashboard/jefe-grupo/personal.js",
+  "/dashboard": "pages/dashboard.js",
+  "/dashboard/jefe-grupo/inscripciones": "pages/dashboard/jefe-grupo/inscripciones.js",
   "/dashboard/jefe-grupo/personal/editar/[idPersonal]": "pages/dashboard/jefe-grupo/personal/editar/[idPersonal].js",
   "/login": "pages/login.js",
-  "/dashboard": "pages/dashboard.js",
-  "/dashboard/jefe-grupo/inscripciones": "pages/dashboard/jefe-grupo/inscripciones.js"
+  "/dashboard/jefe-grupo/personal": "pages/dashboard/jefe-grupo/personal.js"
 }

@@ -2,13 +2,17 @@ import { MDBDataTable } from 'mdbreact';
 import { useEffect, useRef, useState } from "react";
 import withReactContent from 'sweetalert2-react-content'
 import styles from "~/styles/dashboard/administrator/AddPerson.module.scss";
-export default function ActualizarPersonal({ idPersonal, edit }: any) {
+import { useUserImage } from '~/hooks/use-user';
+
+
+export default function ActualizarPersonal({ idPersonal, edit }) {
 
     const [values, setValues] = useState(null)
-
+    const { image, isLoading: loadingImage } = useUserImage(idPersonal)
+    //const image = useRef(fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/upload/photo/${idPersonal}`))
 
     const photo = useRef(null);
-    const image = useRef(null);
+    const images = useRef(null);
     const method = () => {
         if (photo.current.files[0]) {
             var filesize = photo.current.files[0].size;
@@ -36,9 +40,9 @@ export default function ActualizarPersonal({ idPersonal, edit }: any) {
                 var dataurl = canvas.toDataURL(imageFile.type);
                 //document.getElementById("preview").src = dataurl;
                 
-                image.current.src = e.target.result;
+                images.current.src = e.target.result;
             };
-             image.current.src = e.target.result;
+            images.current.src = e.target.result;
             
           }
           reader.readAsDataURL(imageFile);
@@ -220,7 +224,7 @@ export default function ActualizarPersonal({ idPersonal, edit }: any) {
                     window.location.href = "/dashboard/jefe-grupo/personal/";
                 }
             })
-            fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/uploads/photo/${userid}`, {
+            fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/upload/photo/${userid}`, {
                 mode: 'cors',
                 method: 'PUT',
                 body: photo,
@@ -237,7 +241,7 @@ export default function ActualizarPersonal({ idPersonal, edit }: any) {
         })
     }
 
-
+    
 
     return (
         <>
@@ -251,7 +255,8 @@ export default function ActualizarPersonal({ idPersonal, edit }: any) {
                             <button type="button" className="btn btn-secondary"><a className={`${styles.letra}`} href={`/dashboard/jefe-grupo/personal/`}>Regresar</a></button>
                             <div className="text-center">
                                 <div className={styles.photo}>
-                                    <img className={styles.image} src="/img/profile-picture.png" ref={image} />
+                                    <img className={styles.image} src={loadingImage ? "/img/profile-picture.png" : URL.createObjectURL(image)}/>
+                                    
                                 </div>
                                 <div className="row">
                                     <div className={styles.div_file} >
