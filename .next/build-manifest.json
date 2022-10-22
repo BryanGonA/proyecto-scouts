@@ -35,6 +35,11 @@
       "static/chunks/main.js",
       "static/chunks/pages/dashboard/jefe-grupo/personal.js"
     ],
+    "/dashboard/jefe-grupo/personal/[idPersonal]": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/dashboard/jefe-grupo/personal/[idPersonal].js"
+    ],
     "/dashboard/jefe-grupo/personal/editar/[idPersonal]": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",

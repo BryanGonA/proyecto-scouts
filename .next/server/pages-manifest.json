@@ -2,7 +2,8 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/dashboard/jefe-grupo/personal/editar/[idPersonal]": "pages/dashboard/jefe-grupo/personal/editar/[idPersonal].js",
   "/404": "pages/404.js",
+  "/dashboard/jefe-grupo/personal/editar/[idPersonal]": "pages/dashboard/jefe-grupo/personal/editar/[idPersonal].js",
+  "/dashboard/jefe-grupo/personal/[idPersonal]": "pages/dashboard/jefe-grupo/personal/[idPersonal].js",
   "/dashboard/jefe-grupo/personal": "pages/dashboard/jefe-grupo/personal.js"
 }
