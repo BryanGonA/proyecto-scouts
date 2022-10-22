@@ -8,11 +8,14 @@ import { useUserImage } from '~/hooks/use-user';
 export default function ActualizarPersonal({ idPersonal, edit }) {
 
     const [values, setValues] = useState(null)
-    const { image, isLoading: loadingImage } = useUserImage(idPersonal)
+    
     //const image = useRef(fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/upload/photo/${idPersonal}`))
 
     const photo = useRef(null);
     const images = useRef(null);
+  
+    
+
     const method = () => {
         if (photo.current.files[0]) {
             var filesize = photo.current.files[0].size;
@@ -53,7 +56,7 @@ export default function ActualizarPersonal({ idPersonal, edit }) {
         }
     };
 
-
+    
 
     const Swal = require('sweetalert2')
     const MySwal = withReactContent(Swal)
@@ -241,7 +244,9 @@ export default function ActualizarPersonal({ idPersonal, edit }) {
         })
     }
 
-    
+    const { image, isLoading: loadingImage } = useUserImage(idPersonal)
+    //<img className={styles.image} src="/img/profile-picture.png" ref={images} />
+    //<img className={styles.image} src={loadingImage ? "/img/profile-picture.png" : URL.createObjectURL(image)}/>
 
     return (
         <>
@@ -255,7 +260,8 @@ export default function ActualizarPersonal({ idPersonal, edit }) {
                             <button type="button" className="btn btn-secondary"><a className={`${styles.letra}`} href={`/dashboard/jefe-grupo/personal/`}>Regresar</a></button>
                             <div className="text-center">
                                 <div className={styles.photo}>
-                                    <img className={styles.image} src={loadingImage ? "/img/profile-picture.png" : URL.createObjectURL(image)}/>
+                                    
+                                <img className={styles.image} src={loadingImage ? "/img/profile-picture.png" : URL.createObjectURL(image)} ref={images}/>
                                     
                                 </div>
                                 <div className="row">
