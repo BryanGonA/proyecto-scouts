@@ -172,14 +172,14 @@ export default function AgregarPersonal() {
             
         }).catch(err => {
             console.log(err)
-            MySwal.fire({   
+            /*MySwal.fire({   
                 icon: 'error',
                 title: 'Oops...',
                 text: 'Algo salió mal!',
                 confirmButtonColor: '#31B411',
                 confirmButtonText: "Continuar",
 
-        })
+        })*/
         })    
     }
     const [Datos, setDatos] = useState(null)

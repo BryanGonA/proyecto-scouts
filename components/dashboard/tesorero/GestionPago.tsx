@@ -144,7 +144,7 @@ export default function GestionPagos({ id, paymentId }: any) {
 
     const enviarEditar = (pagos, userId, paymentId) => {
         pagos = {...pagos, id: Number.parseInt(paymentId)}
-        fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/users/editpayments/${userId}`, {
+        fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/users/editpayments/${id}/${paymentId}`, {
             method: 'PUT',
             headers: {
                 'Referrer-Policy': 'origin-when-cross-origin',
