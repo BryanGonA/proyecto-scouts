@@ -41,7 +41,7 @@ export default function RegisterContainer({title, values, children} : Props) {
         })
     }
     
-    const submit = (e:any) => {
+    const submit = (e) => {
         e.preventDefault();
         fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/users`, {
             mode: 'cors',
@@ -52,21 +52,20 @@ export default function RegisterContainer({title, values, children} : Props) {
                 'Access-Control-Allow-Origin': `${process.env.NEXT_PUBLIC_URL}`
             },
             body: JSON.stringify(values)
-        }).then(res => {
-            return res.json().then(data => {
-                if (res.ok) {
-                    return Promise.resolve(data)
-                } else {
-                    return Promise.reject(data)
-                }
-            })
+        }).then(async res => {
+            const data = await res.json()
+            if (res.ok) {
+                return Promise.resolve(data)
+            } else {
+                return Promise.reject(data)
+            }
         }).then(data => {
             let userId= data.user.id
             let photo = new FormData()
             photo.append("file",values.photo)
             photo.append("id",userId)
 
-            fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/upload`, {
+            fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/upload/photo`, {
                 mode: 'cors',
                 method: 'POST',
                 body: photo,
@@ -91,12 +90,13 @@ export default function RegisterContainer({title, values, children} : Props) {
         }).catch(error => {
             MySwal.fire({
                 icon: 'error',
-                title: <p>Hay errores</p>,
+                title: <p>Hay errores, por favor verifique la información</p>,
                 text: error.message,
                 showConfirmButton: false,
                 showDenyButton: true,
                 denyButtonText: `Cerrar`,
             })
+
         })
     }
 

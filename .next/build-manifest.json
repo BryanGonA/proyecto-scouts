@@ -15,11 +15,6 @@
   ],
   "rootMainFiles": [],
   "pages": {
-    "/404": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/404.js"
-    ],
     "/_app": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
@@ -30,20 +25,25 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/dashboard/jefe-grupo/personal": [
+    "/dashboard/info/[userId]": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/dashboard/jefe-grupo/personal.js"
+      "static/chunks/pages/dashboard/info/[userId].js"
     ],
-    "/dashboard/jefe-grupo/personal/[idPersonal]": [
+    "/dashboard/info/acudientes/[userId]": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/dashboard/jefe-grupo/personal/[idPersonal].js"
+      "static/chunks/pages/dashboard/info/acudientes/[userId].js"
     ],
-    "/dashboard/jefe-grupo/personal/editar/[idPersonal]": [
+    "/dashboard/info/medicos/[userId]": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/dashboard/jefe-grupo/personal/editar/[idPersonal].js"
+      "static/chunks/pages/dashboard/info/medicos/[userId].js"
+    ],
+    "/dashboard/jefe-grupo/inscripciones": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/dashboard/jefe-grupo/inscripciones.js"
     ]
   },
   "ampFirstPages": []

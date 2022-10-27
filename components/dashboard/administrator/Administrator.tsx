@@ -56,22 +56,21 @@ export default function PersonalAdministrator() {
       headers: {
         "Referrer-Policy": "origin-when-cross-origin",
         "Content-Type": "application/json",
-        Authorization: "Bearer " + localStorage.getItem("auth_token"),
+        'Authorization': "Bearer " + localStorage.getItem("auth_token"),
         "Access-Control-Allow-Origin": `${process.env.NEXT_PUBLIC_URL}`,
       },
     })
-      .then((res) => {
-        return res.json().then((data) => {
-          if (res.ok) {
-            return Promise.resolve(data);
-          } else {
-            return Promise.reject(data);
-          }
-        });
+      .then(async (res) => {
+        const data = await res.json();
+        if (res.ok) {
+          return Promise.resolve(data);
+        } else {
+          return Promise.reject(data);
+        }
       })
       .then((data) => {
         let users = data.data;
-        users = users.map((user: any) => {
+        users = users.map((user) => {
           let u = {
             name: user.name,
             level: user.personalDetails.level,
@@ -113,14 +112,13 @@ export default function PersonalAdministrator() {
                             },
                           }
                         )
-                          .then((res) => {
-                            return res.json().then((data) => {
-                              if (res.ok) {
-                                return Promise.resolve(data);
-                              } else {
-                                return Promise.reject(data);
-                              }
-                            });
+                          .then(async (res) => {
+                            const data = await res.json();
+                            if (res.ok) {
+                              return Promise.resolve(data);
+                            } else {
+                              return Promise.reject(data);
+                            }
                           })
                           .then((data) => {
                             MySwal.fire({

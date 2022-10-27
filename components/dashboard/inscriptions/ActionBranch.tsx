@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import { Button, Modal } from 'react-bootstrap';
-import Select from 'react-select';
+import {Select} from 'react-select';
 import MultiSelect from "react-multi-select-component";
 
-export default function ActionBranch({id, value} : any) {
+
+
+export default function ActionBranch({id, value} ) {
     const [show, setShow] = useState(false);
     const handleClosePut = () => {
         setShow(false)
@@ -13,7 +15,7 @@ export default function ActionBranch({id, value} : any) {
     const handleShow = () => setShow(true);
     const [loading, setLoading] = useState(true)
     const [selected, setSelected] = useState({value:0, label:''})
-    const [branches, setBranches] = useState([])
+    const [branches, setBranches] = useState({})
     const [datosUsuario, setDatosUsuario] = useState(null)
     var lista = []
 
@@ -27,14 +29,13 @@ export default function ActionBranch({id, value} : any) {
               'Content-Type': 'application/json',
               'Access-Control-Allow-Origin': `${process.env.NEXT_PUBLIC_URL}`
             },
-          }).then(res => {
-            return res.json().then(data => {
-                if (res.ok) {
-                    return Promise.resolve(data)
-                } else {
-                    return Promise.reject(data)
-                }
-            })
+          }).then(async res => {
+            const data = await res.json();
+              if (res.ok) {
+                  return Promise.resolve(data);
+              } else {
+                  return Promise.reject(data);
+              }
           }).then(data => {          
             data.data.map((branches)=>{
                 let datos = {
@@ -54,18 +55,17 @@ export default function ActionBranch({id, value} : any) {
             method: 'GET',
             headers: {
               'Referrer-Policy': 'origin-when-cross-origin',
-              Authorization: "Bearer " + localStorage.getItem("auth_token"),
+              'Authorization': "Bearer " + localStorage.getItem("auth_token"),
               'Content-Type': 'application/json',
               'Access-Control-Allow-Origin': `${process.env.NEXT_PUBLIC_URL}`
             },
-          }).then(res => {
-            return res.json().then(data => {
-                if (res.ok) {
-                    return Promise.resolve(data)
-                } else {
-                    return Promise.reject(data)
-                }
-            })
+          }).then(async res => {
+            const data = await res.json();
+              if (res.ok) {
+                  return Promise.resolve(data);
+              } else {
+                  return Promise.reject(data);
+              }
           }).then(data => {            
             let default_value = {
                 value:data.data.branches.id,
@@ -102,15 +102,13 @@ export default function ActionBranch({id, value} : any) {
             },
             
             body:JSON.stringify(auxliar)
-            }).then(res => {
-                return res.json()
-                    .then(data => {                    
-                    if (res.ok) {                                  
-                        return Promise.resolve(data)
-                    } else {                
-                        return Promise.reject(data)
-                    }
-                    })  
+            }).then(async res => {
+                const data = await res.json();
+                if (res.ok) {
+                    return Promise.resolve(data);
+                } else {
+                    return Promise.reject(data);
+                }  
             }).catch (error => {
                 console.log(error)
             })            
@@ -128,14 +126,13 @@ export default function ActionBranch({id, value} : any) {
                 'Content-Type': 'application/json',
                 'Access-Control-Allow-Origin': `${process.env.NEXT_PUBLIC_URL}`
             },           
-            }).then(res => {
-                return res.json().then(data => {
-                    if (res.ok) {
-                    return Promise.resolve(data)
-                    } else {
-                    return Promise.reject(data)
-                    }
-                })
+            }).then(async res => {
+                const data = await res.json();
+                if (res.ok) {
+                    return Promise.resolve(data);
+                } else {
+                    return Promise.reject(data);
+                }
             }).then(data => {               
             setDatosUsuario(data['data'])                 
         })  
@@ -145,11 +142,14 @@ export default function ActionBranch({id, value} : any) {
     function getOptions(input) {  
         setSelected(input)        
     }
-
+    
+    
     return (       
         <>
             <div>
-                <label onClick={handleShow}>{value.nameBranch}</label>
+                <label onClick={handleShow}>
+                    {value?.nameBranch}
+                    </label>
                 <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
                     <Modal.Title className="text-center">Seleccione la Rama a ingresar</Modal.Title>

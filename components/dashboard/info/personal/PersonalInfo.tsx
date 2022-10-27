@@ -6,12 +6,57 @@ import Swal from "sweetalert2";
 import { useRouter } from "next/router";
 import withReactContent from "sweetalert2-react-content";
 import { useCurrentUser } from "~/hooks/use-current-user";
+import { useUserImage } from "~/hooks/use-user";
+
 
 // Corresponde a la ruta http://.../info/about
 
 export default function PersonalInformation({ Id }: any){
     
+    const photo = useRef(null);
+    const images = useRef(null);
+    const [values, setValues] = useState(null)
+    
 
+    const method = () => {
+        if (photo.current.files[0]) {
+            var filesize = photo.current.files[0].size;
+            if (filesize > 10000000) {
+                alert('El archivo no debe superar los 10MB');
+                photo.current.value = '';
+                photo.current.files[0].name = '';
+                return
+            }
+            var imageFile = photo.current.files[0];
+            var reader = new FileReader();
+            reader.onload = function (e) {
+              var img = document.createElement("img");
+              img.onload = function (event) {
+                // Crear dinámicamente un elemento del lienzo
+                var canvas = document.createElement("canvas");
+
+                //var canvas = document.getElementById("canvas");
+                var ctx = canvas.getContext("2d");
+
+                // Redimensionamiento real
+                imageFile = ctx.drawImage(img, 0, 0, 300, 300);
+
+                // Mostrar la imagen redimensionada en el elemento de vista previa.
+                var dataurl = canvas.toDataURL(imageFile.type);
+                //document.getElementById("preview").src = dataurl;
+                
+                images.current.src = e.target.result;
+            };
+            images.current.src = e.target.result;
+            
+          }
+          reader.readAsDataURL(imageFile);
+          setValues({...values, photo: imageFile})
+          //setValues({...values, photo: i})
+
+        // Fin del Script para el redimencionado de las imagenes. --------------------------------------------------------------------------------------------------------------
+        }
+    };
     const router = useRouter()
     const { user, isLoading: loadingUser, error: userError } = useCurrentUser()
 
@@ -315,7 +360,15 @@ export default function PersonalInformation({ Id }: any){
         btn_cancelar.current.style.visibility= "hidden";
   
     }
-    
+    const { image, isLoading: loadingImage } = useUserImage(Id)
+    //<img className={styles.image} src="/img/profile-picture.png" ref={images} />
+    //<img className={styles.image} src={loadingImage ? "/img/profile-picture.png" : URL.createObjectURL(image)}/>
+
+    const helloStyles = {
+        color: 'red',
+        fontSize: '10px', //camelCase property
+        padding: '10px' //camelCase property
+    }
     
     return(
         <div className={`${styles.text_data}`}>
@@ -326,37 +379,52 @@ export default function PersonalInformation({ Id }: any){
         ) : (
             <div className={styles.contenedor}>
                 <div className={`${styles.container} pl-5`}>
+                <div className="text-center">
+                                <div className={styles.photo}>
+                                    
+                                <img className={styles.image} src={loadingImage ? "/img/profile-picture.png" : URL.createObjectURL(image)} ref={images}/>
+                                <p style={helloStyles}>*Formato de imagen: JPG, JPEG, PNG. No mayor a 10 MB.</p>
+                                </div>
+                                <div className="row">
+                                    
+                                    <div className={styles.div_file} >
+                                        <p className={styles.text}>*Seleccionar foto</p><input type="file" disabled id="btn_upload" accept="image/jpeg,image/png" className={styles.btn_upload} ref={photo} onChange={method} />
+                                    </div>
+                                    
+
+                                </div>
+                            </div>
                     <div className=" row col-12 mt-5 justify-content-center" >
                     
-                        <DataQuery label='Nombre' data={usuario.name} settings='col-sm-12 col-lg-6 ' editar={editando} reference={i_name} />
-                        <DataQuery label='Apellidos' data={usuario.lastName} settings='col-sm-12 col-lg-6' editar={editando} reference={i_lastName}/>
-                        <DataQuery label='Tipo documento' data={usuario.documentType} settings='col-sm-12 col-lg-6' reference={i_documentType} tipo={'tipo_documento'} className={styles.label}/>
+                        <DataQuery label='Nombre' data={usuario?.name} settings='col-sm-12 col-lg-6 ' editar={editando} reference={i_name} />
+                        <DataQuery label='Apellidos' data={usuario?.lastName} settings='col-sm-12 col-lg-6' editar={editando} reference={i_lastName}/>
+                        <DataQuery label='Tipo documento' data={usuario?.documentType} settings='col-sm-12 col-lg-6' reference={i_documentType} tipo={'tipo_documento'} className={styles.label}/>
                         <DataQuery label='Edad' data={`${edad} Años`}  reference={i_edad}settings='col-sm-12 col-lg-6' className={styles.label}/> 
 
                     </div>
 
 
                     <div className="row col-12" >
-                        <DataQuery label='Número de documento' data={usuario.document} settings='col-12' reference={i_document} className={styles.label}/>
-                        <DataQuery label='Correo electrónico' data={usuario.email} settings='col-12' reference={i_email} className={styles.inputObser} tipo={'correo'}/>
+                        <DataQuery label='Número de documento' data={usuario?.document} settings='col-12' reference={i_document} className={styles.label}/>
+                        <DataQuery label='Correo electrónico' data={usuario?.email} settings='col-12' reference={i_email} className={styles.inputObser} tipo={'correo'}/>
                        {/* <DataQuery label='Lugar de nacimiento' data={detalles.homePlace} settings='col-12' editar={editando} reference={i_homePlace}/> */}
-                        <DataQuery label='Dirección de residencia' data={detalles.homeAddress} settings='col-12' editar={editando} reference={i_homeAddress}/>
-                        <DataQuery label='Número teléfonico' data={detalles.phone} settings='col-12' editar={editando} reference={i_phone}/>
-                        <DataQuery label='Institución educativa' data={detalles.institute} settings='col-12' editar={editando} reference={i_institute}/> 
+                        <DataQuery label='Dirección de residencia' data={detalles?.homeAddress} settings='col-12' editar={editando} reference={i_homeAddress}/>
+                        <DataQuery label='Número teléfonico' data={detalles?.phone} settings='col-12' editar={editando} reference={i_phone}/>
+                        <DataQuery label='Institución educativa' data={detalles?.institute} settings='col-12' editar={editando} reference={i_institute}/> 
                     </div>
                     <div className="row col-12" >
-                        <DataQuery label='Curso actual' data={detalles.currentCourse} settings='col-sm-12 col-md-4 col-lg-4' editar={editando} reference={i_currentCourse} tipo={'curso_actual'}/>
-                        <DataQuery label='Calendario' data={detalles.calendary ?detalles.calendary:'Ninguno'} settings='col-sm-12 col-md-4 col-lg-4' editar={editando} reference={i_calendary} tipo={'calendario'}/>
-                        <DataQuery label='Jornada' data={detalles.timeShift} settings='col-sm-12 col-md-4 col-lg-4' editar={editando} reference={i_timeShift} tipo={'jornada'}/>
-                        <DataQuery label='Sexo' data={detalles.sex === "M" ? "MASCULINO" : "FEMENINO"} settings='col-sm-12 col-md-6 col-lg-4' editar={editando} reference={i_sex} tipo={'sexo'}/>
-                        <DataQuery label='Peso (Kg)' data={detalles.weight ? detalles.weight: ''} settings='col-sm-12 col-md-6 col-lg-4' editar={editando} reference={i_weight} tipo={'numeros'}/>
-                        <DataQuery label='Estatura (Cm)' data={detalles.stature? detalles.stature: ''} settings='col-sm-12 col-md-6 col-lg-4' editar={editando} reference={i_stature} tipo={'numeros'}/>
-                        <DataQuery label='Tipo Sangre' data={detalles.bloodType} settings='col-sm-12 col-md-6 col-lg-4' editar={editando} reference={i_bloodType} tipo={'tipo_sangre'}/>
-                        <DataQuery label='RH' data={detalles.rh} settings='col-sm-12 col-md-6 col-lg-4' editar={editando} reference={i_rh} tipo={'rh'}/>
-                        <DataQuery label='EPS' data={detalles.eps} settings='col-sm-12 col-md-6 col-lg-4' editar={editando} reference={i_eps}/> 
+                        <DataQuery label='Curso actual' data={detalles?.currentCourse} settings='col-sm-12 col-md-4 col-lg-4' editar={editando} reference={i_currentCourse} tipo={'curso_actual'}/>
+                        <DataQuery label='Calendario' data={detalles?.calendary ?detalles?.calendary:'Ninguno'} settings='col-sm-12 col-md-4 col-lg-4' editar={editando} reference={i_calendary} tipo={'calendario'}/>
+                        <DataQuery label='Jornada' data={detalles?.timeShift} settings='col-sm-12 col-md-4 col-lg-4' editar={editando} reference={i_timeShift} tipo={'jornada'}/>
+                        <DataQuery label='Sexo' data={detalles?.sex === "M" ? "MASCULINO" : "FEMENINO"} settings='col-sm-12 col-md-6 col-lg-4' editar={editando} reference={i_sex} tipo={'sexo'}/>
+                        <DataQuery label='Peso (Kg)' data={detalles?.weight ? detalles?.weight: ''} settings='col-sm-12 col-md-6 col-lg-4' editar={editando} reference={i_weight} tipo={'numeros'}/>
+                        <DataQuery label='Estatura (Cm)' data={detalles?.stature? detalles?.stature: ''} settings='col-sm-12 col-md-6 col-lg-4' editar={editando} reference={i_stature} tipo={'numeros'}/>
+                        <DataQuery label='Tipo Sangre' data={detalles?.bloodType} settings='col-sm-12 col-md-6 col-lg-4' editar={editando} reference={i_bloodType} tipo={'tipo_sangre'}/>
+                        <DataQuery label='RH' data={detalles?.rh} settings='col-sm-12 col-md-6 col-lg-4' editar={editando} reference={i_rh} tipo={'rh'}/>
+                        <DataQuery label='EPS' data={detalles?.eps} settings='col-sm-12 col-md-6 col-lg-4' editar={editando} reference={i_eps}/> 
                     </div>
                     <div className="row col-12">
-                        <DataQuery label='Sitio atención' settings='col-12' data={detalles.attentionSite? detalles.attentionSite : "N/A"} editar={editando} reference={i_attentionSite}/>                        
+                        <DataQuery label='Sitio atención' settings='col-12' data={detalles?.attentionSite? detalles?.attentionSite : "N/A"} editar={editando} reference={i_attentionSite}/>                        
                     </div>
                     <div className="row col-12 mr-5">
                         <button className={`${styles.editarB}`} onClick={editar}>

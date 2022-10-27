@@ -65,18 +65,17 @@ export default function  Inscriptions(){
         method: 'GET',
         headers: {
           'Referrer-Policy': 'origin-when-cross-origin',
-          Authorization: "Bearer " + localStorage.getItem("auth_token"),
+          'Authorization': "Bearer " + localStorage.getItem("auth_token"),
           'Content-Type': 'application/json',
           'Access-Control-Allow-Origin': `${process.env.NEXT_PUBLIC_URL}`
         },
-      }).then(res => {
-        return res.json().then(data => {
-            if (res.ok) {
-                return Promise.resolve(data)
-            } else {
-                return Promise.reject(data)
-            }
-        })
+      }).then(async res => {
+        const data = await res.json();
+        if (res.ok) {
+          return Promise.resolve(data);
+        } else {
+          return Promise.reject(data);
+        }
       }).then(data => {
         let puntero = data.data.map((user)=>{
             let diferencia_fechas = new Date().getTime() - new Date(user.birthDate).getTime()
@@ -97,6 +96,9 @@ export default function  Inscriptions(){
         data_payment.rows=puntero
         setData(data_payment)
         setLoading(false)
+      }).catch(error => {
+        console.log(error)
+        
       })
     }
     

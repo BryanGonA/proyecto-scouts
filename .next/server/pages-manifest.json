@@ -2,8 +2,8 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/404": "pages/404.js",
-  "/dashboard/jefe-grupo/personal/editar/[idPersonal]": "pages/dashboard/jefe-grupo/personal/editar/[idPersonal].js",
-  "/dashboard/jefe-grupo/personal/[idPersonal]": "pages/dashboard/jefe-grupo/personal/[idPersonal].js",
-  "/dashboard/jefe-grupo/personal": "pages/dashboard/jefe-grupo/personal.js"
+  "/dashboard/info/acudientes/[userId]": "pages/dashboard/info/acudientes/[userId].js",
+  "/dashboard/jefe-grupo/inscripciones": "pages/dashboard/jefe-grupo/inscripciones.js",
+  "/dashboard/info/[userId]": "pages/dashboard/info/[userId].js",
+  "/dashboard/info/medicos/[userId]": "pages/dashboard/info/medicos/[userId].js"
 }

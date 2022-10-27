@@ -103,14 +103,14 @@ export default function RegisterDropdown({ id, title, active, handleDropClick, d
         }
     }, [isActive]);
 
-    useEffect(() => {
+    /*useEffect(() => {
         let number = 0;
         
         count.current.innerText = number.toString()
         if (count.current) {
             count.current.textContent = "0/" + (countRequiredTag('input')+countRequiredTag('select'))
         }
-    }) 
+    }) */
 
     return (
         <div className="card">

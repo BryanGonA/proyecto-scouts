@@ -90,35 +90,35 @@ export default function prueba({userId}: any) {
                     <Parent
                         id_componente={0}
                         title={"Datos del Acudiente 1"}
-                        name={parents.data[0].name}
-                        lastName={parents.data[0].lastName}
-                        phoneParent={parents.data[0].phoneParent}
-                        relationship={parents.data[0].relationship}
-                        email={parents.data[0].email}
-                        professional={parents.data[0].professional}
-                        company={parents.data[0].company}
+                        name={parents?.data[0]?.name}
+                        lastName={parents?.data[0]?.lastName}
+                        phoneParent={parents?.data[0]?.phoneParent}
+                        relationship={parents?.data[0]?.relationship}
+                        email={parents?.data[0]?.email}
+                        professional={parents?.data[0]?.professional}
+                        company={parents?.data[0]?.company}
                         userId={userId}
-                        parents={parents.data}
+                        parents={parents?.data}
                     />
                     <Parent
                         id_componente={1}
                         title={"Datos del Acudiente 2"}
-                        name={parents.data[1] ? parents.data[1].name : "N/A"}
-                        lastName={parents.data[1] ? parents.data[1].lastName : "N/A"}
-                        phoneParent={parents.data[1] ? parents.data[1].phoneParent : "N/A"}
-                        relationship={parents.data[1] ? parents.data[1].relationship : "N/A"}
-                        email={parents.data[1] ? parents.data[1].email : "N/A"}
-                        professional={parents.data[1] ? parents.data[1].professional : "N/A"}
-                        company={parents.data[1] ? parents.data[1].company : "N/A"}
+                        name={parents?.data[1] ? parents.data[1].name : "N/A"}
+                        lastName={parents?.data[1] ? parents.data[1].lastName : "N/A"}
+                        phoneParent={parents?.data[1] ? parents.data[1].phoneParent : "N/A"}
+                        relationship={parents?.data[1] ? parents.data[1].relationship : "N/A"}
+                        email={parents?.data[1] ? parents.data[1].email : "N/A"}
+                        professional={parents?.data[1] ? parents.data[1].professional : "N/A"}
+                        company={parents?.data[1] ? parents.data[1].company : "N/A"}
                         userId={userId}
-                        parents={parents.data}
+                        parents={parents?.data}
                     />
                     <Emergency
                         title={"En caso de emergencia"}
-                        nameOneEmergency={parentsE.data.nameOneEmergency}
-                        telephoneOneEmergency={parentsE.data.telephoneOneEmergency}
-                        nameTwoEmergency={parentsE.data.nameTwoEmergency}
-                        telephoneTwoEmergency={parentsE.data.telephoneTwoEmergency}
+                        nameOneEmergency={parentsE?.data.nameOneEmergency}
+                        telephoneOneEmergency={parentsE?.data.telephoneOneEmergency}
+                        nameTwoEmergency={parentsE?.data.nameTwoEmergency}
+                        telephoneTwoEmergency={parentsE?.data.telephoneTwoEmergency}
                         userId={userId}
                     />
                 </div>

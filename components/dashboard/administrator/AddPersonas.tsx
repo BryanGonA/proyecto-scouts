@@ -74,13 +74,17 @@ export default function AgregarPersonal() {
     const labelCEmail = useRef(null);
     const labelCPassword = useRef(null)
 
+   
+
     useEffect(() => {
         if (btnCorreo || cEmail) {
             if (btnCorreo.current.value != cEmail) {
                 labelCEmail.current.style.color = "black";
+                //labelCEmail.current.innerHTML = "El correo no coincide";
             }
             else {
                 labelCEmail.current.style.color = "black";
+                //labelCEmail.current.innerHTML = "Confirmar correo";
             }
         }
     }, [btnCorreo, cEmail])
@@ -89,6 +93,8 @@ export default function AgregarPersonal() {
         if (btnContraseña || cPassword) {
             if (btnContraseña.current.value != cPassword) {
                 labelCPassword.current.style.color = "red";
+                //labelCPassword.current.innerHTML = "La contraseña no coincide";
+
             }
             else {
                 labelCPassword.current.style.color = "black";
@@ -163,7 +169,7 @@ export default function AgregarPersonal() {
                 body: photo,
                 headers: {
                     'Referrer-Policy': 'origin-when-cross-origin',
-                    'Authorization': "Bearer " + localStorage.getItem("auth_token"),
+                    //'Authorization': "Bearer " + localStorage.getItem("auth_token"),
                     'Access-Control-Allow-Origin': `${process.env.NEXT_PUBLIC_URL}`
                 }
             }).catch(err => {

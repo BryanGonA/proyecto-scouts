@@ -136,7 +136,7 @@ export default function ActualizarPersonal({ idPersonal, edit }) {
     const obtenerid = (userid) => {
         fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/users/${userid}`, {
             method: 'GET',
-            cache: 'no-cache',
+            //cache: 'no-cache',
             headers: {
                 'Referrer-Policy': 'origin-when-cross-origin',
                 'Authorization': "Bearer " + localStorage.getItem("auth_token"),
@@ -157,6 +157,7 @@ export default function ActualizarPersonal({ idPersonal, edit }) {
             setLoading(false)
 
         }).catch(error => {
+            console.log(error)
 
         })
     }
@@ -248,6 +249,12 @@ export default function ActualizarPersonal({ idPersonal, edit }) {
     //<img className={styles.image} src="/img/profile-picture.png" ref={images} />
     //<img className={styles.image} src={loadingImage ? "/img/profile-picture.png" : URL.createObjectURL(image)}/>
 
+    const helloStyles = {
+        color: 'red',
+        fontSize: '10px', //camelCase property
+        padding: '10px' //camelCase property
+    }
+
     return (
         <>
             <div className={`${styles.titulo} p-5`}><strong><h1>Agregar personal administrativo Grupo Scout Centinelas 113</h1></strong></div>
@@ -262,12 +269,15 @@ export default function ActualizarPersonal({ idPersonal, edit }) {
                                 <div className={styles.photo}>
                                     
                                 <img className={styles.image} src={loadingImage ? "/img/profile-picture.png" : URL.createObjectURL(image)} ref={images}/>
-                                    
+                                <p style={helloStyles}>*Formato de imagen: JPG, JPEG, PNG. No mayor a 10 MB.</p>
                                 </div>
                                 <div className="row">
+                                    
                                     <div className={styles.div_file} >
                                         <p className={styles.text}>*Seleccionar foto</p><input type="file" disabled id="btn_upload" accept="image/jpeg,image/png" className={styles.btn_upload} ref={photo} onChange={method} />
                                     </div>
+                                    
+
                                 </div>
                             </div>
                             <div className="row">

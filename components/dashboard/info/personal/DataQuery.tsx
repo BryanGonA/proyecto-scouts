@@ -66,6 +66,9 @@ export default function DataQuery({label, data, settings, tipo, editar, referenc
             case 'numeros':
                 elemento = <input type="number" className={`${editar ? styles.editar: styles.mostrar } ${styles.text_data}`}  ref={reference} disabled={!editar} defaultValue={data}></input>
                 break;
+
+            case 'photo':
+                elemento = <input type="file" className={`${editar ? styles.editar: styles.mostrar } ${styles.text_data}`}  ref={reference} disabled={!editar} defaultValue={data}></input>
         }
     }
     if (tipo === 'correo') {

@@ -16,14 +16,13 @@ export default function MyBranchActions({id} : any) {
                     'Content-Type': 'application/json',
                     'Access-Control-Allow-Origin': `${process.env.NEXT_PUBLIC_URL}`
                 },           
-                }).then(res => {
-                    return res.json().then(data => {
-                        if (res.ok) {
-                        return Promise.resolve(data)
-                        } else {
-                        return Promise.reject(data)
-                        }
-                    })
+                }).then(async res => {
+                    const data = await res.json();
+                    if (res.ok) {
+                        return Promise.resolve(data);
+                    } else {
+                        return Promise.reject(data);
+                    }
                 }).then(data => {
                 setDatosUsuario(data['data'])                 
             })
@@ -41,37 +40,24 @@ export default function MyBranchActions({id} : any) {
             method: 'PUT',
             headers: {
                 'Referrer-Policy': 'origin-when-cross-origin',
-                Authorization: "Bearer " + localStorage.getItem("auth_token"),
+                'Authorization': "Bearer " + localStorage.getItem("auth_token"),
                 'Content-Type': 'application/json',
                 'Access-Control-Allow-Origin': `${process.env.NEXT_PUBLIC_URL}`
             },
            
             body:JSON.stringify(datosUsuario)
-           }).then(res => {
-              return res.json()
-                 .then(data => {                    
-                    if (res.ok) {                                  
-                       return Promise.resolve(data)
-                    } else {                
-                       return Promise.reject(data)
-                    }
-                 })  
-           })
-           fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/users/${id}`, {              
-            method: 'PUT',
-            headers: {
-                'Referrer-Policy': 'origin-when-cross-origin',
-                Authorization: "Bearer " + localStorage.getItem("auth_token"),
-                'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': `${process.env.NEXT_PUBLIC_URL}`
-            },
-            body:JSON.stringify(datosUsuario)
-
-           }).catch(error => {
-            console.log(error)
-        })
-
-       
+           }).then(async res => {
+              const data = await res.json();
+               if (res.ok) {
+                   return Promise.resolve(data);
+               } else {
+                   return Promise.reject(data);
+               }  
+           }).then(data => {
+                console.log(data)
+              }).catch(error => {
+                console.log(error)
+              })       
     }
 
 
