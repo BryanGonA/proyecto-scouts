@@ -6,7 +6,6 @@ import { useRouter } from "next/router";
 export default function GestionPagos({ id, paymentId }: any) {
 
     const router = useRouter()
-
     const i_tvalue = useRef(null)
     const i_recibo = useRef(null)
     const i_payDate = useRef(null)
@@ -23,6 +22,7 @@ export default function GestionPagos({ id, paymentId }: any) {
     const i_insig = useRef(null)
     const i_other = useRef(null)
     const i_observ = useRef(null)
+    const i_pay = useRef(null)
 
     const btn_agregar = useRef(null)
     const btn_cancelar = useRef(null)
@@ -143,7 +143,8 @@ export default function GestionPagos({ id, paymentId }: any) {
 
     const enviarEditar = (pagos, userId, paymentId) => {
         pagos = {...pagos, id: Number.parseInt(paymentId)}
-        fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/users/editpayments/${userId}`, {
+        //fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/users/editpayments/${id}`, {
+        fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/users/editpayments/${id}`, {
             method: 'PUT',
             headers: {
                 'Referrer-Policy': 'origin-when-cross-origin',
@@ -223,6 +224,8 @@ export default function GestionPagos({ id, paymentId }: any) {
                 i_tvalue.current.value = payment.amount
                 i_recibo.current.value = payment.receiptNumber
                 i_observ.current.value = payment.observation
+                i_pay.current.value = payment.pay
+                
                 let date = new Date(payment.date)
                 let string = date.toISOString().split('T')[0].split('-')
                 i_payDate.current.value = string[0] + '-' + string[2] + '-' + string[1]
@@ -260,6 +263,7 @@ export default function GestionPagos({ id, paymentId }: any) {
         values.push({ name: 'CAMPAMENTO', ref: i_camp })
         values.push({ name: 'INSIGNIAS', ref: i_insig })
         values.push({ name: 'OTROS', ref: i_other })
+        values.push({ name: 'TIPO PAGO', ref: i_pay })
         setInputValues(values)
     }
 
@@ -400,7 +404,16 @@ export default function GestionPagos({ id, paymentId }: any) {
                             <input placeholder="Ingrese una observación de ser necesario..." ref={i_observ} className={`${styles.inputObser} input-group`} type="text" />
                         </p>
                     </div>
+                    
                 </div>
+                <div className="row col-12" >
+                            <label className={`${styles.desc}`} htmlFor="tipo" ref={i_pay}>Tipo de pago: </label>
+                            <select name="tipo" ref={i_pay} className={`${styles.inputObser} input-group`}>
+                                <option value="" hidden>SELECCIONE...</option>
+                                <option value="1">TRANSFERENCIA</option>
+                                <option value="2">EFECTIVO</option>
+                            </select>
+                        </div>
                 <div className={styles.contenedor_btns}>
 
                     <button ref={btn_agregar} className={`btn btn-success ${styles.botones}`} onClick={actions}>{paymentId ? 'Actualizar Pago' : 'Agregar Pago'}</button>

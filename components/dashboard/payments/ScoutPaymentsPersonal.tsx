@@ -2,6 +2,7 @@ import styles from "~/styles/dashboard/info/DataQuery.module.scss";
 import { MDBDataTable } from 'mdbreact';
 import { useState, useEffect } from "react";
 import Link from "next/link"
+import { downloadCSV } from '~/lib/utils';
 import withReactContent from "sweetalert2-react-content";
 // Corresponde a la ruta http://.../info/about
 
@@ -9,6 +10,7 @@ export default function  ScoutPayment({idPago}:any){
 
   const data_payment = {
     columns: [
+      
       {
         label: 'Número de recibo',
         field: 'receiptNumber',
@@ -22,16 +24,22 @@ export default function  ScoutPayment({idPago}:any){
         width: 270
       },
       {
-        label: 'Valor',
-        field: 'amount',
+        label: 'Descripción',
+        field: 'observation',
+        sort: 'asc',
+        width: 150
+      },
+      {
+        label: 'Tipo de Pago',
+        field: 'pay',
         sort: 'asc',
         width: 200
       },
       {
-        label: 'Observacion',
-        field: 'observation',
+        label: 'Valor',
+        field: 'amount',
         sort: 'asc',
-        width: 150
+        width: 200
       },
       {
         label: 'Fecha',
@@ -105,8 +113,8 @@ export default function  ScoutPayment({idPago}:any){
       if(data.data){
         let puntero = data.data.payments.map((payment)=>{
           let conceptos = payment.paymentConcepts.map((concept)=> concept.name)
-          
           let datos = {
+            pay: payment.pay,
             receiptNumber: payment.receiptNumber ,
             concept: conceptos.join(', '),
             amount: payment.amount,
@@ -200,9 +208,17 @@ export default function  ScoutPayment({idPago}:any){
                     </svg>
                     Agregar Pago 
                   </a>
-
                 </div>
-              
+                <div className="col-6"> 
+                    <p className={`btn ${styles.csvbutton}`} onClick={downloadCSV} >
+                        <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" className="bi bi-file-earmark-arrow-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 0h5.5v1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h1V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z"/>
+                            <path d="M9.5 3V0L14 4.5h-3A1.5 1.5 0 0 1 9.5 3z"/>
+                            <path fill-rule="evenodd" d="M8 6a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 10.293V6.5A.5.5 0 0 1 8 6z"/>
+                        </svg>
+                            Exportar PDF                  
+                    </p>
+                </div>
               </div>
             </div>
               <MDBDataTable

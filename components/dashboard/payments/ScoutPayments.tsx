@@ -20,6 +20,12 @@ export default function  ScoutPayment({idPago}:any){
         width: 270
       },
       {
+        label: 'Tipo de pago',
+        field: 'pay',
+        sort: 'asc',
+        width: 270
+      },
+      {
         label: 'Valor',
         field: 'amount',
         sort: 'asc',
@@ -95,6 +101,7 @@ export default function  ScoutPayment({idPago}:any){
           let conceptos = payment.paymentConcepts.map((concept)=> concept.name)
 
           let datos = {
+            pay: payment.pay,
             receiptNumber: payment.receiptNumber ,
             concept: conceptos.join(', '),
             amount: payment.amount,
