@@ -32,7 +32,13 @@ export default function MyBranchActions({id} : any) {
     }, []);
 
     async function cambiar_estado(estado){
-        
+        // Hay un problema con las funciones fetch. 
+        // Se debe esperar a que los fetch terminen y que 
+        // se retorne del servidor que efectivamente el usuario
+        // se ha actualizado.
+        // Si no se modifica, se recarga automáticamente la página
+        // y en algunas ocasiones la base de datos aún no ha realizado
+        // el cambio. Por lo tanto se deberá utilizar el await.
         datosUsuario.status=estado
         datosUsuario.branches = {}
         setDatosUsuario(datosUsuario)    

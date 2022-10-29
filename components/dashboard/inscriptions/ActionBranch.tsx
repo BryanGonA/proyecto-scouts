@@ -22,12 +22,12 @@ export default function ActionBranch({id, value} : any) {
             mode: 'cors',
             method: 'GET',
             headers: {
-              'Referrer-Policy': 'origin-when-cross-origin',
-              'Authorization': "Bearer " + localStorage.getItem("auth_token"),
-              'Content-Type': 'application/json',
-              'Access-Control-Allow-Origin': `${process.env.NEXT_PUBLIC_URL}`
+            'Referrer-Policy': 'origin-when-cross-origin',
+            'Authorization': "Bearer " + localStorage.getItem("auth_token"),
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': `${process.env.NEXT_PUBLIC_URL}`
             },
-          }).then(res => {
+        }).then(res => {
             return res.json().then(data => {
                 if (res.ok) {
                     return Promise.resolve(data)
@@ -35,17 +35,17 @@ export default function ActionBranch({id, value} : any) {
                     return Promise.reject(data)
                 }
             })
-          }).then(data => {          
+        }).then(data => {          
             data.data.map((branches)=>{
                 let datos = {
-                  value: branches.id,
-                  label: branches.nameBranch,                
+                value: branches.id,
+                label: branches.nameBranch,                
                 }              
                 lista.push(datos)
             })          
-          }).then(()=>{
-              setBranches(lista)            
-          })
+        }).then(()=>{
+            setBranches(lista)            
+        })
     }
 
     function getSeletedBranch(){
@@ -53,12 +53,12 @@ export default function ActionBranch({id, value} : any) {
             mode: 'cors',
             method: 'GET',
             headers: {
-              'Referrer-Policy': 'origin-when-cross-origin',
-              'Authorization': "Bearer " + localStorage.getItem("auth_token"),
-              'Content-Type': 'application/json',
-              'Access-Control-Allow-Origin': `${process.env.NEXT_PUBLIC_URL}`
-            },
-          }).then(res => {
+            'Referrer-Policy': 'origin-when-cross-origin',
+            'Authorization': "Bearer " + localStorage.getItem("auth_token"),
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': `${process.env.NEXT_PUBLIC_URL}`
+        },
+        }).then(res => {
             return res.json().then(data => {
                 if (res.ok) {
                     return Promise.resolve(data)
@@ -66,15 +66,15 @@ export default function ActionBranch({id, value} : any) {
                     return Promise.reject(data)
                 }
             })
-          }).then(data => {            
+        }).then(data => {            
             let default_value = {
                 value:data.data.branches.id,
                 label:data.data.branches.nameBranch
             }            
             setSelected(default_value)                         
-          }).then(()=>{              
-              setLoading(false)              
-          })
+        }).then(()=>{              
+            setLoading(false)              
+        })
 
     }
     
@@ -136,7 +136,7 @@ export default function ActionBranch({id, value} : any) {
         })  
         
     },[])
-  
+
     function getOptions(input) {  
         setSelected(input)        
     }
@@ -144,7 +144,7 @@ export default function ActionBranch({id, value} : any) {
     return (       
         <>
             <div>
-                <label onClick={handleShow}>{value.nameBranch}</label>
+                <label onClick={handleShow}>{value.nameBranch}</label> {/* El usuario debe llenar todos los campos para poder ser mostrado en las páginas subsiguientes. */}
                 <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
                     <Modal.Title className="text-center">Seleccione la Rama a ingresar</Modal.Title>
