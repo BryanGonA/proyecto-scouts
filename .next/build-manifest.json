@@ -25,25 +25,15 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/dashboard/info/[userId]": [
+    "/dashboard/jefe-grupo/cartera": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/dashboard/info/[userId].js"
+      "static/chunks/pages/dashboard/jefe-grupo/cartera.js"
     ],
-    "/dashboard/info/acudientes/[userId]": [
+    "/login": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/dashboard/info/acudientes/[userId].js"
-    ],
-    "/dashboard/info/medicos/[userId]": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/dashboard/info/medicos/[userId].js"
-    ],
-    "/dashboard/jefe-grupo/inscripciones": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/dashboard/jefe-grupo/inscripciones.js"
+      "static/chunks/pages/login.js"
     ]
   },
   "ampFirstPages": []

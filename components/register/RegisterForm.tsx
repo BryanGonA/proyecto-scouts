@@ -113,7 +113,7 @@ export default function RegisterForm() {
 
     const defaultValues : Inputs = {
         userDetails: {
-            entryBranch: "",
+            entryBranch: "TEMPORAL",
             receivingBoss: "",
             recommended: ""
         },

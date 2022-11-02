@@ -24,7 +24,8 @@ export default function MyBranchActions({id} : any) {
                         return Promise.reject(data);
                     }
                 }).then(data => {
-                setDatosUsuario(data['data'])                 
+                setDatosUsuario(data['data'])     
+
             })
             
           
@@ -33,7 +34,7 @@ export default function MyBranchActions({id} : any) {
     async function cambiar_estado(estado){
         
         datosUsuario.status=estado
-        datosUsuario.branches = {}
+        //datosUsuario.branches = {}
         setDatosUsuario(datosUsuario)    
         
         fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/users/${id}`, {              

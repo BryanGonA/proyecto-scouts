@@ -84,7 +84,8 @@ export default function RegisterContainer({title, values, children} : Props) {
             }   
             ).then((result) => {
                 if (result.isConfirmed) {
-                    router.push('/login')
+                    //router.push('/login')
+                    window.location.href = '/login'
                 }
             })
         }).catch(error => {
