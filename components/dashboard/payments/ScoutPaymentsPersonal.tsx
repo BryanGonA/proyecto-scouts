@@ -18,22 +18,10 @@ export default function  ScoutPayment({idPago}:any){
         width: 150
       },
       {
-        label: 'Concepto',
+        label: 'Observacion',
         field: 'concept',
         sort: 'asc',
         width: 270
-      },
-      {
-        label: 'Descripción',
-        field: 'observation',
-        sort: 'asc',
-        width: 150
-      },
-      {
-        label: 'Tipo de Pago',
-        field: 'pay',
-        sort: 'asc',
-        width: 200
       },
       {
         label: 'Valor',
