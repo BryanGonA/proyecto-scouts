@@ -4,6 +4,7 @@ import { useContext } from 'react'
 import styles from '~/styles/dashboard/Slidebar.module.scss'
 import { SidebarContext } from './Sidebar'
 
+
 export interface SideLinkProps {
     href: string,
     name: string,

@@ -104,9 +104,6 @@ export default function  Inscriptions(){
     
   },[userData])
 
-
-
-   
   return (
     <div>
       <div>
@@ -140,7 +137,7 @@ export default function  Inscriptions(){
             </div>
           </div>
         )}
-        
+
     </div>
   )
   

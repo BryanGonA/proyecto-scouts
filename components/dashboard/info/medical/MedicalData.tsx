@@ -7,7 +7,7 @@ import { Disease, Intervention } from "~/components/register/RegisterForm";
 import { useCurrentUser } from "~/hooks/use-current-user";
 
 
-export default function MedicalData({ userId }: any) {
+export default function MedicalData({ userId }) {
   
   const { user, isLoading: loadingUser, error: userError } = useCurrentUser()
   // const mensajes = {

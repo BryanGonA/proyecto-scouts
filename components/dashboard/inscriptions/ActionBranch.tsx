@@ -19,8 +19,8 @@ export default function ActionBranch({id, value} ) {
     const [datosUsuario, setDatosUsuario] = useState(null)
     var lista = []
 
-    function getBranches(){
-        fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/branches`, {
+    async function getBranches(){
+        await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/branches`, {
             mode: 'cors',
             method: 'GET',
             headers: {
@@ -49,8 +49,8 @@ export default function ActionBranch({id, value} ) {
           })
     }
 
-    function getSeletedBranch(){
-        fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/users/${id}`, {
+    async function getSeletedBranch(){
+        await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/users/${id}`, {
             mode: 'cors',
             method: 'GET',
             headers: {
@@ -81,7 +81,7 @@ export default function ActionBranch({id, value} ) {
 
     }
     
-    async function changeBranchUser(branch){ 
+    async function changeBranchUser(branch){   
 
         let newBranch = {id:branch.value, nameBranch:branch.label} 
         
@@ -138,7 +138,6 @@ export default function ActionBranch({id, value} ) {
         })  
         
     },[])
-  
     function getOptions(input) {  
         setSelected(input)        
     }

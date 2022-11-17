@@ -11,7 +11,7 @@ export default function prueba({userId}: any) {
     const [parentsE, setParentsE] = useState(null)
     const [loading, setLoading] = useState(true)
     
-   const { user, isLoading: loadingUser, error: userError } = useCurrentUser()
+const { user, isLoading: loadingUser, error: userError } = useCurrentUser()
 
     useEffect(() => {
         if(userId) {

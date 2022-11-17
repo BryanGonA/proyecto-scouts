@@ -116,14 +116,13 @@ export default function PersonalInformation({ Id }: any){
                     'Content-Type': 'application/json',
                     'Access-Control-Allow-Origin': `${process.env.NEXT_PUBLIC_URL}`
                 },           
-              }).then(res => {
-                  return res.json().then(data => {
-                      if (res.ok) {
-                        return Promise.resolve(data)
-                      } else {
-                        return Promise.reject(data)
-                      }
-                  })
+              }).then(async res => {
+                  const data = await res.json();
+                  if (res.ok) {
+                      return Promise.resolve(data);
+                  } else {
+                      return Promise.reject(data);
+                  }
                 }).then(data => {
                     setUsuario(data.data)
                     let diferencia_fechas = new Date().getTime() - new Date(data.data.birthDate).getTime()
@@ -143,77 +142,77 @@ export default function PersonalInformation({ Id }: any){
         }
     }
     
-    const actualizarDatosId = async (datos_detalles, datos_usuarios,id) => {
-                   
-            fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/userdetails/${id}`, {              
-            method: 'PUT',
-            headers: {
-                'Referrer-Policy': 'origin-when-cross-origin',
-                'Authorization': "Bearer " + localStorage.getItem("auth_token"),
-                'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': `${process.env.NEXT_PUBLIC_URL}`
-            },
-            body:JSON.stringify(datos_detalles)
-           }).then(res => {
-              return res.json()
-                 .then(data => {                    
-                    if (res.ok) {                          
-                        setDetalles(data.data)                                             
-                       return Promise.resolve(data)
-                    } else {                                   
-                        cancelar()                       
-                       return Promise.reject(data)
-                    }
-                 })  
-           })
-           fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/users/${id}`, {              
-            method: 'PUT',
-            headers: {
-                'Referrer-Policy': 'origin-when-cross-origin',
-                'Authorization': "Bearer " + localStorage.getItem("auth_token"),
-                'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': `${process.env.NEXT_PUBLIC_URL}`
-            },
-            body:JSON.stringify(datos_usuarios)
-           }).then(res => {
-              return res.json()
-                 .then(data => {                    
-                    if (res.ok) {   
-                        MySwal.fire({
-                            icon: 'success',
-                            title: 'Datos Actualizados',
-                            text: "Los datos se han actualizado satisfactoriamente",
-                            confirmButtonColor: '#83DC2D',
-                            confirmButtonText: "Aceptar"                    
-                        }).then(function (isConfirm) {
-                            if (isConfirm) {
-                              location.reload();
-                            }
-                          })                     
-                        setDetalles(data.data)                   
-                       return Promise.resolve(data)
-                    } else {
-                        let err=data.message[0]
-                        MySwal.fire({
-                            icon: 'error',
-                            title: 'Error',
-                            text: err,
-                            confirmButtonColor: '#E71919',
-                            confirmButtonText: "Aceptar"
-                        
-                        }).then(function (isConfirm) {
-                            if (isConfirm) {
-                              location.reload();
-                            }
-                          })                   
-                        cancelar()
-                        //let datos={ name: i_nombre.current.value, lastName: i_apellido.current.value, phoneParent: i_telefono.current.value, relationship: i_parentesco.current.value, email: i_correo.current.value, professional: i_profesion.current.value, company: i_empresa.current.value }
-                        //setForm(datos)
-                       return Promise.reject(data)
-                    }
-                 })  
-           })
-    }
+    const actualizarDatosId = async (datos_detalles, datos_usuarios, id) => {
+      fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/userdetails/${id}`, {
+        method: "PUT",
+        headers: {
+          "Referrer-Policy": "origin-when-cross-origin",
+          Authorization: "Bearer " + localStorage.getItem("auth_token"),
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": `${process.env.NEXT_PUBLIC_URL}`,
+        },
+        body: JSON.stringify(datos_detalles),
+      }).then(async (res) => {
+        const data = await res.json();
+        if (res.ok) {
+          setDetalles(data.data);
+          return Promise.resolve(data);
+        } else {
+          cancelar();
+          return Promise.reject(data);
+        }
+      });
+      fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/users/${id}`, {
+        method: "PUT",
+        headers: {
+          "Referrer-Policy": "origin-when-cross-origin",
+          Authorization: "Bearer " + localStorage.getItem("auth_token"),
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": `${process.env.NEXT_PUBLIC_URL}`,
+        },
+        body: JSON.stringify(datos_usuarios),
+      }).then(async (res) => {
+        const data = await res.json();
+        if (res.ok) {
+          MySwal.fire({
+            icon: "success",
+            title: "Datos Actualizados",
+            text: "Los datos se han actualizado satisfactoriamente",
+            confirmButtonColor: "#83DC2D",
+            confirmButtonText: "Aceptar",
+          }).then(function (isConfirm) {
+            if (isConfirm) {
+              location.reload();
+            }
+          }).then(() => {
+            let userId = data.data.id;
+            let photo = new FormData();
+            photo.append("file", values.photo);
+            photo.append("id", userId);
+            setDetalles(data.data);
+            return Promise.resolve(data);
+
+          })
+        } else {
+          let err = data.message[0];
+          MySwal.fire({
+            icon: "error",
+            title: "Error",
+            text: err,
+            confirmButtonColor: "#E71919",
+            confirmButtonText: "Aceptar",
+          }).then(function (isConfirm_1) {
+            if (isConfirm_1) {
+              location.reload();
+            }
+          });
+          cancelar();
+          //let datos={ name: i_nombre.current.value, lastName: i_apellido.current.value, phoneParent: i_telefono.current.value, relationship: i_parentesco.current.value, email: i_correo.current.value, professional: i_profesion.current.value, company: i_empresa.current.value }
+          //setForm(datos)
+          return Promise.reject(data);
+        }
+      });
+    };
 
 
     const actualizarDatos = async (datos_detalles, datos_usuarios) => {
@@ -225,15 +224,13 @@ export default function PersonalInformation({ Id }: any){
               'Authorization': "Bearer " + localStorage.getItem("auth_token"),
               'Access-Control-Allow-Origin': `${process.env.NEXT_PUBLIC_URL}`
            },
-        }).then(res => {
-           return res.json()
-              .then(data => {
-                 if (res.ok) {
-                    return Promise.resolve(data)
-                 } else {
-                    return Promise.reject(data)
-                 }
-              })  
+        }).then(async res => {
+           const data = await res.json();
+            if (res.ok) {
+                return Promise.resolve(data);
+            } else {
+                return Promise.reject(data);
+            }  
         }).then(data => {      
                  
             fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/userdetails/${data['user'].id}`, {              
@@ -245,17 +242,15 @@ export default function PersonalInformation({ Id }: any){
                 'Access-Control-Allow-Origin': `${process.env.NEXT_PUBLIC_URL}`
             },
             body:JSON.stringify(datos_detalles)
-           }).then(res => {
-              return res.json()
-                 .then(data => {                    
-                    if (res.ok) {                          
-                        setDetalles(data.data)                                             
-                       return Promise.resolve(data)
-                    } else {                                   
-                        cancelar()                       
-                       return Promise.reject(data)
-                    }
-                 })  
+           }).then(async res => {
+              const data = await res.json();
+               if (res.ok) {
+                   setDetalles(data.data);
+                   return Promise.resolve(data);
+               } else {
+                   cancelar();
+                   return Promise.reject(data);
+               }  
            })
            fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/users/${data['user'].id}`, {              
             method: 'PUT',
@@ -266,43 +261,40 @@ export default function PersonalInformation({ Id }: any){
                 'Access-Control-Allow-Origin': `${process.env.NEXT_PUBLIC_URL}`
             },
             body:JSON.stringify(datos_usuarios)
-           }).then(res => {
-              return res.json()
-                 .then(data => {                    
-                    if (res.ok) {   
-                        MySwal.fire({
-                            icon: 'success',
-                            title: 'Datos Actualizados',
-                            text: "Los datos se han actualizado satisfactoriamente",
-                            confirmButtonColor: '#83DC2D',
-                            confirmButtonText: "Aceptar"                    
-                        }).then(function (isConfirm) {
-                            if (isConfirm) {
-                              location.reload();
-                            }
-                          })                     
-                        setDetalles(data.data)                   
-                       return Promise.resolve(data)
-                    } else {
-                        let err=data.message[0]
-                        MySwal.fire({
-                            icon: 'error',
-                            title: 'Error',
-                            text: err,
-                            confirmButtonColor: '#E71919',
-                            confirmButtonText: "Aceptar"
-                        
-                        }).then(function (isConfirm) {
-                            if (isConfirm) {
-                              location.reload();
-                            }
-                          })                   
-                        cancelar()
-                        //let datos={ name: i_nombre.current.value, lastName: i_apellido.current.value, phoneParent: i_telefono.current.value, relationship: i_parentesco.current.value, email: i_correo.current.value, professional: i_profesion.current.value, company: i_empresa.current.value }
-                        //setForm(datos)
-                       return Promise.reject(data)
-                    }
-                 })  
+           }).then(async res => {
+              const data = await res.json();
+               if (res.ok) {
+                   MySwal.fire({
+                       icon: 'success',
+                       title: 'Datos Actualizados',
+                       text: "Los datos se han actualizado satisfactoriamente",
+                       confirmButtonColor: '#83DC2D',
+                       confirmButtonText: "Aceptar"
+                   }).then(function (isConfirm) {
+                       if (isConfirm) {
+                           location.reload();
+                       }
+                   });
+                   setDetalles(data.data);
+                   return Promise.resolve(data);
+               } else {
+                   let err = data.message[0];
+                   MySwal.fire({
+                       icon: 'error',
+                       title: 'Error',
+                       text: err,
+                       confirmButtonColor: '#E71919',
+                       confirmButtonText: "Aceptar"
+                   }).then(function (isConfirm_1) {
+                       if (isConfirm_1) {
+                           location.reload();
+                       }
+                   });
+                   cancelar();
+                   //let datos={ name: i_nombre.current.value, lastName: i_apellido.current.value, phoneParent: i_telefono.current.value, relationship: i_parentesco.current.value, email: i_correo.current.value, professional: i_profesion.current.value, company: i_empresa.current.value }
+                   //setForm(datos)
+                   return Promise.reject(data);
+               }  
            })
      })
 

@@ -2,7 +2,6 @@ import styles from "~/styles/login/Login.module.scss";
 
 export default function Input({atribute,handleChange}:any)  {
     return (
-       
                     <input
                     id={atribute.id}
                     name={atribute.name}
@@ -13,7 +12,6 @@ export default function Input({atribute,handleChange}:any)  {
                     maxLength={atribute.maxLength}
                     required
                     
-                    />
-                                 
+                    />                    
     )
 }

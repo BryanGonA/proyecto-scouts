@@ -156,6 +156,7 @@ export default function RegisterForm() {
     
 
     const [values, setValues] = useState<Inputs>(defaultValues)
+    
     return (
         <RegisterContainer title="Hoja de Vida Scout" values={values} setValues={setValues}>
             <FormPhoto values={values} setValues={setValues}/>
@@ -172,4 +173,6 @@ export default function RegisterForm() {
             </RegisterDrops>
         </RegisterContainer>
     )
+    
+    
 }

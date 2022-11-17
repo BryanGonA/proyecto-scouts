@@ -1,16 +1,18 @@
 import { useEffect, useRef, useState } from "react";
 import styles from "~/styles/register/forms/PersonalData.module.scss";
 import { RegisterFormProps } from "../RegisterForm";
+//import { Path, useForm, UseFormRegister, SubmitHandler } from "react-hook-form";
 
 export default function FormPersonalData({ values, setValues }: RegisterFormProps) {
+   // const { register, formState: { errors }, handleSubmit } = useForm();
 
     const [curse, setCurse] = useState(null);
     const [email, setEmail] = useState(null);
     const [cEmail, setCEmail] = useState(null);
     const [password, setPassword] = useState(null);
     const [cPassword, setCPassword] = useState(null);
-    const labelCEmail = useRef(null);
-    const labelCPassword = useRef(null)
+    let labelCEmail = useRef(null);
+    let labelCPassword = useRef(null)
     const calendar = useRef(null);
     const divCalendar = useRef(null);
 
@@ -31,20 +33,25 @@ export default function FormPersonalData({ values, setValues }: RegisterFormProp
         e.target.value = value.replace(new RegExp(/[^\d]/, 'ig'), '');
     }
 
+
+
     useEffect(() => {
-        if (email || cEmail) {
+        
             if (email != cEmail) {
+                labelCEmail.current.value = 'Los correos no coinciden',
                 labelCEmail.current.style.color = 'red';
             }
             else {
+                labelCEmail.current.value = 'Confirmar tu correo',
                 labelCEmail.current.style.color = "black";
             }
-        }
+        
     }, [email, cEmail])
 
     useEffect(() => {
         if (password || cPassword) {
             if (password != cPassword) {
+                labelCPassword.current.value = 'Las contraseñas no coinciden',
                 labelCPassword.current.style.color = "red";
             }
             else {
@@ -76,6 +83,7 @@ export default function FormPersonalData({ values, setValues }: RegisterFormProp
                         <p className={styles.label}>Los campos (*) son obligatorios</p>
                     </div>
                 </div>
+                
                 <div className={`${styles.row} row`}>
                     <div className="col-lg-4 col-md-6 col-sm-12">
                         <label className={`${styles.label}`} htmlFor="names" >* Nombres:</label>
@@ -96,19 +104,54 @@ export default function FormPersonalData({ values, setValues }: RegisterFormProp
                     </div>
                 </div>
                 <div className={`${styles.row} row`}>
-                    <div className="col-lg-4 col-md-6 col-sm-12">
-                        <label className={`${styles.label}`} ref={labelCEmail} htmlFor="emailConfirmation">* Confirmación de correo electrónico:</label>
-                        <input name="emailConfirmation" className={`${styles.input} form-control`} type="email" onChange={e => setCEmail(e.target.value.toLowerCase())} />
-                    </div>
-                    <div className="col-lg-4 col-md-6 col-sm-12">
-                        <label className={`${styles.label}`} htmlFor="password">* Contraseña:</label>
-                        <input name="password" className={`${styles.inputPassword} form-control`} type="password" maxLength={20} onChange={e => { setPassword(e.target.value); setValues({ ...values, password: e.target.value }) }} />
-                    </div>
-                    <div className="col-lg-4 col-md-6 col-sm-12">
-                        <label className={`${styles.label}`} ref={labelCPassword} htmlFor="passwordConfirmation">* Confirmación de contraseña:</label>
-                        <input name="passwordConfirmation" className={`${styles.inputPassword} form-control`} type="password" maxLength={20} required onChange={e => setCPassword(e.target.value)} />
-                    </div>
-                </div>
+            <div className="col-lg-4 col-md-6 col-sm-12">
+              <label
+                className={`${styles.label}`}
+                ref={labelCEmail}
+                htmlFor="emailConfirmation"
+              >
+                {labelCEmail.current?.value}
+              </label>
+              <input
+                name="emailConfirmation"
+                className={`${styles.input} form-control`}
+                type="email"
+                onChange={(e) => setCEmail(e.target.value.toLowerCase())}
+              />
+            </div>
+            <div className="col-lg-4 col-md-6 col-sm-12">
+              <label className={`${styles.label}`} htmlFor="password">
+                * Contraseña:
+              </label>
+              <input
+                name="password"
+                className={`${styles.inputPassword} form-control`}
+                type="password"
+                maxLength={20}
+                onChange={(e) => {
+                  setPassword(e.target.value);
+                  setValues({ ...values, password: e.target.value });
+                }}
+              />
+            </div>
+            <div className="col-lg-4 col-md-6 col-sm-12">
+              <label
+                className={`${styles.label}`}
+                ref={labelCPassword}
+                htmlFor="passwordConfirmation"
+              >
+                * Confirmación de contraseña:
+              </label>
+              <input
+                name="passwordConfirmation"
+                className={`${styles.inputPassword} form-control`}
+                type="password"
+                maxLength={20}
+                required
+                onChange={(e) => setCPassword(e.target.value)}
+              />
+            </div>
+          </div>
                 <div className={`${styles.row2} row`}>
                     <div className="col-12">
                         <br />
