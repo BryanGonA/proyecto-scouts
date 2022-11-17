@@ -1,6 +1,5 @@
 {
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
-  "/_document": "pages/_document.js",
-  "/dashboard/tesorero/payments/[idPago]": "pages/dashboard/tesorero/payments/[idPago].js"
+  "/_document": "pages/_document.js"
 }

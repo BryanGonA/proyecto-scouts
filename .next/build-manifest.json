@@ -24,11 +24,6 @@
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
-    ],
-    "/dashboard/tesorero/payments/[idPago]": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/dashboard/tesorero/payments/[idPago].js"
     ]
   },
   "ampFirstPages": []
