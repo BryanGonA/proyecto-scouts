@@ -2,7 +2,7 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/dashboard/jefe-grupo/inscripciones": "pages/dashboard/jefe-grupo/inscripciones.js",
-  "/dashboard": "pages/dashboard.js",
-  "/login": "pages/login.js"
+  "/dashboard/tesorero": "pages/dashboard/tesorero.js",
+  "/login": "pages/login.js",
+  "/dashboard": "pages/dashboard.js"
 }
