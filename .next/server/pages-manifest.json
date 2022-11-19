@@ -3,5 +3,10 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/dashboard/tesorero": "pages/dashboard/tesorero.js",
+<<<<<<< HEAD
   "/dashboard/tesorero/payments/[idPago]": "pages/dashboard/tesorero/payments/[idPago].js"
+=======
+  "/login": "pages/login.js",
+  "/dashboard": "pages/dashboard.js"
+>>>>>>> 1807224ef98969aff1d85d86ce4edc26b50e806d
 }

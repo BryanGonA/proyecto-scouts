@@ -32,7 +32,7 @@ export function downloadCSV() {
     .then(response => response.blob())
     .then(blob => {
         var url = window.URL.createObjectURL(blob);
-        Object.assign(document.createElement('a'), { target: '_blank', href: url, download: `pagos-${new Date().toISOString().split('T')[0]}.csv`}).click();
+        Object.assign(document.createElement('a'), { target: '_blank', href: url, download: `Historial de pagos-${new Date().toISOString().split('T')[0]}.csv`}).click();
         setTimeout(function(){
             window.URL.revokeObjectURL(url);
         }, 100);

@@ -30,10 +30,22 @@
       "static/chunks/main.js",
       "static/chunks/pages/dashboard/tesorero.js"
     ],
+<<<<<<< HEAD
     "/dashboard/tesorero/payments/[idPago]": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/dashboard/tesorero/payments/[idPago].js"
+=======
+    "/dashboard/tesorero": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/dashboard/tesorero.js"
+    ],
+    "/login": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/login.js"
+>>>>>>> 1807224ef98969aff1d85d86ce4edc26b50e806d
     ]
   },
   "ampFirstPages": []
