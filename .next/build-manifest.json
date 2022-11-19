@@ -31,6 +31,7 @@
       "static/chunks/pages/dashboard/tesorero.js"
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
     "/dashboard/tesorero/payments/[idPago]": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
@@ -39,6 +40,11 @@
     "/dashboard/tesorero": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
+=======
+    "/dashboard/tesorero": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+>>>>>>> 1807224ef98969aff1d85d86ce4edc26b50e806d
       "static/chunks/pages/dashboard/tesorero.js"
     ],
     "/login": [
