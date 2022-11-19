@@ -49,8 +49,8 @@ export default function HeaderNavigation({ children }: any) {
             <Link href="/">
                 <a className={styles.logo}>
                     <img src="/img/pañoleta.png" alt="Pañoleta" />
-                    <img src="/logo.png" alt="Logo 113" />
-                    <img src="/img/ACE.png" alt="ACE" />
+                    {/* <img src="/logo.png" alt="Logo 113" />
+                    <img src="/img/ACE.png" alt="ACE" /> */}
                 </a>
             </Link>
             <ul className={active ? `${styles.ul} ${styles.responsive}` : styles.ul} ref={navBar}>

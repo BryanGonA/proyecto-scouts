@@ -8,8 +8,8 @@ export default function Footer() {
                 <div className="row footer_margin">
                     <div className="col-sm-3 col-12 logos" data-align="center">
                         <img src="/img/pañoleta.png" alt="pañoleta"></img>
-                        <img src="/img/113.png" alt="113"></img>
-                        <img src="/img/ACE.png" alt="ACE"></img>
+                        {/* <img src="/img/113.png" alt="113"></img>
+                        <img src="/img/ACE.png" alt="ACE"></img> */}
                     </div>
                     <div className="col-sm-3 col-6 terminos" >
                         <a href="/documents/TERMINOS_Y_CONDICIONES.pdf">
