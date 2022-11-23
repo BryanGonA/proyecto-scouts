@@ -1,108 +1,386 @@
-/*
- * ATTENTION: An "eval-source-map" devtool has been used.
- * This devtool is neither made for production nor for readable output files.
- * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
- * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
- * or disable the default devtool with "devtool: false".
- * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
- */
 (() => {
 var exports = {};
-exports.id = "pages/index";
-exports.ids = ["pages/index"];
+exports.id = 5405;
+exports.ids = [5405];
 exports.modules = {
 
-/***/ "./styles/inicio/Presentacion.module.scss":
-/*!************************************************!*\
-  !*** ./styles/inicio/Presentacion.module.scss ***!
-  \************************************************/
+/***/ 5168:
 /***/ ((module) => {
 
-eval("// Exports\nmodule.exports = {\n\t\"portada\": \"Presentacion_portada__fhFRX\",\n\t\"elementos_portada\": \"Presentacion_elementos_portada__PHGnZ\",\n\t\"titulo\": \"Presentacion_titulo__eNsrN\",\n\t\"subtitulo\": \"Presentacion_subtitulo__4R6p9\",\n\t\"boton_portada\": \"Presentacion_boton_portada__neLr_\",\n\t\"rectangulo\": \"Presentacion_rectangulo__I2NcB\"\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zdHlsZXMvaW5pY2lvL1ByZXNlbnRhY2lvbi5tb2R1bGUuc2Nzcy5qcyIsIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9wcm95ZWN0by1zY291dHMvLi9zdHlsZXMvaW5pY2lvL1ByZXNlbnRhY2lvbi5tb2R1bGUuc2Nzcz8yM2RlIl0sInNvdXJjZXNDb250ZW50IjpbIi8vIEV4cG9ydHNcbm1vZHVsZS5leHBvcnRzID0ge1xuXHRcInBvcnRhZGFcIjogXCJQcmVzZW50YWNpb25fcG9ydGFkYV9fZmhGUlhcIixcblx0XCJlbGVtZW50b3NfcG9ydGFkYVwiOiBcIlByZXNlbnRhY2lvbl9lbGVtZW50b3NfcG9ydGFkYV9fUEhHblpcIixcblx0XCJ0aXR1bG9cIjogXCJQcmVzZW50YWNpb25fdGl0dWxvX19lTnNyTlwiLFxuXHRcInN1YnRpdHVsb1wiOiBcIlByZXNlbnRhY2lvbl9zdWJ0aXR1bG9fXzRSNnA5XCIsXG5cdFwiYm90b25fcG9ydGFkYVwiOiBcIlByZXNlbnRhY2lvbl9ib3Rvbl9wb3J0YWRhX19uZUxyX1wiLFxuXHRcInJlY3Rhbmd1bG9cIjogXCJQcmVzZW50YWNpb25fcmVjdGFuZ3Vsb19fSTJOY0JcIlxufTtcbiJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./styles/inicio/Presentacion.module.scss\n");
+// Exports
+module.exports = {
+	"portada": "Presentacion_portada__fhFRX",
+	"elementos_portada": "Presentacion_elementos_portada__PHGnZ",
+	"titulo": "Presentacion_titulo__eNsrN",
+	"subtitulo": "Presentacion_subtitulo__4R6p9",
+	"boton_portada": "Presentacion_boton_portada__neLr_",
+	"rectangulo": "Presentacion_rectangulo__I2NcB"
+};
+
 
 /***/ }),
 
-/***/ "./components/inicio/Card.tsx":
-/*!************************************!*\
-  !*** ./components/inicio/Card.tsx ***!
-  \************************************/
+/***/ 7776:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Header)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n\nfunction Header({ titulo , descripcion , imagen , ultimo  }) {\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n        className: ultimo ? \"col-sm-10 col-lg-8 col-xl-8 mx-2 my-2 p-0 fondo_card w-100 card_final\" : \"col-xl-4 col-lg-8 col-sm-10 mx-2 my-2 p-0 fondo_card w-100\",\n        children: [\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                className: \"barra\",\n                children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"svg\", {\n                    viewBox: \"0 0 500 150\",\n                    preserveAspectRatio: \"none\",\n                    className: \"fondo\",\n                    children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"path\", {\n                        d: \"M-6.49,81.41 C151.52,160.36 188.20,33.05 501.97,41.94 L501.97,-31.08 L0.00,0.00 Z\",\n                        className: \"curva\"\n                    }, void 0, false, {\n                        fileName: \"C:\\\\Users\\\\Nicolas\\\\Desktop\\\\proyecto 2\\\\proyecto-scouts\\\\components\\\\inicio\\\\Card.tsx\",\n                        lineNumber: 7,\n                        columnNumber: 21\n                    }, this)\n                }, void 0, false, {\n                    fileName: \"C:\\\\Users\\\\Nicolas\\\\Desktop\\\\proyecto 2\\\\proyecto-scouts\\\\components\\\\inicio\\\\Card.tsx\",\n                    lineNumber: 6,\n                    columnNumber: 17\n                }, this)\n            }, void 0, false, {\n                fileName: \"C:\\\\Users\\\\Nicolas\\\\Desktop\\\\proyecto 2\\\\proyecto-scouts\\\\components\\\\inicio\\\\Card.tsx\",\n                lineNumber: 5,\n                columnNumber: 13\n            }, this),\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                className: \"barra_2 \",\n                children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"svg\", {\n                    viewBox: \"0 0 500 150\",\n                    preserveAspectRatio: \"none\",\n                    className: \"fondo_2\",\n                    children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"path\", {\n                        d: \"M-6.49,81.41 C151.52,160.36 188.20,33.05 501.97,41.94 L501.97,-31.08 L0.00,0.00 Z\",\n                        className: \"curva_2\"\n                    }, void 0, false, {\n                        fileName: \"C:\\\\Users\\\\Nicolas\\\\Desktop\\\\proyecto 2\\\\proyecto-scouts\\\\components\\\\inicio\\\\Card.tsx\",\n                        lineNumber: 13,\n                        columnNumber: 25\n                    }, this)\n                }, void 0, false, {\n                    fileName: \"C:\\\\Users\\\\Nicolas\\\\Desktop\\\\proyecto 2\\\\proyecto-scouts\\\\components\\\\inicio\\\\Card.tsx\",\n                    lineNumber: 12,\n                    columnNumber: 21\n                }, this)\n            }, void 0, false, {\n                fileName: \"C:\\\\Users\\\\Nicolas\\\\Desktop\\\\proyecto 2\\\\proyecto-scouts\\\\components\\\\inicio\\\\Card.tsx\",\n                lineNumber: 11,\n                columnNumber: 13\n            }, this),\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                className: \"mb-5\",\n                children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                    className: \"text-center\",\n                    children: [\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                            children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n                                className: \"card-title texto_titulo\",\n                                children: titulo\n                            }, void 0, false, {\n                                fileName: \"C:\\\\Users\\\\Nicolas\\\\Desktop\\\\proyecto 2\\\\proyecto-scouts\\\\components\\\\inicio\\\\Card.tsx\",\n                                lineNumber: 20,\n                                columnNumber: 25\n                            }, this)\n                        }, void 0, false, {\n                            fileName: \"C:\\\\Users\\\\Nicolas\\\\Desktop\\\\proyecto 2\\\\proyecto-scouts\\\\components\\\\inicio\\\\Card.tsx\",\n                            lineNumber: 19,\n                            columnNumber: 21\n                        }, this),\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                            className: \"limite_descripcion\",\n                            children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n                                className: \"limite_parrafo texto_descripcion-card\",\n                                children: descripcion\n                            }, void 0, false, {\n                                fileName: \"C:\\\\Users\\\\Nicolas\\\\Desktop\\\\proyecto 2\\\\proyecto-scouts\\\\components\\\\inicio\\\\Card.tsx\",\n                                lineNumber: 25,\n                                columnNumber: 25\n                            }, this)\n                        }, void 0, false, {\n                            fileName: \"C:\\\\Users\\\\Nicolas\\\\Desktop\\\\proyecto 2\\\\proyecto-scouts\\\\components\\\\inicio\\\\Card.tsx\",\n                            lineNumber: 24,\n                            columnNumber: 21\n                        }, this)\n                    ]\n                }, void 0, true, {\n                    fileName: \"C:\\\\Users\\\\Nicolas\\\\Desktop\\\\proyecto 2\\\\proyecto-scouts\\\\components\\\\inicio\\\\Card.tsx\",\n                    lineNumber: 18,\n                    columnNumber: 17\n                }, this)\n            }, void 0, false, {\n                fileName: \"C:\\\\Users\\\\Nicolas\\\\Desktop\\\\proyecto 2\\\\proyecto-scouts\\\\components\\\\inicio\\\\Card.tsx\",\n                lineNumber: 17,\n                columnNumber: 13\n            }, this),\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                className: \"text-right imagen-card\",\n                children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"img\", {\n                    src: imagen,\n                    alt: \"imagen\",\n                    width: \"15%\"\n                }, void 0, false, {\n                    fileName: \"C:\\\\Users\\\\Nicolas\\\\Desktop\\\\proyecto 2\\\\proyecto-scouts\\\\components\\\\inicio\\\\Card.tsx\",\n                    lineNumber: 32,\n                    columnNumber: 17\n                }, this)\n            }, void 0, false, {\n                fileName: \"C:\\\\Users\\\\Nicolas\\\\Desktop\\\\proyecto 2\\\\proyecto-scouts\\\\components\\\\inicio\\\\Card.tsx\",\n                lineNumber: 31,\n                columnNumber: 13\n            }, this)\n        ]\n    }, void 0, true, {\n        fileName: \"C:\\\\Users\\\\Nicolas\\\\Desktop\\\\proyecto 2\\\\proyecto-scouts\\\\components\\\\inicio\\\\Card.tsx\",\n        lineNumber: 4,\n        columnNumber: 9\n    }, this);\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jb21wb25lbnRzL2luaWNpby9DYXJkLnRzeC5qcyIsIm1hcHBpbmdzIjoiOzs7Ozs7QUFDQTtBQUFlLFNBQVNBLE1BQU0sQ0FBQyxFQUFDQyxNQUFNLEdBQUVDLFdBQVcsR0FBRUMsTUFBTSxHQUFFQyxNQUFNLEdBQUssRUFBRTtJQUN0RSxxQkFDSSw4REFBQ0MsS0FBRztRQUFDQyxTQUFTLEVBQUVGLE1BQU0sR0FBQyx1RUFBdUUsR0FBQyw0REFBNEQ7OzBCQUN2Siw4REFBQ0MsS0FBRztnQkFBQ0MsU0FBUyxFQUFDLE9BQU87MEJBQ2xCLDRFQUFDQyxLQUFHO29CQUFDQyxPQUFPLEVBQUMsYUFBYTtvQkFBQ0MsbUJBQW1CLEVBQUMsTUFBTTtvQkFBQ0gsU0FBUyxFQUFDLE9BQU87OEJBQ25FLDRFQUFDSSxNQUFJO3dCQUFDQyxDQUFDLEVBQUMsbUZBQW1GO3dCQUFDTCxTQUFTLEVBQUMsT0FBTzs7Ozs7NEJBQ3RHOzs7Ozt3QkFDTDs7Ozs7b0JBQ0o7MEJBQ04sOERBQUNELEtBQUc7Z0JBQUNDLFNBQVMsRUFBQyxVQUFVOzBCQUNqQiw0RUFBQ0MsS0FBRztvQkFBQ0MsT0FBTyxFQUFDLGFBQWE7b0JBQUNDLG1CQUFtQixFQUFDLE1BQU07b0JBQUNILFNBQVMsRUFBQyxTQUFTOzhCQUNyRSw0RUFBQ0ksTUFBSTt3QkFBQ0MsQ0FBQyxFQUFDLG1GQUFtRjt3QkFBQ0wsU0FBUyxFQUFDLFNBQVM7Ozs7OzRCQUN4Rzs7Ozs7d0JBQ0w7Ozs7O29CQUNKOzBCQUNWLDhEQUFDRCxLQUFHO2dCQUFDQyxTQUFTLEVBQUMsTUFBTTswQkFDakIsNEVBQUNELEtBQUc7b0JBQUNDLFNBQVMsRUFBQyxhQUFhOztzQ0FDeEIsOERBQUNELEtBQUc7c0NBQ0EsNEVBQUNPLEdBQUM7Z0NBQUNOLFNBQVMsRUFBQyx5QkFBeUI7MENBQ2pDTCxNQUFNOzs7OztvQ0FDUDs7Ozs7Z0NBQ0Y7c0NBQ04sOERBQUNJLEtBQUc7NEJBQUNDLFNBQVMsRUFBQyxvQkFBb0I7c0NBQy9CLDRFQUFDTSxHQUFDO2dDQUFDTixTQUFTLEVBQUMsdUNBQXVDOzBDQUMvQ0osV0FBVzs7Ozs7b0NBQ1o7Ozs7O2dDQUNGOzs7Ozs7d0JBQ0o7Ozs7O29CQUNKOzBCQUNOLDhEQUFDRyxLQUFHO2dCQUFDQyxTQUFTLEVBQUMsd0JBQXdCOzBCQUNuQyw0RUFBQ08sS0FBRztvQkFBQ0MsR0FBRyxFQUFFWCxNQUFNO29CQUFFWSxHQUFHLEVBQUMsUUFBUTtvQkFBQ0MsS0FBSyxFQUFDLEtBQUs7Ozs7O3dCQUFFOzs7OztvQkFDMUM7Ozs7OztZQUNKLENBQ1Q7QUFDTCxDQUFDIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vcHJveWVjdG8tc2NvdXRzLy4vY29tcG9uZW50cy9pbmljaW8vQ2FyZC50c3g/MGRkZiJdLCJzb3VyY2VzQ29udGVudCI6WyJcclxuZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gSGVhZGVyKHt0aXR1bG8sIGRlc2NyaXBjaW9uLCBpbWFnZW4sIHVsdGltb306YW55KSB7XHJcbiAgICByZXR1cm4gKFxyXG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPXt1bHRpbW8/J2NvbC1zbS0xMCBjb2wtbGctOCBjb2wteGwtOCBteC0yIG15LTIgcC0wIGZvbmRvX2NhcmQgdy0xMDAgY2FyZF9maW5hbCc6J2NvbC14bC00IGNvbC1sZy04IGNvbC1zbS0xMCBteC0yIG15LTIgcC0wIGZvbmRvX2NhcmQgdy0xMDAnfT5cclxuICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJiYXJyYVwiPlxyXG4gICAgICAgICAgICAgICAgPHN2ZyB2aWV3Qm94PVwiMCAwIDUwMCAxNTBcIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPVwibm9uZVwiIGNsYXNzTmFtZT0nZm9uZG8nPlxyXG4gICAgICAgICAgICAgICAgICAgIDxwYXRoIGQ9XCJNLTYuNDksODEuNDEgQzE1MS41MiwxNjAuMzYgMTg4LjIwLDMzLjA1IDUwMS45Nyw0MS45NCBMNTAxLjk3LC0zMS4wOCBMMC4wMCwwLjAwIFpcIiBjbGFzc05hbWU9J2N1cnZhJz5cclxuICAgICAgICAgICAgICAgICAgICA8L3BhdGg+XHJcbiAgICAgICAgICAgICAgICA8L3N2Zz4gICAgICAgICAgICAgICBcclxuICAgICAgICAgICAgPC9kaXY+XHJcbiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiYmFycmFfMiBcIiA+XHJcbiAgICAgICAgICAgICAgICAgICAgPHN2ZyB2aWV3Qm94PVwiMCAwIDUwMCAxNTBcIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPVwibm9uZVwiIGNsYXNzTmFtZT0nZm9uZG9fMic+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDxwYXRoIGQ9XCJNLTYuNDksODEuNDEgQzE1MS41MiwxNjAuMzYgMTg4LjIwLDMzLjA1IDUwMS45Nyw0MS45NCBMNTAxLjk3LC0zMS4wOCBMMC4wMCwwLjAwIFpcIiBjbGFzc05hbWU9J2N1cnZhXzInPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8L3BhdGg+XHJcbiAgICAgICAgICAgICAgICAgICAgPC9zdmc+ICAgICAgICAgICAgICAgXHJcbiAgICAgICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9J21iLTUnPlxyXG4gICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9J3RleHQtY2VudGVyJz5cclxuICAgICAgICAgICAgICAgICAgICA8ZGl2PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9J2NhcmQtdGl0bGUgdGV4dG9fdGl0dWxvJz5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIHt0aXR1bG99XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDwvcD5cclxuICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0nbGltaXRlX2Rlc2NyaXBjaW9uJz5cclxuICAgICAgICAgICAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPSdsaW1pdGVfcGFycmFmbyB0ZXh0b19kZXNjcmlwY2lvbi1jYXJkJz5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIHtkZXNjcmlwY2lvbn1cclxuICAgICAgICAgICAgICAgICAgICAgICAgPC9wPlxyXG4gICAgICAgICAgICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgICAgICAgICAgPC9kaXY+XHJcbiAgICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInRleHQtcmlnaHQgaW1hZ2VuLWNhcmRcIj5cclxuICAgICAgICAgICAgICAgIDxpbWcgc3JjPXtpbWFnZW59IGFsdD1cImltYWdlblwiIHdpZHRoPScxNSUnLz5cclxuICAgICAgICAgICAgPC9kaXY+XHJcbiAgICAgICAgPC9kaXY+XHJcbiAgICApXHJcbn0iXSwibmFtZXMiOlsiSGVhZGVyIiwidGl0dWxvIiwiZGVzY3JpcGNpb24iLCJpbWFnZW4iLCJ1bHRpbW8iLCJkaXYiLCJjbGFzc05hbWUiLCJzdmciLCJ2aWV3Qm94IiwicHJlc2VydmVBc3BlY3RSYXRpbyIsInBhdGgiLCJkIiwicCIsImltZyIsInNyYyIsImFsdCIsIndpZHRoIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./components/inicio/Card.tsx\n");
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "default": () => (/* binding */ pages),
+  "getServerSideProps": () => (/* binding */ getServerSideProps)
+});
+
+// EXTERNAL MODULE: external "react/jsx-runtime"
+var jsx_runtime_ = __webpack_require__(997);
+// EXTERNAL MODULE: external "react"
+var external_react_ = __webpack_require__(6689);
+// EXTERNAL MODULE: external "react-cookie"
+var external_react_cookie_ = __webpack_require__(5515);
+;// CONCATENATED MODULE: ./components/inicio/InicioAnimacion.tsx
+
+
+
+function Inicio({ visited  }) {
+    const [cookies, setCookie] = (0,external_react_cookie_.useCookies)([
+        "visited"
+    ]);
+    const ole1 = (0,external_react_.useRef)(null);
+    const principal = (0,external_react_.useRef)(null);
+    const ole2 = (0,external_react_.useRef)(null);
+    const elementos = (0,external_react_.useRef)(null);
+    const onClick = ()=>{
+        ole1.current.className = "animacion_ola animacion_prueba3";
+        ole2.current.className = "animacion_olas animacion_prueba3";
+        elementos.current.style.display = "none";
+        setTimeout(()=>{
+            document.body.className = "";
+            principal.current.style.display = "none";
+            setCookie("visited", "true", {
+                path: "/"
+            });
+        }, 700);
+    };
+    return /*#__PURE__*/ jsx_runtime_.jsx(jsx_runtime_.Fragment, {
+        children: visited === "true" ? null : /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+            id: "Principal",
+            className: "animacion_fondo_inicio",
+            ref: principal,
+            children: [
+                /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                    className: "animacion_fondo2",
+                    children: [
+                        /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                            className: "animacion_ola",
+                            id: "ole2",
+                            ref: ole1,
+                            children: /*#__PURE__*/ jsx_runtime_.jsx("svg", {
+                                viewBox: "0 0 500 150",
+                                preserveAspectRatio: "none",
+                                className: "animacion_ola2",
+                                children: /*#__PURE__*/ jsx_runtime_.jsx("path", {
+                                    d: "M-10.61,120.69 C295.26,216.41 251.24,33.84 546.95,64.44 L500.00,0.00 L0.00,0.00 Z",
+                                    className: "animacion_ola3"
+                                })
+                            })
+                        }),
+                        /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                            className: "animacion_olas",
+                            id: "ole2",
+                            ref: ole2,
+                            children: [
+                                /*#__PURE__*/ jsx_runtime_.jsx("svg", {
+                                    viewBox: "0 0 500 150",
+                                    preserveAspectRatio: "none",
+                                    className: "animacion_olas2",
+                                    children: /*#__PURE__*/ jsx_runtime_.jsx("path", {
+                                        d: "M-10.61,120.69 C295.26,216.41 251.24,33.84 546.95,64.44 L500.00,0.00 L0.00,0.00 Z",
+                                        className: "animacion_olas3"
+                                    })
+                                }),
+                                /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                                    className: "animacion_fondo_inicio",
+                                    ref: elementos,
+                                    children: [
+                                        /*#__PURE__*/ jsx_runtime_.jsx("p", {
+                                            className: "animacion_text animacion_fondo_texto",
+                                            children: "Grupo Scout Centinelas 113 - Cali"
+                                        }),
+                                        /*#__PURE__*/ jsx_runtime_.jsx("p", {
+                                            className: "animacion_text2 animacion_fondo_texto2",
+                                            children: "Scout A.C.E"
+                                        }),
+                                        /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                                            className: "animacion_foto_logo",
+                                            children: [
+                                                /*#__PURE__*/ jsx_runtime_.jsx("img", {
+                                                    src: "/img/pa\xf1oleta.png",
+                                                    alt: "logo1"
+                                                }),
+                                                /*#__PURE__*/ jsx_runtime_.jsx("img", {
+                                                    src: "/img/113.png",
+                                                    alt: "logo1"
+                                                }),
+                                                /*#__PURE__*/ jsx_runtime_.jsx("img", {
+                                                    src: "/img/ACE.png",
+                                                    alt: "logo1"
+                                                }),
+                                                /*#__PURE__*/ jsx_runtime_.jsx("button", {
+                                                    className: "animacion_rectangle",
+                                                    onClick: onClick,
+                                                    children: "\xa1Con\xf3cenos!"
+                                                })
+                                            ]
+                                        })
+                                    ]
+                                })
+                            ]
+                        })
+                    ]
+                }),
+                /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                    children: /*#__PURE__*/ jsx_runtime_.jsx("body", {
+                        className: "scroll"
+                    })
+                })
+            ]
+        })
+    });
+}
+
+// EXTERNAL MODULE: ./styles/inicio/Presentacion.module.scss
+var Presentacion_module = __webpack_require__(5168);
+var Presentacion_module_default = /*#__PURE__*/__webpack_require__.n(Presentacion_module);
+;// CONCATENATED MODULE: ./components/inicio/Presentacion.tsx
+
+
+function presentacion() {
+    return /*#__PURE__*/ jsx_runtime_.jsx("div", {
+        className: (Presentacion_module_default()).portada,
+        children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+            className: (Presentacion_module_default()).elementos_portada,
+            children: [
+                /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                    className: (Presentacion_module_default()).titulo,
+                    children: /*#__PURE__*/ jsx_runtime_.jsx("p", {
+                        children: "Grupo Scout Centinelas 113 - Cali"
+                    })
+                }),
+                /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                    className: (Presentacion_module_default()).subtitulo,
+                    children: /*#__PURE__*/ jsx_runtime_.jsx("p", {
+                        children: "Scout A.C.E"
+                    })
+                })
+            ]
+        })
+    });
+}
+
+;// CONCATENATED MODULE: ./components/inicio/Container.tsx
+
+function Container({ children , imagen  }) {
+    return /*#__PURE__*/ jsx_runtime_.jsx("div", {
+        className: "contenedor-padding ",
+        children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+            className: "row contenedor-paddingm-5 pb-5 backgroun_container justify-content-center contenedor_metodo_scout",
+            children: [
+                /*#__PURE__*/ jsx_runtime_.jsx("img", {
+                    src: imagen,
+                    alt: "imagen",
+                    className: "antorcha_1"
+                }),
+                /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                    className: "text-center mb-5",
+                    children: [
+                        /*#__PURE__*/ jsx_runtime_.jsx("h1", {
+                            className: "texto_titulo",
+                            children: "M\xe9todo Scout"
+                        }),
+                        /*#__PURE__*/ jsx_runtime_.jsx("p", {
+                            className: "texto_descripcion",
+                            children: "Es un sistema de autoeducaci\xf3n, progresivo y personalizado, complementado a la familia y el colegio, a partir de la interacci\xf3n de varios elementos."
+                        })
+                    ]
+                }),
+                children,
+                /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                    className: "mt-5 hidden-sm-down",
+                    children: /*#__PURE__*/ jsx_runtime_.jsx("img", {
+                        src: imagen,
+                        alt: "imagen",
+                        className: "antorcha_2"
+                    })
+                })
+            ]
+        })
+    });
+}
+
+;// CONCATENATED MODULE: ./components/inicio/Card.tsx
+
+function Header({ titulo , descripcion , imagen , ultimo  }) {
+    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+        className: ultimo ? "col-sm-10 col-lg-8 col-xl-8 mx-2 my-2 p-0 fondo_card w-100 card_final" : "col-xl-4 col-lg-8 col-sm-10 mx-2 my-2 p-0 fondo_card w-100",
+        children: [
+            /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                className: "barra",
+                children: /*#__PURE__*/ jsx_runtime_.jsx("svg", {
+                    viewBox: "0 0 500 150",
+                    preserveAspectRatio: "none",
+                    className: "fondo",
+                    children: /*#__PURE__*/ jsx_runtime_.jsx("path", {
+                        d: "M-6.49,81.41 C151.52,160.36 188.20,33.05 501.97,41.94 L501.97,-31.08 L0.00,0.00 Z",
+                        className: "curva"
+                    })
+                })
+            }),
+            /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                className: "barra_2 ",
+                children: /*#__PURE__*/ jsx_runtime_.jsx("svg", {
+                    viewBox: "0 0 500 150",
+                    preserveAspectRatio: "none",
+                    className: "fondo_2",
+                    children: /*#__PURE__*/ jsx_runtime_.jsx("path", {
+                        d: "M-6.49,81.41 C151.52,160.36 188.20,33.05 501.97,41.94 L501.97,-31.08 L0.00,0.00 Z",
+                        className: "curva_2"
+                    })
+                })
+            }),
+            /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                className: "mb-5",
+                children: /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+                    className: "text-center",
+                    children: [
+                        /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                            children: /*#__PURE__*/ jsx_runtime_.jsx("p", {
+                                className: "card-title texto_titulo",
+                                children: titulo
+                            })
+                        }),
+                        /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                            className: "limite_descripcion",
+                            children: /*#__PURE__*/ jsx_runtime_.jsx("p", {
+                                className: "limite_parrafo texto_descripcion-card",
+                                children: descripcion
+                            })
+                        })
+                    ]
+                })
+            }),
+            /*#__PURE__*/ jsx_runtime_.jsx("div", {
+                className: "text-right imagen-card",
+                children: /*#__PURE__*/ jsx_runtime_.jsx("img", {
+                    src: imagen,
+                    alt: "imagen",
+                    width: "15%"
+                })
+            })
+        ]
+    });
+}
+
+;// CONCATENATED MODULE: external "cookie"
+const external_cookie_namespaceObject = require("cookie");
+var external_cookie_default = /*#__PURE__*/__webpack_require__.n(external_cookie_namespaceObject);
+;// CONCATENATED MODULE: ./lib/parseCookies.js
+
+function parseCookies(req) {
+    return external_cookie_default().parse(req ? req.headers.cookie || "" : document.cookie);
+}
+
+;// CONCATENATED MODULE: ./pages/index.tsx
+
+
+
+
+
+
+const getServerSideProps = async (context)=>{
+    const cookies = parseCookies(context.req);
+    return {
+        props: {
+            visited: cookies.visited ? cookies.visited : "false"
+        }
+    };
+};
+/*
+// La vista puede implementar alguno de estos dos metodos, para hacer SSG o SSR, no se deben usar los dos
+// Si la vista no implementa ninguna, se considera que es SSG sin alimentación de datos
+
+// La vista actua como estatica (Static Side Generation), obtiene la información al momento de compilar
+export const getStaticProps: GetStaticProps<> = async (context) => {
+  //Se hace fetch (por default en metodo GET) a la api
+  const res = await fetch(process.env.API_URL + '/api/endpoint/')
+  const data = await res.json()
+  return {
+    props: {
+      //Se pasan los datos en alguna variable como propiedad, a la vista o a los componentes
+      datos: data
+    },
+  }
+}
+
+// Hace Server Side Render, obtiene la información al momento de consultar la vista
+export const getServerSideProps: GetServerSideProps<> = async (context) => {
+  const res = await fetch(process.env.API_URL + '/api/endpoint/')
+  const data = await res.json()
+  return {
+    props: {
+      datos: data
+    },
+  }
+} 
+*/ // Corresponde al contenido de la vista (Recibe las propiedades, si pasaramos una propiedad llamada datos sería: { query, datos}: Props)
+const HomePage = ({ visited  })=>{
+    return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+        children: [
+            /*#__PURE__*/ jsx_runtime_.jsx(Inicio, {
+                visited: visited
+            }),
+            /*#__PURE__*/ jsx_runtime_.jsx(presentacion, {}),
+            /*#__PURE__*/ (0,jsx_runtime_.jsxs)(Container, {
+                imagen: "/img/antorcha.svg",
+                children: [
+                    /*#__PURE__*/ jsx_runtime_.jsx(Header, {
+                        titulo: "Promesa y ley",
+                        descripcion: "La educaci\xf3n en valores expresados en una promesa y ley a los que se adhiere de manera voluntaria.",
+                        imagen: "/img/jurar.png"
+                    }),
+                    /*#__PURE__*/ jsx_runtime_.jsx(Header, {
+                        titulo: "Aprender haciendo",
+                        descripcion: "La educaci\xf3n activa a trav\xe9s del aprender haciendo, el aprender jugando y el aprender por medio del servicio.",
+                        imagen: "/img/equipo.png"
+                    }),
+                    /*#__PURE__*/ jsx_runtime_.jsx(Header, {
+                        titulo: "Vida en peque\xf1os grupos",
+                        descripcion: "La pertenencia a peque\xf1os grupos, con el acompa\xf1amiento responsable de adultos.",
+                        imagen: "/img/trabajo-en-equipo.png"
+                    }),
+                    /*#__PURE__*/ jsx_runtime_.jsx(Header, {
+                        titulo: "Adulto no interferente",
+                        descripcion: "La participaci\xf3n indirecta del adulto, en forma estimulante y no interferente, con la oportunidad de ayudar a los muchachos en la organizaci\xf3n y direcci\xf3n de actividades y en la toma de decisiones.",
+                        imagen: "/img/familia.png"
+                    }),
+                    /*#__PURE__*/ jsx_runtime_.jsx(Header, {
+                        titulo: "Vida al aire libre",
+                        descripcion: "Programas progresivos, atrayentes y estimulantes, basados en los intereses de los participantes compuestos por un marco simb\xf3lico sugerente y un sistema progresivo de objetivos y actividades educativas variadas, incluyendo juegos, habilidades \xfatiles y servicios a la comunidad, que ocurren en gran parte al aire libre en contacto con la naturaleza.",
+                        imagen: "/img/leisure.png",
+                        ultimo: true
+                    })
+                ]
+            })
+        ]
+    });
+};
+/* harmony default export */ const pages = (HomePage);
+
 
 /***/ }),
 
-/***/ "./components/inicio/Container.tsx":
-/*!*****************************************!*\
-  !*** ./components/inicio/Container.tsx ***!
-  \*****************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Container)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n\nfunction Container({ children , imagen  }) {\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n        className: \"contenedor-padding \",\n        children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n            className: \"row contenedor-paddingm-5 pb-5 backgroun_container justify-content-center contenedor_metodo_scout\",\n            children: [\n                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"img\", {\n                    src: imagen,\n                    alt: \"imagen\",\n                    className: \"antorcha_1\"\n                }, void 0, false, {\n                    fileName: \"C:\\\\Users\\\\Nicolas\\\\Desktop\\\\proyecto 2\\\\proyecto-scouts\\\\components\\\\inicio\\\\Container.tsx\",\n                    lineNumber: 6,\n                    columnNumber: 17\n                }, this),\n                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                    className: \"text-center mb-5\",\n                    children: [\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"h1\", {\n                            className: \"texto_titulo\",\n                            children: \"M\\xe9todo Scout\"\n                        }, void 0, false, {\n                            fileName: \"C:\\\\Users\\\\Nicolas\\\\Desktop\\\\proyecto 2\\\\proyecto-scouts\\\\components\\\\inicio\\\\Container.tsx\",\n                            lineNumber: 9,\n                            columnNumber: 21\n                        }, this),\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n                            className: \"texto_descripcion\",\n                            children: \"Es un sistema de autoeducaci\\xf3n, progresivo y personalizado, complementado a la familia y el colegio, a partir de la interacci\\xf3n de varios elementos.\"\n                        }, void 0, false, {\n                            fileName: \"C:\\\\Users\\\\Nicolas\\\\Desktop\\\\proyecto 2\\\\proyecto-scouts\\\\components\\\\inicio\\\\Container.tsx\",\n                            lineNumber: 10,\n                            columnNumber: 21\n                        }, this)\n                    ]\n                }, void 0, true, {\n                    fileName: \"C:\\\\Users\\\\Nicolas\\\\Desktop\\\\proyecto 2\\\\proyecto-scouts\\\\components\\\\inicio\\\\Container.tsx\",\n                    lineNumber: 8,\n                    columnNumber: 17\n                }, this),\n                children,\n                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                    className: \"mt-5 hidden-sm-down\",\n                    children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"img\", {\n                        src: imagen,\n                        alt: \"imagen\",\n                        className: \"antorcha_2\"\n                    }, void 0, false, {\n                        fileName: \"C:\\\\Users\\\\Nicolas\\\\Desktop\\\\proyecto 2\\\\proyecto-scouts\\\\components\\\\inicio\\\\Container.tsx\",\n                        lineNumber: 14,\n                        columnNumber: 21\n                    }, this)\n                }, void 0, false, {\n                    fileName: \"C:\\\\Users\\\\Nicolas\\\\Desktop\\\\proyecto 2\\\\proyecto-scouts\\\\components\\\\inicio\\\\Container.tsx\",\n                    lineNumber: 13,\n                    columnNumber: 17\n                }, this)\n            ]\n        }, void 0, true, {\n            fileName: \"C:\\\\Users\\\\Nicolas\\\\Desktop\\\\proyecto 2\\\\proyecto-scouts\\\\components\\\\inicio\\\\Container.tsx\",\n            lineNumber: 4,\n            columnNumber: 13\n        }, this)\n    }, void 0, false, {\n        fileName: \"C:\\\\Users\\\\Nicolas\\\\Desktop\\\\proyecto 2\\\\proyecto-scouts\\\\components\\\\inicio\\\\Container.tsx\",\n        lineNumber: 3,\n        columnNumber: 9\n    }, this);\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jb21wb25lbnRzL2luaWNpby9Db250YWluZXIudHN4LmpzIiwibWFwcGluZ3MiOiI7Ozs7OztBQUFBO0FBQWUsU0FBU0EsU0FBUyxDQUFDLEVBQUVDLFFBQVEsR0FBRUMsTUFBTSxHQUFNLEVBQUU7SUFDeEQscUJBQ0ksOERBQUNDLEtBQUc7UUFBQ0MsU0FBUyxFQUFDLHFCQUFxQjtrQkFDaEMsNEVBQUNELEtBQUc7WUFBQ0MsU0FBUyxFQUFDLG1HQUFtRzs7OEJBRTlHLDhEQUFDQyxLQUFHO29CQUFDQyxHQUFHLEVBQUVKLE1BQU07b0JBQUVLLEdBQUcsRUFBQyxRQUFRO29CQUFDSCxTQUFTLEVBQUMsWUFBWTs7Ozs7d0JBQUU7OEJBRXZELDhEQUFDRCxLQUFHO29CQUFDQyxTQUFTLEVBQUMsa0JBQWtCOztzQ0FDN0IsOERBQUNJLElBQUU7NEJBQUNKLFNBQVMsRUFBQyxjQUFjO3NDQUFDLGlCQUFZOzs7OztnQ0FBSztzQ0FDOUMsOERBQUNLLEdBQUM7NEJBQUNMLFNBQVMsRUFBQyxtQkFBbUI7c0NBQUMsNEpBQW9KOzs7OztnQ0FBSTs7Ozs7O3dCQUN2TDtnQkFDSkgsUUFBUTs4QkFDViw4REFBQ0UsS0FBRztvQkFBQ0MsU0FBUyxFQUFDLHFCQUFxQjs4QkFDaEMsNEVBQUNDLEtBQUc7d0JBQUNDLEdBQUcsRUFBRUosTUFBTTt3QkFBRUssR0FBRyxFQUFDLFFBQVE7d0JBQUNILFNBQVMsRUFBQyxZQUFZOzs7Ozs0QkFBRTs7Ozs7d0JBQ3JEOzs7Ozs7Z0JBQ0o7Ozs7O1lBQ0osQ0FDVDtBQUNMLENBQUMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9wcm95ZWN0by1zY291dHMvLi9jb21wb25lbnRzL2luaWNpby9Db250YWluZXIudHN4PzA0ZjciXSwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gQ29udGFpbmVyKHsgY2hpbGRyZW4sIGltYWdlbn06IGFueSkge1xyXG4gICAgcmV0dXJuIChcclxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT0nY29udGVuZWRvci1wYWRkaW5nICc+XHJcbiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSdyb3cgY29udGVuZWRvci1wYWRkaW5nbS01IHBiLTUgYmFja2dyb3VuX2NvbnRhaW5lciBqdXN0aWZ5LWNvbnRlbnQtY2VudGVyIGNvbnRlbmVkb3JfbWV0b2RvX3Njb3V0Jz5cclxuICAgICAgICAgICAgICAgIFxyXG4gICAgICAgICAgICAgICAgPGltZyBzcmM9e2ltYWdlbn0gYWx0PVwiaW1hZ2VuXCIgY2xhc3NOYW1lPVwiYW50b3JjaGFfMVwiLz5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcclxuICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwidGV4dC1jZW50ZXIgbWItNVwiPlxyXG4gICAgICAgICAgICAgICAgICAgIDxoMSBjbGFzc05hbWU9J3RleHRvX3RpdHVsbyc+TcOpdG9kbyBTY291dDwvaDE+XHJcbiAgICAgICAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPSd0ZXh0b19kZXNjcmlwY2lvbic+RXMgdW4gc2lzdGVtYSBkZSBhdXRvZWR1Y2FjacOzbiwgcHJvZ3Jlc2l2byB5IHBlcnNvbmFsaXphZG8sIGNvbXBsZW1lbnRhZG8gYSBsYSBmYW1pbGlhIHkgZWwgY29sZWdpbywgYSBwYXJ0aXIgZGUgbGEgaW50ZXJhY2Npw7NuIGRlIHZhcmlvcyBlbGVtZW50b3MuPC9wPlxyXG4gICAgICAgICAgICAgICAgPC9kaXY+ICAgICAgICAgICAgXHJcbiAgICAgICAgICAgICAgICB7IGNoaWxkcmVuIH1cclxuICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSdtdC01IGhpZGRlbi1zbS1kb3duJz5cclxuICAgICAgICAgICAgICAgICAgICA8aW1nIHNyYz17aW1hZ2VufSBhbHQ9XCJpbWFnZW5cIiBjbGFzc05hbWU9XCJhbnRvcmNoYV8yXCIvPlxyXG4gICAgICAgICAgICAgICAgPC9kaXY+ICAgXHJcbiAgICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgIDwvZGl2PiAgICAgICAgXHJcbiAgICApXHJcbn0iXSwibmFtZXMiOlsiQ29udGFpbmVyIiwiY2hpbGRyZW4iLCJpbWFnZW4iLCJkaXYiLCJjbGFzc05hbWUiLCJpbWciLCJzcmMiLCJhbHQiLCJoMSIsInAiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./components/inicio/Container.tsx\n");
-
-/***/ }),
-
-/***/ "./components/inicio/InicioAnimacion.tsx":
-/*!***********************************************!*\
-  !*** ./components/inicio/InicioAnimacion.tsx ***!
-  \***********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Inicio)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var react_cookie__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-cookie */ \"react-cookie\");\n/* harmony import */ var react_cookie__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_cookie__WEBPACK_IMPORTED_MODULE_2__);\n\n\n\nfunction Inicio({ visited  }) {\n    const [cookies, setCookie] = (0,react_cookie__WEBPACK_IMPORTED_MODULE_2__.useCookies)([\n        \"visited\"\n    ]);\n    const ole1 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useRef)(null);\n    const principal = (0,react__WEBPACK_IMPORTED_MODULE_1__.useRef)(null);\n    const ole2 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useRef)(null);\n    const elementos = (0,react__WEBPACK_IMPORTED_MODULE_1__.useRef)(null);\n    const onClick = ()=>{\n        ole1.current.className = \"animacion_ola animacion_prueba3\";\n        ole2.current.className = \"animacion_olas animacion_prueba3\";\n        elementos.current.style.display = \"none\";\n        setTimeout(()=>{\n            document.body.className = \"\";\n            principal.current.style.display = \"none\";\n            setCookie(\"visited\", \"true\", {\n                path: \"/\"\n            });\n        }, 700);\n    };\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {\n        children: visited === \"true\" ? null : /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n            id: \"Principal\",\n            className: \"animacion_fondo_inicio\",\n            ref: principal,\n            children: [\n                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                    className: \"animacion_fondo2\",\n                    children: [\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                            className: \"animacion_ola\",\n                            id: \"ole2\",\n                            ref: ole1,\n                            children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"svg\", {\n                                viewBox: \"0 0 500 150\",\n                                preserveAspectRatio: \"none\",\n                                className: \"animacion_ola2\",\n                                children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"path\", {\n                                    d: \"M-10.61,120.69 C295.26,216.41 251.24,33.84 546.95,64.44 L500.00,0.00 L0.00,0.00 Z\",\n                                    className: \"animacion_ola3\"\n                                }, void 0, false, {\n                                    fileName: \"C:\\\\Users\\\\Nicolas\\\\Desktop\\\\proyecto 2\\\\proyecto-scouts\\\\components\\\\inicio\\\\InicioAnimacion.tsx\",\n                                    lineNumber: 35,\n                                    columnNumber: 11\n                                }, this)\n                            }, void 0, false, {\n                                fileName: \"C:\\\\Users\\\\Nicolas\\\\Desktop\\\\proyecto 2\\\\proyecto-scouts\\\\components\\\\inicio\\\\InicioAnimacion.tsx\",\n                                lineNumber: 30,\n                                columnNumber: 9\n                            }, this)\n                        }, void 0, false, {\n                            fileName: \"C:\\\\Users\\\\Nicolas\\\\Desktop\\\\proyecto 2\\\\proyecto-scouts\\\\components\\\\inicio\\\\InicioAnimacion.tsx\",\n                            lineNumber: 29,\n                            columnNumber: 7\n                        }, this),\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                            className: \"animacion_olas\",\n                            id: \"ole2\",\n                            ref: ole2,\n                            children: [\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"svg\", {\n                                    viewBox: \"0 0 500 150\",\n                                    preserveAspectRatio: \"none\",\n                                    className: \"animacion_olas2\",\n                                    children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"path\", {\n                                        d: \"M-10.61,120.69 C295.26,216.41 251.24,33.84 546.95,64.44 L500.00,0.00 L0.00,0.00 Z\",\n                                        className: \"animacion_olas3\"\n                                    }, void 0, false, {\n                                        fileName: \"C:\\\\Users\\\\Nicolas\\\\Desktop\\\\proyecto 2\\\\proyecto-scouts\\\\components\\\\inicio\\\\InicioAnimacion.tsx\",\n                                        lineNumber: 47,\n                                        columnNumber: 11\n                                    }, this)\n                                }, void 0, false, {\n                                    fileName: \"C:\\\\Users\\\\Nicolas\\\\Desktop\\\\proyecto 2\\\\proyecto-scouts\\\\components\\\\inicio\\\\InicioAnimacion.tsx\",\n                                    lineNumber: 42,\n                                    columnNumber: 9\n                                }, this),\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                    className: \"animacion_fondo_inicio\",\n                                    ref: elementos,\n                                    children: [\n                                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n                                            className: \"animacion_text animacion_fondo_texto\",\n                                            children: \"Grupo Scout Centinelas 113 - Cali\"\n                                        }, void 0, false, {\n                                            fileName: \"C:\\\\Users\\\\Nicolas\\\\Desktop\\\\proyecto 2\\\\proyecto-scouts\\\\components\\\\inicio\\\\InicioAnimacion.tsx\",\n                                            lineNumber: 54,\n                                            columnNumber: 9\n                                        }, this),\n                                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n                                            className: \"animacion_text2 animacion_fondo_texto2\",\n                                            children: \"Scout A.C.E\"\n                                        }, void 0, false, {\n                                            fileName: \"C:\\\\Users\\\\Nicolas\\\\Desktop\\\\proyecto 2\\\\proyecto-scouts\\\\components\\\\inicio\\\\InicioAnimacion.tsx\",\n                                            lineNumber: 55,\n                                            columnNumber: 9\n                                        }, this),\n                                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                            className: \"animacion_foto_logo\",\n                                            children: [\n                                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"img\", {\n                                                    src: \"/img/pa\\xf1oleta.png\",\n                                                    alt: \"logo1\"\n                                                }, void 0, false, {\n                                                    fileName: \"C:\\\\Users\\\\Nicolas\\\\Desktop\\\\proyecto 2\\\\proyecto-scouts\\\\components\\\\inicio\\\\InicioAnimacion.tsx\",\n                                                    lineNumber: 57,\n                                                    columnNumber: 11\n                                                }, this),\n                                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"img\", {\n                                                    src: \"/img/113.png\",\n                                                    alt: \"logo1\"\n                                                }, void 0, false, {\n                                                    fileName: \"C:\\\\Users\\\\Nicolas\\\\Desktop\\\\proyecto 2\\\\proyecto-scouts\\\\components\\\\inicio\\\\InicioAnimacion.tsx\",\n                                                    lineNumber: 58,\n                                                    columnNumber: 11\n                                                }, this),\n                                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"img\", {\n                                                    src: \"/img/ACE.png\",\n                                                    alt: \"logo1\"\n                                                }, void 0, false, {\n                                                    fileName: \"C:\\\\Users\\\\Nicolas\\\\Desktop\\\\proyecto 2\\\\proyecto-scouts\\\\components\\\\inicio\\\\InicioAnimacion.tsx\",\n                                                    lineNumber: 59,\n                                                    columnNumber: 11\n                                                }, this),\n                                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"button\", {\n                                                    className: \"animacion_rectangle\",\n                                                    onClick: onClick,\n                                                    children: \"\\xa1Con\\xf3cenos!\"\n                                                }, void 0, false, {\n                                                    fileName: \"C:\\\\Users\\\\Nicolas\\\\Desktop\\\\proyecto 2\\\\proyecto-scouts\\\\components\\\\inicio\\\\InicioAnimacion.tsx\",\n                                                    lineNumber: 60,\n                                                    columnNumber: 11\n                                                }, this)\n                                            ]\n                                        }, void 0, true, {\n                                            fileName: \"C:\\\\Users\\\\Nicolas\\\\Desktop\\\\proyecto 2\\\\proyecto-scouts\\\\components\\\\inicio\\\\InicioAnimacion.tsx\",\n                                            lineNumber: 56,\n                                            columnNumber: 9\n                                        }, this)\n                                    ]\n                                }, void 0, true, {\n                                    fileName: \"C:\\\\Users\\\\Nicolas\\\\Desktop\\\\proyecto 2\\\\proyecto-scouts\\\\components\\\\inicio\\\\InicioAnimacion.tsx\",\n                                    lineNumber: 52,\n                                    columnNumber: 9\n                                }, this)\n                            ]\n                        }, void 0, true, {\n                            fileName: \"C:\\\\Users\\\\Nicolas\\\\Desktop\\\\proyecto 2\\\\proyecto-scouts\\\\components\\\\inicio\\\\InicioAnimacion.tsx\",\n                            lineNumber: 41,\n                            columnNumber: 7\n                        }, this)\n                    ]\n                }, void 0, true, {\n                    fileName: \"C:\\\\Users\\\\Nicolas\\\\Desktop\\\\proyecto 2\\\\proyecto-scouts\\\\components\\\\inicio\\\\InicioAnimacion.tsx\",\n                    lineNumber: 28,\n                    columnNumber: 5\n                }, this),\n                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                    children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"body\", {\n                        className: \"scroll\"\n                    }, void 0, false, {\n                        fileName: \"C:\\\\Users\\\\Nicolas\\\\Desktop\\\\proyecto 2\\\\proyecto-scouts\\\\components\\\\inicio\\\\InicioAnimacion.tsx\",\n                        lineNumber: 69,\n                        columnNumber: 7\n                    }, this)\n                }, void 0, false, {\n                    fileName: \"C:\\\\Users\\\\Nicolas\\\\Desktop\\\\proyecto 2\\\\proyecto-scouts\\\\components\\\\inicio\\\\InicioAnimacion.tsx\",\n                    lineNumber: 68,\n                    columnNumber: 5\n                }, this)\n            ]\n        }, void 0, true, {\n            fileName: \"C:\\\\Users\\\\Nicolas\\\\Desktop\\\\proyecto 2\\\\proyecto-scouts\\\\components\\\\inicio\\\\InicioAnimacion.tsx\",\n            lineNumber: 27,\n            columnNumber: 5\n        }, this)\n    }, void 0, false);\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jb21wb25lbnRzL2luaWNpby9JbmljaW9BbmltYWNpb24udHN4LmpzIiwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7QUFBQTtBQUErQjtBQUNXO0FBRTNCLFNBQVNFLE1BQU0sQ0FBQyxFQUFDQyxPQUFPLEdBQU8sRUFBRTtJQUM5QyxNQUFNLENBQUNDLE9BQU8sRUFBRUMsU0FBUyxDQUFDLEdBQUdKLHdEQUFVLENBQUM7UUFBQyxTQUFTO0tBQUMsQ0FBQztJQUNwRCxNQUFNSyxJQUFJLEdBQUdOLDZDQUFNLENBQUMsSUFBSSxDQUFDO0lBRXpCLE1BQU1PLFNBQVMsR0FBR1AsNkNBQU0sQ0FBQyxJQUFJLENBQUM7SUFFOUIsTUFBTVEsSUFBSSxHQUFHUiw2Q0FBTSxDQUFDLElBQUksQ0FBQztJQUN6QixNQUFNUyxTQUFTLEdBQUdULDZDQUFNLENBQUMsSUFBSSxDQUFDO0lBRTlCLE1BQU1VLE9BQU8sR0FBRyxJQUFNO1FBQ3BCSixJQUFJLENBQUNLLE9BQU8sQ0FBQ0MsU0FBUyxHQUFHLGlDQUFpQyxDQUFDO1FBQzNESixJQUFJLENBQUNHLE9BQU8sQ0FBQ0MsU0FBUyxHQUFHLGtDQUFrQyxDQUFDO1FBQzVESCxTQUFTLENBQUNFLE9BQU8sQ0FBQ0UsS0FBSyxDQUFDQyxPQUFPLEdBQUcsTUFBTSxDQUFDO1FBQ3pDQyxVQUFVLENBQUMsSUFBTTtZQUNmQyxRQUFRLENBQUNDLElBQUksQ0FBQ0wsU0FBUyxHQUFHLEVBQUUsQ0FBQztZQUM3QkwsU0FBUyxDQUFDSSxPQUFPLENBQUNFLEtBQUssQ0FBQ0MsT0FBTyxHQUFHLE1BQU0sQ0FBQztZQUN6Q1QsU0FBUyxDQUFDLFNBQVMsRUFBRSxNQUFNLEVBQUU7Z0JBQUVhLElBQUksRUFBRSxHQUFHO2FBQUUsQ0FBQztRQUM3QyxDQUFDLEVBQUUsR0FBRyxDQUFDLENBQUM7SUFDVixDQUFDO0lBRUQscUJBQ0U7a0JBQ0NmLE9BQU8sS0FBSyxNQUFNLEdBQUcsSUFBSSxpQkFDMUIsOERBQUNnQixLQUFHO1lBQUNDLEVBQUUsRUFBQyxXQUFXO1lBQUNSLFNBQVMsRUFBQyx3QkFBd0I7WUFBQ1MsR0FBRyxFQUFFZCxTQUFTOzs4QkFDckUsOERBQUNZLEtBQUc7b0JBQUNQLFNBQVMsRUFBQyxrQkFBa0I7O3NDQUMvQiw4REFBQ08sS0FBRzs0QkFBQ1AsU0FBUyxFQUFDLGVBQWU7NEJBQUNRLEVBQUUsRUFBQyxNQUFNOzRCQUFDQyxHQUFHLEVBQUVmLElBQUk7c0NBQ2hELDRFQUFDZ0IsS0FBRztnQ0FDRkMsT0FBTyxFQUFDLGFBQWE7Z0NBQ3JCQyxtQkFBbUIsRUFBQyxNQUFNO2dDQUMxQlosU0FBUyxFQUFDLGdCQUFnQjswQ0FFMUIsNEVBQUNNLE1BQUk7b0NBQ0hPLENBQUMsRUFBQyxtRkFBbUY7b0NBQ3JGYixTQUFTLEVBQUMsZ0JBQWdCOzs7Ozt3Q0FDcEI7Ozs7O29DQUNKOzs7OztnQ0FDRjtzQ0FDTiw4REFBQ08sS0FBRzs0QkFBQ1AsU0FBUyxFQUFDLGdCQUFnQjs0QkFBQ1EsRUFBRSxFQUFDLE1BQU07NEJBQUNDLEdBQUcsRUFBRWIsSUFBSTs7OENBQ2pELDhEQUFDYyxLQUFHO29DQUNGQyxPQUFPLEVBQUMsYUFBYTtvQ0FDckJDLG1CQUFtQixFQUFDLE1BQU07b0NBQzFCWixTQUFTLEVBQUMsaUJBQWlCOzhDQUUzQiw0RUFBQ00sTUFBSTt3Q0FDSE8sQ0FBQyxFQUFDLG1GQUFtRjt3Q0FDckZiLFNBQVMsRUFBQyxpQkFBaUI7Ozs7OzRDQUNyQjs7Ozs7d0NBQ0o7OENBQ04sOERBQUNPLEtBQUc7b0NBQUNQLFNBQVMsRUFBQyx3QkFBd0I7b0NBQUNTLEdBQUcsRUFBRVosU0FBUzs7c0RBRXRELDhEQUFDaUIsR0FBQzs0Q0FBQ2QsU0FBUyxFQUFDLHNDQUFzQztzREFBQyxtQ0FBaUM7Ozs7O2dEQUFJO3NEQUN6Riw4REFBQ2MsR0FBQzs0Q0FBQ2QsU0FBUyxFQUFDLHdDQUF3QztzREFBQyxhQUFXOzs7OztnREFBSTtzREFDckUsOERBQUNPLEtBQUc7NENBQUNQLFNBQVMsRUFBQyxxQkFBcUI7OzhEQUNsQyw4REFBQ2UsS0FBRztvREFBQ0MsR0FBRyxFQUFDLHNCQUFtQjtvREFBRUMsR0FBRyxFQUFDLE9BQU87Ozs7O3dEQUFHOzhEQUM1Qyw4REFBQ0YsS0FBRztvREFBQ0MsR0FBRyxFQUFDLGNBQWM7b0RBQUVDLEdBQUcsRUFBQyxPQUFPOzs7Ozt3REFBRzs4REFDdkMsOERBQUNGLEtBQUc7b0RBQUNDLEdBQUcsRUFBQyxjQUFjO29EQUFFQyxHQUFHLEVBQUMsT0FBTzs7Ozs7d0RBQUc7OERBQ3ZDLDhEQUFDQyxRQUFNO29EQUFDbEIsU0FBUyxFQUFDLHFCQUFxQjtvREFBQ0YsT0FBTyxFQUFFQSxPQUFPOzhEQUFFLG1CQUU1RDs7Ozs7d0RBQVM7Ozs7OztnREFDSDs7Ozs7O3dDQUNGOzs7Ozs7Z0NBQ0Y7Ozs7Ozt3QkFDRTs4QkFFUiw4REFBQ1MsS0FBRzs4QkFDRiw0RUFBQ0YsTUFBSTt3QkFBQ0wsU0FBUyxFQUFDLFFBQVE7Ozs7OzRCQUVqQjs7Ozs7d0JBQ0g7Ozs7OztnQkFDRjtxQkFDRCxDQUNIO0FBQ0osQ0FBQyIsInNvdXJjZXMiOlsid2VicGFjazovL3Byb3llY3RvLXNjb3V0cy8uL2NvbXBvbmVudHMvaW5pY2lvL0luaWNpb0FuaW1hY2lvbi50c3g/ODk3YiJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyB1c2VSZWYgfSBmcm9tIFwicmVhY3RcIjtcclxuaW1wb3J0IHsgdXNlQ29va2llcyB9IGZyb20gJ3JlYWN0LWNvb2tpZSc7XHJcblxyXG5leHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBJbmljaW8oe3Zpc2l0ZWR9IDogYW55KSB7XHJcbiAgY29uc3QgW2Nvb2tpZXMsIHNldENvb2tpZV0gPSB1c2VDb29raWVzKFsndmlzaXRlZCddKTtcclxuICBjb25zdCBvbGUxID0gdXNlUmVmKG51bGwpO1xyXG5cclxuICBjb25zdCBwcmluY2lwYWwgPSB1c2VSZWYobnVsbCk7XHJcblxyXG4gIGNvbnN0IG9sZTIgPSB1c2VSZWYobnVsbCk7XHJcbiAgY29uc3QgZWxlbWVudG9zID0gdXNlUmVmKG51bGwpO1xyXG5cclxuICBjb25zdCBvbkNsaWNrID0gKCkgPT4ge1xyXG4gICAgb2xlMS5jdXJyZW50LmNsYXNzTmFtZSA9IFwiYW5pbWFjaW9uX29sYSBhbmltYWNpb25fcHJ1ZWJhM1wiO1xyXG4gICAgb2xlMi5jdXJyZW50LmNsYXNzTmFtZSA9IFwiYW5pbWFjaW9uX29sYXMgYW5pbWFjaW9uX3BydWViYTNcIjtcclxuICAgIGVsZW1lbnRvcy5jdXJyZW50LnN0eWxlLmRpc3BsYXkgPSBcIm5vbmVcIjtcclxuICAgIHNldFRpbWVvdXQoKCkgPT4ge1xyXG4gICAgICBkb2N1bWVudC5ib2R5LmNsYXNzTmFtZSA9IFwiXCI7XHJcbiAgICAgIHByaW5jaXBhbC5jdXJyZW50LnN0eWxlLmRpc3BsYXkgPSBcIm5vbmVcIjtcclxuICAgICAgc2V0Q29va2llKCd2aXNpdGVkJywgXCJ0cnVlXCIsIHsgcGF0aDogJy8nIH0pXHJcbiAgICB9LCA3MDApO1xyXG4gIH07XHJcblxyXG4gIHJldHVybiAoXHJcbiAgICA8PlxyXG4gICAge3Zpc2l0ZWQgPT09IFwidHJ1ZVwiID8gbnVsbCA6XHJcbiAgICA8ZGl2IGlkPVwiUHJpbmNpcGFsXCIgY2xhc3NOYW1lPVwiYW5pbWFjaW9uX2ZvbmRvX2luaWNpb1wiIHJlZj17cHJpbmNpcGFsfT5cclxuICAgIDxkaXYgY2xhc3NOYW1lPVwiYW5pbWFjaW9uX2ZvbmRvMlwiPlxyXG4gICAgICA8ZGl2IGNsYXNzTmFtZT1cImFuaW1hY2lvbl9vbGFcIiBpZD1cIm9sZTJcIiByZWY9e29sZTF9PlxyXG4gICAgICAgIDxzdmdcclxuICAgICAgICAgIHZpZXdCb3g9XCIwIDAgNTAwIDE1MFwiXHJcbiAgICAgICAgICBwcmVzZXJ2ZUFzcGVjdFJhdGlvPVwibm9uZVwiXHJcbiAgICAgICAgICBjbGFzc05hbWU9XCJhbmltYWNpb25fb2xhMlwiXHJcbiAgICAgICAgPlxyXG4gICAgICAgICAgPHBhdGhcclxuICAgICAgICAgICAgZD1cIk0tMTAuNjEsMTIwLjY5IEMyOTUuMjYsMjE2LjQxIDI1MS4yNCwzMy44NCA1NDYuOTUsNjQuNDQgTDUwMC4wMCwwLjAwIEwwLjAwLDAuMDAgWlwiXHJcbiAgICAgICAgICAgIGNsYXNzTmFtZT1cImFuaW1hY2lvbl9vbGEzXCJcclxuICAgICAgICAgID48L3BhdGg+XHJcbiAgICAgICAgPC9zdmc+XHJcbiAgICAgIDwvZGl2PlxyXG4gICAgICA8ZGl2IGNsYXNzTmFtZT1cImFuaW1hY2lvbl9vbGFzXCIgaWQ9XCJvbGUyXCIgcmVmPXtvbGUyfT5cclxuICAgICAgICA8c3ZnXHJcbiAgICAgICAgICB2aWV3Qm94PVwiMCAwIDUwMCAxNTBcIlxyXG4gICAgICAgICAgcHJlc2VydmVBc3BlY3RSYXRpbz1cIm5vbmVcIlxyXG4gICAgICAgICAgY2xhc3NOYW1lPVwiYW5pbWFjaW9uX29sYXMyXCJcclxuICAgICAgICA+XHJcbiAgICAgICAgICA8cGF0aFxyXG4gICAgICAgICAgICBkPVwiTS0xMC42MSwxMjAuNjkgQzI5NS4yNiwyMTYuNDEgMjUxLjI0LDMzLjg0IDU0Ni45NSw2NC40NCBMNTAwLjAwLDAuMDAgTDAuMDAsMC4wMCBaXCJcclxuICAgICAgICAgICAgY2xhc3NOYW1lPVwiYW5pbWFjaW9uX29sYXMzXCJcclxuICAgICAgICAgID48L3BhdGg+XHJcbiAgICAgICAgPC9zdmc+XHJcbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJhbmltYWNpb25fZm9uZG9faW5pY2lvXCIgcmVmPXtlbGVtZW50b3N9PlxyXG4gICAgICBcclxuICAgICAgICA8cCBjbGFzc05hbWU9XCJhbmltYWNpb25fdGV4dCBhbmltYWNpb25fZm9uZG9fdGV4dG9cIj5HcnVwbyBTY291dCBDZW50aW5lbGFzIDExMyAtIENhbGk8L3A+XHJcbiAgICAgICAgPHAgY2xhc3NOYW1lPVwiYW5pbWFjaW9uX3RleHQyIGFuaW1hY2lvbl9mb25kb190ZXh0bzJcIj5TY291dCBBLkMuRTwvcD5cclxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImFuaW1hY2lvbl9mb3RvX2xvZ29cIj5cclxuICAgICAgICAgIDxpbWcgc3JjPVwiL2ltZy9wYcOxb2xldGEucG5nXCIgIGFsdD1cImxvZ28xXCIgLz5cclxuICAgICAgICAgIDxpbWcgc3JjPVwiL2ltZy8xMTMucG5nXCIgIGFsdD1cImxvZ28xXCIgLz5cclxuICAgICAgICAgIDxpbWcgc3JjPVwiL2ltZy9BQ0UucG5nXCIgIGFsdD1cImxvZ28xXCIgLz5cclxuICAgICAgICAgIDxidXR0b24gY2xhc3NOYW1lPVwiYW5pbWFjaW9uX3JlY3RhbmdsZVwiIG9uQ2xpY2s9e29uQ2xpY2t9PlxyXG4gICAgICAgICAgwqFDb27Ds2Nlbm9zIVxyXG4gICAgICAgIDwvYnV0dG9uPlxyXG4gICAgICAgIDwvZGl2PlxyXG4gICAgICA8L2Rpdj5cclxuICAgIDwvZGl2PlxyXG4gICAgICA8L2Rpdj5cclxuICAgICAgXHJcbiAgICA8ZGl2PlxyXG4gICAgICA8Ym9keSBjbGFzc05hbWU9XCJzY3JvbGxcIj5cclxuICAgICAgICBcclxuICAgICAgPC9ib2R5PlxyXG4gICAgPC9kaXY+XHJcbiAgPC9kaXY+fVxyXG4gICAgPC8+XHJcbiAgKTtcclxufVxyXG4iXSwibmFtZXMiOlsidXNlUmVmIiwidXNlQ29va2llcyIsIkluaWNpbyIsInZpc2l0ZWQiLCJjb29raWVzIiwic2V0Q29va2llIiwib2xlMSIsInByaW5jaXBhbCIsIm9sZTIiLCJlbGVtZW50b3MiLCJvbkNsaWNrIiwiY3VycmVudCIsImNsYXNzTmFtZSIsInN0eWxlIiwiZGlzcGxheSIsInNldFRpbWVvdXQiLCJkb2N1bWVudCIsImJvZHkiLCJwYXRoIiwiZGl2IiwiaWQiLCJyZWYiLCJzdmciLCJ2aWV3Qm94IiwicHJlc2VydmVBc3BlY3RSYXRpbyIsImQiLCJwIiwiaW1nIiwic3JjIiwiYWx0IiwiYnV0dG9uIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./components/inicio/InicioAnimacion.tsx\n");
-
-/***/ }),
-
-/***/ "./components/inicio/Presentacion.tsx":
-/*!********************************************!*\
-  !*** ./components/inicio/Presentacion.tsx ***!
-  \********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ presentacion)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _styles_inicio_Presentacion_module_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ~/styles/inicio/Presentacion.module.scss */ \"./styles/inicio/Presentacion.module.scss\");\n/* harmony import */ var _styles_inicio_Presentacion_module_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_inicio_Presentacion_module_scss__WEBPACK_IMPORTED_MODULE_1__);\n\n\nfunction presentacion() {\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n        className: (_styles_inicio_Presentacion_module_scss__WEBPACK_IMPORTED_MODULE_1___default().portada),\n        children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n            className: (_styles_inicio_Presentacion_module_scss__WEBPACK_IMPORTED_MODULE_1___default().elementos_portada),\n            children: [\n                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                    className: (_styles_inicio_Presentacion_module_scss__WEBPACK_IMPORTED_MODULE_1___default().titulo),\n                    children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n                        children: \"Grupo Scout Centinelas 113 - Cali\"\n                    }, void 0, false, {\n                        fileName: \"C:\\\\Users\\\\Nicolas\\\\Desktop\\\\proyecto 2\\\\proyecto-scouts\\\\components\\\\inicio\\\\Presentacion.tsx\",\n                        lineNumber: 10,\n                        columnNumber: 21\n                    }, this)\n                }, void 0, false, {\n                    fileName: \"C:\\\\Users\\\\Nicolas\\\\Desktop\\\\proyecto 2\\\\proyecto-scouts\\\\components\\\\inicio\\\\Presentacion.tsx\",\n                    lineNumber: 9,\n                    columnNumber: 17\n                }, this),\n                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                    className: (_styles_inicio_Presentacion_module_scss__WEBPACK_IMPORTED_MODULE_1___default().subtitulo),\n                    children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n                        children: \"Scout A.C.E\"\n                    }, void 0, false, {\n                        fileName: \"C:\\\\Users\\\\Nicolas\\\\Desktop\\\\proyecto 2\\\\proyecto-scouts\\\\components\\\\inicio\\\\Presentacion.tsx\",\n                        lineNumber: 13,\n                        columnNumber: 21\n                    }, this)\n                }, void 0, false, {\n                    fileName: \"C:\\\\Users\\\\Nicolas\\\\Desktop\\\\proyecto 2\\\\proyecto-scouts\\\\components\\\\inicio\\\\Presentacion.tsx\",\n                    lineNumber: 12,\n                    columnNumber: 17\n                }, this)\n            ]\n        }, void 0, true, {\n            fileName: \"C:\\\\Users\\\\Nicolas\\\\Desktop\\\\proyecto 2\\\\proyecto-scouts\\\\components\\\\inicio\\\\Presentacion.tsx\",\n            lineNumber: 7,\n            columnNumber: 13\n        }, this)\n    }, void 0, false, {\n        fileName: \"C:\\\\Users\\\\Nicolas\\\\Desktop\\\\proyecto 2\\\\proyecto-scouts\\\\components\\\\inicio\\\\Presentacion.tsx\",\n        lineNumber: 6,\n        columnNumber: 9\n    }, this);\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jb21wb25lbnRzL2luaWNpby9QcmVzZW50YWNpb24udHN4LmpzIiwibWFwcGluZ3MiOiI7Ozs7Ozs7O0FBQUE7QUFBNkQ7QUFFOUMsU0FBU0MsWUFBWSxHQUFHO0lBRW5DLHFCQUNJLDhEQUFDQyxLQUFHO1FBQUNDLFNBQVMsRUFBRUgsd0ZBQWM7a0JBQzFCLDRFQUFDRSxLQUFHO1lBQUNDLFNBQVMsRUFBRUgsa0dBQXdCOzs4QkFFcEMsOERBQUNFLEtBQUc7b0JBQUNDLFNBQVMsRUFBRUgsdUZBQWE7OEJBQ3pCLDRFQUFDTyxHQUFDO2tDQUFDLG1DQUFpQzs7Ozs7NEJBQUk7Ozs7O3dCQUN0Qzs4QkFDTiw4REFBQ0wsS0FBRztvQkFBQ0MsU0FBUyxFQUFFSCwwRkFBZ0I7OEJBQzVCLDRFQUFDTyxHQUFDO2tDQUFDLGFBQVc7Ozs7OzRCQUFJOzs7Ozt3QkFDaEI7Ozs7OztnQkFDSjs7Ozs7WUFDSixDQUVUO0FBQ0wsQ0FBQyIsInNvdXJjZXMiOlsid2VicGFjazovL3Byb3llY3RvLXNjb3V0cy8uL2NvbXBvbmVudHMvaW5pY2lvL1ByZXNlbnRhY2lvbi50c3g/M2UwMSJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgc3R5bGVzIGZyb20gJ34vc3R5bGVzL2luaWNpby9QcmVzZW50YWNpb24ubW9kdWxlLnNjc3MnXHJcblxyXG5leHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBwcmVzZW50YWNpb24oKSB7XHJcblxyXG4gICAgcmV0dXJuIChcclxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT17c3R5bGVzLnBvcnRhZGF9PlxyXG4gICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT17c3R5bGVzLmVsZW1lbnRvc19wb3J0YWRhfT5cclxuXHJcbiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT17c3R5bGVzLnRpdHVsb30+XHJcbiAgICAgICAgICAgICAgICAgICAgPHA+R3J1cG8gU2NvdXQgQ2VudGluZWxhcyAxMTMgLSBDYWxpPC9wPlxyXG4gICAgICAgICAgICAgICAgPC9kaXY+XHJcbiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT17c3R5bGVzLnN1YnRpdHVsb30+XHJcbiAgICAgICAgICAgICAgICAgICAgPHA+U2NvdXQgQS5DLkU8L3A+XHJcbiAgICAgICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICAgICAgPC9kaXY+XHJcbiAgICAgICAgPC9kaXY+XHJcblxyXG4gICAgKVxyXG59Il0sIm5hbWVzIjpbInN0eWxlcyIsInByZXNlbnRhY2lvbiIsImRpdiIsImNsYXNzTmFtZSIsInBvcnRhZGEiLCJlbGVtZW50b3NfcG9ydGFkYSIsInRpdHVsbyIsInAiLCJzdWJ0aXR1bG8iXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./components/inicio/Presentacion.tsx\n");
-
-/***/ }),
-
-/***/ "./lib/parseCookies.js":
-/*!*****************************!*\
-  !*** ./lib/parseCookies.js ***!
-  \*****************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"parseCookies\": () => (/* binding */ parseCookies)\n/* harmony export */ });\n/* harmony import */ var cookie__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! cookie */ \"cookie\");\n/* harmony import */ var cookie__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(cookie__WEBPACK_IMPORTED_MODULE_0__);\n\nfunction parseCookies(req) {\n    return cookie__WEBPACK_IMPORTED_MODULE_0___default().parse(req ? req.headers.cookie || \"\" : document.cookie);\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9saWIvcGFyc2VDb29raWVzLmpzLmpzIiwibWFwcGluZ3MiOiI7Ozs7OztBQUE0QjtBQUVyQixTQUFTQyxZQUFZLENBQUNDLEdBQUcsRUFBRTtJQUM5QixPQUFPRixtREFBWSxDQUFDRSxHQUFHLEdBQUdBLEdBQUcsQ0FBQ0UsT0FBTyxDQUFDSixNQUFNLElBQUksRUFBRSxHQUFHSyxRQUFRLENBQUNMLE1BQU0sQ0FBQyxDQUFDO0FBQzFFLENBQUMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9wcm95ZWN0by1zY291dHMvLi9saWIvcGFyc2VDb29raWVzLmpzP2Q3ZTUiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IGNvb2tpZSBmcm9tIFwiY29va2llXCI7XHJcblxyXG5leHBvcnQgZnVuY3Rpb24gcGFyc2VDb29raWVzKHJlcSkge1xyXG4gICAgcmV0dXJuIGNvb2tpZS5wYXJzZShyZXEgPyByZXEuaGVhZGVycy5jb29raWUgfHwgXCJcIiA6IGRvY3VtZW50LmNvb2tpZSk7XHJcbn0iXSwibmFtZXMiOlsiY29va2llIiwicGFyc2VDb29raWVzIiwicmVxIiwicGFyc2UiLCJoZWFkZXJzIiwiZG9jdW1lbnQiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./lib/parseCookies.js\n");
-
-/***/ }),
-
-/***/ "./pages/index.tsx":
-/*!*************************!*\
-  !*** ./pages/index.tsx ***!
-  \*************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__),\n/* harmony export */   \"getServerSideProps\": () => (/* binding */ getServerSideProps)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _components_inicio_InicioAnimacion__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ~/components/inicio/InicioAnimacion */ \"./components/inicio/InicioAnimacion.tsx\");\n/* harmony import */ var _components_inicio_Presentacion__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ~/components/inicio/Presentacion */ \"./components/inicio/Presentacion.tsx\");\n/* harmony import */ var _components_inicio_Container__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ~/components/inicio/Container */ \"./components/inicio/Container.tsx\");\n/* harmony import */ var _components_inicio_Card__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ~/components/inicio/Card */ \"./components/inicio/Card.tsx\");\n/* harmony import */ var _lib_parseCookies__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ~/lib/parseCookies */ \"./lib/parseCookies.js\");\n\n\n\n\n\n\nconst getServerSideProps = async (context)=>{\n    const cookies = (0,_lib_parseCookies__WEBPACK_IMPORTED_MODULE_5__.parseCookies)(context.req);\n    return {\n        props: {\n            visited: cookies.visited ? cookies.visited : \"false\"\n        }\n    };\n};\n/*\r\n// La vista puede implementar alguno de estos dos metodos, para hacer SSG o SSR, no se deben usar los dos\r\n// Si la vista no implementa ninguna, se considera que es SSG sin alimentación de datos\r\n\r\n// La vista actua como estatica (Static Side Generation), obtiene la información al momento de compilar\r\nexport const getStaticProps: GetStaticProps<> = async (context) => {\r\n  //Se hace fetch (por default en metodo GET) a la api\r\n  const res = await fetch(process.env.API_URL + '/api/endpoint/')\r\n  const data = await res.json()\r\n  return {\r\n    props: {\r\n      //Se pasan los datos en alguna variable como propiedad, a la vista o a los componentes\r\n      datos: data\r\n    },\r\n  }\r\n}\r\n\r\n// Hace Server Side Render, obtiene la información al momento de consultar la vista\r\nexport const getServerSideProps: GetServerSideProps<> = async (context) => {\r\n  const res = await fetch(process.env.API_URL + '/api/endpoint/')\r\n  const data = await res.json()\r\n  return {\r\n    props: {\r\n      datos: data\r\n    },\r\n  }\r\n} \r\n*/ // Corresponde al contenido de la vista (Recibe las propiedades, si pasaramos una propiedad llamada datos sería: { query, datos}: Props)\nconst HomePage = ({ visited  })=>{\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n        children: [\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_components_inicio_InicioAnimacion__WEBPACK_IMPORTED_MODULE_1__[\"default\"], {\n                visited: visited\n            }, void 0, false, {\n                fileName: \"C:\\\\Users\\\\Nicolas\\\\Desktop\\\\proyecto 2\\\\proyecto-scouts\\\\pages\\\\index.tsx\",\n                lineNumber: 57,\n                columnNumber: 7\n            }, undefined),\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_components_inicio_Presentacion__WEBPACK_IMPORTED_MODULE_2__[\"default\"], {}, void 0, false, {\n                fileName: \"C:\\\\Users\\\\Nicolas\\\\Desktop\\\\proyecto 2\\\\proyecto-scouts\\\\pages\\\\index.tsx\",\n                lineNumber: 58,\n                columnNumber: 7\n            }, undefined),\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_components_inicio_Container__WEBPACK_IMPORTED_MODULE_3__[\"default\"], {\n                imagen: \"/img/antorcha.svg\",\n                children: [\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_components_inicio_Card__WEBPACK_IMPORTED_MODULE_4__[\"default\"], {\n                        titulo: \"Promesa y ley\",\n                        descripcion: \"La educaci\\xf3n en valores expresados en una promesa y ley a los que se adhiere de manera voluntaria.\",\n                        imagen: \"/img/jurar.png\"\n                    }, void 0, false, {\n                        fileName: \"C:\\\\Users\\\\Nicolas\\\\Desktop\\\\proyecto 2\\\\proyecto-scouts\\\\pages\\\\index.tsx\",\n                        lineNumber: 60,\n                        columnNumber: 9\n                    }, undefined),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_components_inicio_Card__WEBPACK_IMPORTED_MODULE_4__[\"default\"], {\n                        titulo: \"Aprender haciendo\",\n                        descripcion: \"La educaci\\xf3n activa a trav\\xe9s del aprender haciendo, el aprender jugando y el aprender por medio del servicio.\",\n                        imagen: \"/img/equipo.png\"\n                    }, void 0, false, {\n                        fileName: \"C:\\\\Users\\\\Nicolas\\\\Desktop\\\\proyecto 2\\\\proyecto-scouts\\\\pages\\\\index.tsx\",\n                        lineNumber: 61,\n                        columnNumber: 9\n                    }, undefined),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_components_inicio_Card__WEBPACK_IMPORTED_MODULE_4__[\"default\"], {\n                        titulo: \"Vida en peque\\xf1os grupos\",\n                        descripcion: \"La pertenencia a peque\\xf1os grupos, con el acompa\\xf1amiento responsable de adultos.\",\n                        imagen: \"/img/trabajo-en-equipo.png\"\n                    }, void 0, false, {\n                        fileName: \"C:\\\\Users\\\\Nicolas\\\\Desktop\\\\proyecto 2\\\\proyecto-scouts\\\\pages\\\\index.tsx\",\n                        lineNumber: 62,\n                        columnNumber: 9\n                    }, undefined),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_components_inicio_Card__WEBPACK_IMPORTED_MODULE_4__[\"default\"], {\n                        titulo: \"Adulto no interferente\",\n                        descripcion: \"La participaci\\xf3n indirecta del adulto, en forma estimulante y no interferente, con la oportunidad de ayudar a los muchachos en la organizaci\\xf3n y direcci\\xf3n de actividades y en la toma de decisiones.\",\n                        imagen: \"/img/familia.png\"\n                    }, void 0, false, {\n                        fileName: \"C:\\\\Users\\\\Nicolas\\\\Desktop\\\\proyecto 2\\\\proyecto-scouts\\\\pages\\\\index.tsx\",\n                        lineNumber: 63,\n                        columnNumber: 9\n                    }, undefined),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_components_inicio_Card__WEBPACK_IMPORTED_MODULE_4__[\"default\"], {\n                        titulo: \"Vida al aire libre\",\n                        descripcion: \"Programas progresivos, atrayentes y estimulantes, basados en los intereses de los participantes compuestos por un marco simb\\xf3lico sugerente y un sistema progresivo de objetivos y actividades educativas variadas, incluyendo juegos, habilidades \\xfatiles y servicios a la comunidad, que ocurren en gran parte al aire libre en contacto con la naturaleza.\",\n                        imagen: \"/img/leisure.png\",\n                        ultimo: true\n                    }, void 0, false, {\n                        fileName: \"C:\\\\Users\\\\Nicolas\\\\Desktop\\\\proyecto 2\\\\proyecto-scouts\\\\pages\\\\index.tsx\",\n                        lineNumber: 64,\n                        columnNumber: 9\n                    }, undefined)\n                ]\n            }, void 0, true, {\n                fileName: \"C:\\\\Users\\\\Nicolas\\\\Desktop\\\\proyecto 2\\\\proyecto-scouts\\\\pages\\\\index.tsx\",\n                lineNumber: 59,\n                columnNumber: 7\n            }, undefined)\n        ]\n    }, void 0, true, {\n        fileName: \"C:\\\\Users\\\\Nicolas\\\\Desktop\\\\proyecto 2\\\\proyecto-scouts\\\\pages\\\\index.tsx\",\n        lineNumber: 56,\n        columnNumber: 5\n    }, undefined);\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (HomePage);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9wYWdlcy9pbmRleC50c3guanMiLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7O0FBQUE7QUFFeUQ7QUFDRTtBQUNOO0FBQ1Y7QUFDSTtBQU94QyxNQUFNSyxrQkFBa0IsR0FBOEIsT0FBT0MsT0FBTyxHQUFLO0lBQzlFLE1BQU1DLE9BQU8sR0FBR0gsK0RBQVksQ0FBQ0UsT0FBTyxDQUFDRSxHQUFHLENBQUM7SUFDekMsT0FBTztRQUNMQyxLQUFLLEVBQUU7WUFDTEMsT0FBTyxFQUFFSCxPQUFPLENBQUNHLE9BQU8sR0FBR0gsT0FBTyxDQUFDRyxPQUFPLEdBQUcsT0FBTztTQUNyRDtLQUNGO0FBQ0gsQ0FBQztBQUVEO0FBOEJBLE1BQU1DLFFBQVEsR0FBb0IsQ0FBQyxFQUFFRCxPQUFPLEdBQVMsR0FBSztJQUN4RCxxQkFFRSxRQUFDRSxLQUFHOzswQkFDRixRQUFDWixNQUFNO2dCQUFDVSxPQUFPLEVBQUVBLE9BQU87Ozs7OzswQkFDeEIsUUFBQ1QsWUFBWTs7Ozs7O2dCQUNGWSxNQUFNLEVBQUMsbUJBQW1COztrQ0FDbkMsUUFBQ1YsSUFBSTt3QkFBQ1csTUFBTSxFQUFDOzs7Ozs7OzRCQUEwSjtrQ0FDdks7d0JBQU1BLENBQUFBLDZEQUFPOzt3QkFBZ0pELEVBQUFBLDZEQUFPOzs7Ozs0QkFBbUI7O3dCQUNqTEMsRUFBQUEsNkRBQU8sc0ZBQXlCO3dCQUFDQyxXQUFXLEVBQUM7d0JBQWtGRixNQUFNOzs7Ozs7a0NBQzNJLDhEQUFDViwrREFBSTt3QkFBQ1csTUFBTSxFQUFDO3dCQUF5QkMsV0FBVyxFQUFDO3dCQUF3TUYsTUFBTSxFQUFDOzs7OztpQ0FBb0I7a0NBQ3JSLDhEQUFDViwrREFBSTt3QkFBQ1csTUFBTSxFQUFDLG9CQUFvQjt3QkFBQ0MsV0FBVyxFQUFDO3dCQUErVkYsTUFBTSxFQUFDO3dCQUFtQkcsTUFBTTs7Ozs7NEJBQUU7Ozs7OztvQkFDcmE7Ozs7OztZQUNSLENBR1A7QUFDSCxDQUFDO0FBRUQsZUFBZUwsUUFBUSIsInNvdXJjZXMiOlsid2VicGFjazovL3Byb3llY3RvLXNjb3V0cy8uL3BhZ2VzL2luZGV4LnRzeD8wN2ZmIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IE5leHRQYWdlLCBOZXh0UGFnZUNvbnRleHQsIEdldFNlcnZlclNpZGVQcm9wcywgR2V0U3RhdGljUHJvcHMgfSBmcm9tICduZXh0JztcclxuaW1wb3J0IEhlYWRlciBmcm9tICd+L2NvbXBvbmVudHMvbGF5b3V0L2hlYWRlci9IZWFkZXInXHJcbmltcG9ydCBJbmljaW8gZnJvbSAnfi9jb21wb25lbnRzL2luaWNpby9JbmljaW9BbmltYWNpb24nO1xyXG5pbXBvcnQgUHJlc2VudGFjaW9uIGZyb20gJ34vY29tcG9uZW50cy9pbmljaW8vUHJlc2VudGFjaW9uJ1xyXG5pbXBvcnQgQ29udGFpbmVyIGZyb20gJ34vY29tcG9uZW50cy9pbmljaW8vQ29udGFpbmVyJ1xyXG5pbXBvcnQgQ2FyZCBmcm9tICd+L2NvbXBvbmVudHMvaW5pY2lvL0NhcmQnXHJcbmltcG9ydCB7cGFyc2VDb29raWVzfSBmcm9tICd+L2xpYi9wYXJzZUNvb2tpZXMnXHJcblxyXG4vLyBFc3RhIGludGVyZmF6IHBlcm1pdGUgY29udHJvbGFyIGxvcyBkYXRvcyBxdWUgcHVlZGVuIHNlciByZWNpYmlkb3MgXHJcbmludGVyZmFjZSBQcm9wcyB7XHJcbiAgdmlzaXRlZDogc3RyaW5nXHJcbn1cclxuXHJcbmV4cG9ydCBjb25zdCBnZXRTZXJ2ZXJTaWRlUHJvcHM6IEdldFNlcnZlclNpZGVQcm9wczxQcm9wcz4gPSBhc3luYyAoY29udGV4dCkgPT4ge1xyXG4gIGNvbnN0IGNvb2tpZXMgPSBwYXJzZUNvb2tpZXMoY29udGV4dC5yZXEpXHJcbiAgcmV0dXJuIHtcclxuICAgIHByb3BzOiB7XHJcbiAgICAgIHZpc2l0ZWQ6IGNvb2tpZXMudmlzaXRlZCA/IGNvb2tpZXMudmlzaXRlZCA6IFwiZmFsc2VcIlxyXG4gICAgfVxyXG4gIH1cclxufVxyXG5cclxuLypcclxuLy8gTGEgdmlzdGEgcHVlZGUgaW1wbGVtZW50YXIgYWxndW5vIGRlIGVzdG9zIGRvcyBtZXRvZG9zLCBwYXJhIGhhY2VyIFNTRyBvIFNTUiwgbm8gc2UgZGViZW4gdXNhciBsb3MgZG9zXHJcbi8vIFNpIGxhIHZpc3RhIG5vIGltcGxlbWVudGEgbmluZ3VuYSwgc2UgY29uc2lkZXJhIHF1ZSBlcyBTU0cgc2luIGFsaW1lbnRhY2nDs24gZGUgZGF0b3NcclxuXHJcbi8vIExhIHZpc3RhIGFjdHVhIGNvbW8gZXN0YXRpY2EgKFN0YXRpYyBTaWRlIEdlbmVyYXRpb24pLCBvYnRpZW5lIGxhIGluZm9ybWFjacOzbiBhbCBtb21lbnRvIGRlIGNvbXBpbGFyXHJcbmV4cG9ydCBjb25zdCBnZXRTdGF0aWNQcm9wczogR2V0U3RhdGljUHJvcHM8PiA9IGFzeW5jIChjb250ZXh0KSA9PiB7XHJcbiAgLy9TZSBoYWNlIGZldGNoIChwb3IgZGVmYXVsdCBlbiBtZXRvZG8gR0VUKSBhIGxhIGFwaVxyXG4gIGNvbnN0IHJlcyA9IGF3YWl0IGZldGNoKHByb2Nlc3MuZW52LkFQSV9VUkwgKyAnL2FwaS9lbmRwb2ludC8nKVxyXG4gIGNvbnN0IGRhdGEgPSBhd2FpdCByZXMuanNvbigpXHJcbiAgcmV0dXJuIHtcclxuICAgIHByb3BzOiB7XHJcbiAgICAgIC8vU2UgcGFzYW4gbG9zIGRhdG9zIGVuIGFsZ3VuYSB2YXJpYWJsZSBjb21vIHByb3BpZWRhZCwgYSBsYSB2aXN0YSBvIGEgbG9zIGNvbXBvbmVudGVzXHJcbiAgICAgIGRhdG9zOiBkYXRhXHJcbiAgICB9LFxyXG4gIH1cclxufVxyXG5cclxuLy8gSGFjZSBTZXJ2ZXIgU2lkZSBSZW5kZXIsIG9idGllbmUgbGEgaW5mb3JtYWNpw7NuIGFsIG1vbWVudG8gZGUgY29uc3VsdGFyIGxhIHZpc3RhXHJcbmV4cG9ydCBjb25zdCBnZXRTZXJ2ZXJTaWRlUHJvcHM6IEdldFNlcnZlclNpZGVQcm9wczw+ID0gYXN5bmMgKGNvbnRleHQpID0+IHtcclxuICBjb25zdCByZXMgPSBhd2FpdCBmZXRjaChwcm9jZXNzLmVudi5BUElfVVJMICsgJy9hcGkvZW5kcG9pbnQvJylcclxuICBjb25zdCBkYXRhID0gYXdhaXQgcmVzLmpzb24oKVxyXG4gIHJldHVybiB7XHJcbiAgICBwcm9wczoge1xyXG4gICAgICBkYXRvczogZGF0YVxyXG4gICAgfSxcclxuICB9XHJcbn0gXHJcbiovXHJcblxyXG4vLyBDb3JyZXNwb25kZSBhbCBjb250ZW5pZG8gZGUgbGEgdmlzdGEgKFJlY2liZSBsYXMgcHJvcGllZGFkZXMsIHNpIHBhc2FyYW1vcyB1bmEgcHJvcGllZGFkIGxsYW1hZGEgZGF0b3Mgc2Vyw61hOiB7IHF1ZXJ5LCBkYXRvc306IFByb3BzKVxyXG5jb25zdCBIb21lUGFnZTogTmV4dFBhZ2U8UHJvcHM+ID0gKHsgdmlzaXRlZCB9OiBQcm9wcykgPT4ge1xyXG4gIHJldHVybiAoXHJcbiAgICBcclxuICAgIDxkaXY+XHJcbiAgICAgIDxJbmljaW8gdmlzaXRlZD17dmlzaXRlZH0vPlxyXG4gICAgICA8UHJlc2VudGFjaW9uIC8+XHJcbiAgICAgIDxDb250YWluZXIgaW1hZ2VuPScvaW1nL2FudG9yY2hhLnN2Zyc+XHJcbiAgICAgICAgPENhcmQgdGl0dWxvPSdQcm9tZXNhIHkgbGV5JyBkZXNjcmlwY2lvbj0nTGEgZWR1Y2FjacOzbiBlbiB2YWxvcmVzIGV4cHJlc2Fkb3MgZW4gdW5hIHByb21lc2EgeSBsZXkgYSBsb3MgcXVlIHNlIGFkaGllcmUgZGUgbWFuZXJhIHZvbHVudGFyaWEuJyBpbWFnZW49Jy9pbWcvanVyYXIucG5nJy8+XHJcbiAgICAgICAgPENhcmQgdGl0dWxvPSdBcHJlbmRlciBoYWNpZW5kbycgZGVzY3JpcGNpb249J0xhIGVkdWNhY2nDs24gYWN0aXZhIGEgdHJhdsOpcyBkZWwgYXByZW5kZXIgaGFjaWVuZG8sIGVsIGFwcmVuZGVyIGp1Z2FuZG8geSBlbCBhcHJlbmRlciBwb3IgbWVkaW8gZGVsIHNlcnZpY2lvLicgaW1hZ2VuPScvaW1nL2VxdWlwby5wbmcnLz5cclxuICAgICAgICA8Q2FyZCB0aXR1bG89J1ZpZGEgZW4gcGVxdWXDsW9zIGdydXBvcycgZGVzY3JpcGNpb249J0xhIHBlcnRlbmVuY2lhIGEgcGVxdWXDsW9zIGdydXBvcywgY29uIGVsIGFjb21wYcOxYW1pZW50byByZXNwb25zYWJsZSBkZSBhZHVsdG9zLicgaW1hZ2VuPScvaW1nL3RyYWJham8tZW4tZXF1aXBvLnBuZycvPlxyXG4gICAgICAgIDxDYXJkIHRpdHVsbz0nQWR1bHRvIG5vIGludGVyZmVyZW50ZScgZGVzY3JpcGNpb249J0xhIHBhcnRpY2lwYWNpw7NuIGluZGlyZWN0YSBkZWwgYWR1bHRvLCBlbiBmb3JtYSBlc3RpbXVsYW50ZSB5IG5vIGludGVyZmVyZW50ZSwgY29uIGxhIG9wb3J0dW5pZGFkIGRlIGF5dWRhciBhIGxvcyBtdWNoYWNob3MgZW4gbGEgb3JnYW5pemFjacOzbiB5IGRpcmVjY2nDs24gZGUgYWN0aXZpZGFkZXMgeSBlbiBsYSB0b21hIGRlIGRlY2lzaW9uZXMuJyBpbWFnZW49Jy9pbWcvZmFtaWxpYS5wbmcnLz5cclxuICAgICAgICA8Q2FyZCB0aXR1bG89J1ZpZGEgYWwgYWlyZSBsaWJyZScgZGVzY3JpcGNpb249J1Byb2dyYW1hcyBwcm9ncmVzaXZvcywgYXRyYXllbnRlcyB5IGVzdGltdWxhbnRlcywgYmFzYWRvcyBlbiBsb3MgaW50ZXJlc2VzIGRlIGxvcyBwYXJ0aWNpcGFudGVzIGNvbXB1ZXN0b3MgcG9yIHVuIG1hcmNvIHNpbWLDs2xpY28gc3VnZXJlbnRlIHkgdW4gc2lzdGVtYSBwcm9ncmVzaXZvIGRlIG9iamV0aXZvcyB5IGFjdGl2aWRhZGVzIGVkdWNhdGl2YXMgdmFyaWFkYXMsIGluY2x1eWVuZG8ganVlZ29zLCBoYWJpbGlkYWRlcyDDunRpbGVzIHkgc2VydmljaW9zIGEgbGEgY29tdW5pZGFkLCBxdWUgb2N1cnJlbiBlbiBncmFuIHBhcnRlIGFsIGFpcmUgbGlicmUgZW4gY29udGFjdG8gY29uIGxhIG5hdHVyYWxlemEuJyBpbWFnZW49Jy9pbWcvbGVpc3VyZS5wbmcnIHVsdGltby8+XHJcbiAgICAgIDwvQ29udGFpbmVyPlxyXG4gICAgPC9kaXY+XHJcbiAgICBcclxuXHJcbiAgKVxyXG59XHJcblxyXG5leHBvcnQgZGVmYXVsdCBIb21lUGFnZVxyXG4iXSwibmFtZXMiOlsiSW5pY2lvIiwiUHJlc2VudGFjaW9uIiwiQ29udGFpbmVyIiwiQ2FyZCIsInBhcnNlQ29va2llcyIsImdldFNlcnZlclNpZGVQcm9wcyIsImNvbnRleHQiLCJjb29raWVzIiwicmVxIiwicHJvcHMiLCJ2aXNpdGVkIiwiSG9tZVBhZ2UiLCJkaXYiLCJpbWFnZW4iLCJ0aXR1bG8iLCJkZXNjcmlwY2lvbiIsInVsdGltbyJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./pages/index.tsx\n");
-
-/***/ }),
-
-/***/ "cookie":
-/*!*************************!*\
-  !*** external "cookie" ***!
-  \*************************/
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("cookie");
-
-/***/ }),
-
-/***/ "react":
-/*!************************!*\
-  !*** external "react" ***!
-  \************************/
+/***/ 6689:
 /***/ ((module) => {
 
 "use strict";
@@ -110,10 +388,7 @@ module.exports = require("react");
 
 /***/ }),
 
-/***/ "react-cookie":
-/*!*******************************!*\
-  !*** external "react-cookie" ***!
-  \*******************************/
+/***/ 5515:
 /***/ ((module) => {
 
 "use strict";
@@ -121,14 +396,11 @@ module.exports = require("react-cookie");
 
 /***/ }),
 
-/***/ "react/jsx-dev-runtime":
-/*!****************************************!*\
-  !*** external "react/jsx-dev-runtime" ***!
-  \****************************************/
+/***/ 997:
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("react/jsx-dev-runtime");
+module.exports = require("react/jsx-runtime");
 
 /***/ })
 
@@ -139,7 +411,7 @@ module.exports = require("react/jsx-dev-runtime");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = (__webpack_exec__("./pages/index.tsx"));
+var __webpack_exports__ = (__webpack_exec__(7776));
 module.exports = __webpack_exports__;
 
 })();

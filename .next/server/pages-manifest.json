@@ -1,17 +1,42 @@
 {
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
+  "/404": "pages/404.html",
+  "/cambio/[slug]": "pages/cambio/[slug].html",
+  "/cambio": "pages/cambio.html",
+  "/dashboard/cambio": "pages/dashboard/cambio.html",
+  "/dashboard": "pages/dashboard.html",
+  "/dashboard/info/[userId]": "pages/dashboard/info/[userId].html",
+  "/dashboard/info/acudientes/[userId]": "pages/dashboard/info/acudientes/[userId].html",
+  "/dashboard/info/acudientes": "pages/dashboard/info/acudientes.html",
+  "/dashboard/info": "pages/dashboard/info.html",
+  "/dashboard/info/medicos/[userId]": "pages/dashboard/info/medicos/[userId].html",
+  "/dashboard/jefe-grupo/cartera": "pages/dashboard/jefe-grupo/cartera.html",
+  "/dashboard/info/medicos": "pages/dashboard/info/medicos.html",
+  "/dashboard/jefe-grupo": "pages/dashboard/jefe-grupo.html",
+  "/dashboard/jefe-grupo/inscripciones": "pages/dashboard/jefe-grupo/inscripciones.html",
+  "/dashboard/jefe-grupo/personal/[idPersonal]": "pages/dashboard/jefe-grupo/personal/[idPersonal].html",
+  "/dashboard/jefe-grupo/personal/agregar": "pages/dashboard/jefe-grupo/personal/agregar.html",
+  "/dashboard/jefe-grupo/personal/editar/[idPersonal]": "pages/dashboard/jefe-grupo/personal/editar/[idPersonal].html",
+  "/dashboard/jefe-grupo/personal": "pages/dashboard/jefe-grupo/personal.html",
+  "/dashboard/jefe-rama/adelantos/[userId]": "pages/dashboard/jefe-rama/adelantos/[userId].html",
+  "/dashboard/jefe-rama/adelantos/agregar/[userId]": "pages/dashboard/jefe-rama/adelantos/agregar/[userId].html",
+  "/dashboard/jefe-rama": "pages/dashboard/jefe-rama.html",
+  "/dashboard/payments/[idPago]": "pages/dashboard/payments/[idPago].html",
+  "/dashboard/payments": "pages/dashboard/payments.html",
+  "/dashboard/progress/[idAdvance]": "pages/dashboard/progress/[idAdvance].html",
+  "/dashboard/progress": "pages/dashboard/progress.html",
+  "/dashboard/tesorero/agregar/[idUser]": "pages/dashboard/tesorero/agregar/[idUser].html",
+  "/dashboard/tesorero/editar/[userId]/[paymentId]": "pages/dashboard/tesorero/editar/[userId]/[paymentId].html",
+  "/dashboard/tesorero/payments/[idPago]": "pages/dashboard/tesorero/payments/[idPago].html",
+  "/dashboard/tesorero": "pages/dashboard/tesorero.html",
+  "/login": "pages/login.html",
+  "/logout": "pages/logout.html",
+  "/nosotros": "pages/nosotros.html",
+  "/noticias": "pages/noticias.html",
+  "/recuperar": "pages/recuperar.html",
+  "/registro": "pages/registro.html",
+  "/unete": "pages/unete.html",
   "/_document": "pages/_document.js",
-  "/dashboard/tesorero": "pages/dashboard/tesorero.js",
-<<<<<<< HEAD
-<<<<<<< HEAD
-  "/dashboard/tesorero/payments/[idPago]": "pages/dashboard/tesorero/payments/[idPago].js"
-=======
-  "/login": "pages/login.js",
-  "/dashboard": "pages/dashboard.js"
->>>>>>> 1807224ef98969aff1d85d86ce4edc26b50e806d
-=======
-  "/login": "pages/login.js",
-  "/dashboard": "pages/dashboard.js"
->>>>>>> 1807224ef98969aff1d85d86ce4edc26b50e806d
+  "/": "pages/index.js"
 }
